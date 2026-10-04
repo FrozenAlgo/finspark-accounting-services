@@ -2,17 +2,9 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Building2,
-  CheckCircle,
-  Mail,
-  Phone,
-  Send,
-  ShieldCheck,
-  User,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, CalendarCheck, ShieldCheck } from "lucide-react";
+import Form from "../ui/Form";
+import AnimatedBtn from "../ui/AnimatedBtn";
 
 // A utility function for class names
 const cn = (...classes) => classes.filter(Boolean).join(" ");
@@ -183,218 +175,72 @@ const Hero = () => {
   };
 
   return (
-    // Removed bg-black from this container
-    <div className="relative w-full flex min-h-screen flex-row items-center justify-between px-12 overflow-hidden ">
-      {/* The canvas is now the primary background */}
-      <canvas
-        ref={canvasRef}
-        className="absolute top-0 left-0 w-full h-full"
-      ></canvas>
+    <>
+      <div className="relative w-full flex py-6 flex-col lg:flex-row items-center justify-between px-12 overflow-hidden ">
+        {/* The canvas is now the primary background */}
+        <canvas
+          ref={canvasRef}
+          className="absolute top-0 left-0 w-full h-full"
+        ></canvas>
 
-      {/* Overlay HTML Content */}
-      <div className="relative z-10 p-6 basis-1/2">
-        <motion.div
-          custom={0}
-          variants={fadeUpVariants}
-          initial="hidden"
-          animate="visible"
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6 backdrop-blur-sm"
-        >
-          <ShieldCheck className="h-4 w-4 text-blue-400" />
-          <span className="text-sm font-medium text-gray-200">
-            Trusted Accountancy Services in Haven Lane
-          </span>
-        </motion.div>
+        {/* Overlay HTML Content */}
+        <div className="relative z-10 p-6 basis-full md:basis-1/2">
+          <motion.div
+            custom={0}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6 backdrop-blur-sm"
+          >
+            <ShieldCheck className="h-4 w-4 text-blue-400" />
+            <span className="text-sm font-medium text-gray-200">
+              Trusted Accountancy Services in Haven Lane
+            </span>
+          </motion.div>
 
-        <motion.h1
-          custom={1}
-          variants={fadeUpVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400"
-        >
-          Bookkeeping & Accountancy in Haven Lane
-        </motion.h1>
+          <motion.h1
+            custom={1}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400"
+          >
+            Bookkeeping & Accountancy in Haven Lane
+          </motion.h1>
 
-        <motion.p
-          custom={2}
-          variants={fadeUpVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-2xl mx-auto text-lg text-gray-400 mb-10"
-        >
-          An intelligent, adaptive framework for creating fluid digital
-          experiences that feel alive and respond to user interaction in
-          real-time.
-        </motion.p>
+          <motion.p
+            custom={2}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="max-w-2xl mx-auto text-lg text-gray-400 mb-10"
+          >
+            An intelligent, adaptive framework for creating fluid digital
+            experiences that feel alive and respond to user interaction in
+            real-time.
+          </motion.p>
 
-        <motion.div
-          custom={3}
-          variants={fadeUpVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <button className="px-8 py-4 bg-white text-black font-semibold rounded-lg shadow-lg hover:bg-gray-200 transition-colors duration-300 flex items-center gap-2 ">
-            Explore the Engine
-            <ArrowRight className="h-5 w-5" />
-          </button>
-        </motion.div>
-      </div>
-      <div className="text-amber-100 text-3xl z-10">
-        <div className="lg:col-span-5" id="enquiry-form">
-          <div className="bg-white/80 backdrop-blur-md rounded-2xl p-6 sm:p-8 shadow-2xl border border-white/40 text-slate-900 relative">
-            {/* Top Accent Bar on Card */}
-            <div className="absolute top-0 left-8 right-8 h-1.5 bg-gradient-to-r from-blue-600 via-cyan-400 to-indigo-500 rounded-b-md"></div>
-
-            <div className="mb-6">
-              <h2 className="text-2xl font-bold text-slate-900 tracking-tight">
-                Send An Enquiry
-              </h2>
-              <p className="text-slate-600 text-sm mt-1">
-                Get a response from our Farnborough experts within 24 hours.
-              </p>
-            </div>
-
-            {/* Interactive Form */}
-            <form
-              id="contact-form"
-              onSubmit={(e) => handleFormSubmit(e)}
-              className="space-y-4"
+          <motion.div
+            custom={3}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <AnimatedBtn
+              hoverText="Book an Appointment Now"
+              icon={CalendarCheck}
+              bgColor="bg-[#278392]"
+              hoverBgColor="hover:bg-[#083761]"
+              textColor="text-white"
+              hoverTextColor="hover:text-gray-100"
             >
-              {/* Name Input */}
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">
-                  Your Name <span className="text-red-500">*</span>
-                </label>
-                <div className="relative">
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
-                    <User className="w-4 h-4" />
-                  </span>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. John Smith"
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all"
-                  />
-                </div>
-              </div>
-
-              {/* Business Name Input */}
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">
-                  Your Business Name <span className="text-red-500">*</span>
-                </label>
-                <div className="relative">
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
-                    <Building2 className="w-4 h-4" />
-                  </span>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Smith Digital Ltd"
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all"
-                  />
-                </div>
-              </div>
-
-              {/* Email Input */}
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">
-                  Your Email <span className="text-red-500">*</span>
-                </label>
-                <div className="relative">
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
-                    <Mail className="w-4 h-4" />
-                  </span>
-                  <input
-                    type="email"
-                    required
-                    placeholder="john@example.com"
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all"
-                  />
-                </div>
-              </div>
-
-              {/* Phone Input */}
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">
-                  Your Phone <span className="text-red-500">*</span>
-                </label>
-                <div className="relative">
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
-                    <Phone className="w-4 h-4" />
-                  </span>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="07123 456789"
-                    className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all"
-                  />
-                </div>
-              </div>
-
-              {/* Message Area */}
-              <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1">
-                  How can we help?
-                </label>
-                <div className="relative">
-                  <textarea
-                    rows={3}
-                    placeholder="Tell us about your accountancy or bookkeeping needs..."
-                    className="w-full p-3 bg-slate-50 border border-slate-300 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white transition-all resize-none"
-                  />
-                </div>
-              </div>
-
-              {/* Consent Checkbox */}
-              <div className="flex items-start gap-2.5 pt-1">
-                <input
-                  type="checkbox"
-                  id="privacy"
-                  required
-                  className="mt-1 h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-600 accent-blue-600 cursor-pointer"
-                />
-                <label
-                  htmlFor="privacy"
-                  className="text-xs text-slate-600 leading-snug cursor-pointer"
-                >
-                  I agree to the{" "}
-                  <a
-                    href="#"
-                    className="text-blue-600 underline hover:text-blue-700"
-                  >
-                    privacy policy
-                  </a>{" "}
-                  and to be contacted regarding this request.*
-                </label>
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full mt-2 py-3.5 px-6 rounded-xl font-bold text-white bg-slate-900 hover:bg-slate-800 shadow-lg shadow-slate-900/30 hover:shadow-slate-900/50 transition-all duration-200 flex items-center justify-center gap-2 group"
-              >
-                <span>Send Enquiry</span>
-                <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </form>
-
-            {/* Notification Container */}
-            <div
-              id="form-feedback"
-              className="hidden mt-4 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium flex items-center gap-2"
-            >
-              <CheckCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>
-                Thank you! Your enquiry has been sent. We'll be in touch
-                shortly.
-              </span>
-            </div>
-          </div>
+              Book an Appointment
+            </AnimatedBtn>
+          </motion.div>
         </div>
+        <Form />
       </div>
-    </div>
+    </>
   );
 };
 

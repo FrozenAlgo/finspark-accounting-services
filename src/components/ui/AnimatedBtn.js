@@ -14,7 +14,7 @@ export default function AnimatedBtn({
   return (
     <a
       href={href}
-      className={`group inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-6 py-3 font-medium transition-all duration-500 ease-in-out ${bgColor} ${hoverBgColor} ${textColor} ${hoverTextColor} ${className}`}
+      className={`group inline-flex items-center justify-center items-center gap-2 overflow-hidden rounded-full px-6 py-3 font-medium transition-all duration-500 ease-in-out ${bgColor} ${hoverBgColor} ${textColor} ${hoverTextColor} ${className}`}
     >
       {/* 
         The Grid Stack: Keeps both text tracks sharing the exact same space 
