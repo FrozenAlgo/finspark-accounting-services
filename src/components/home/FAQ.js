@@ -37,24 +37,30 @@ const FAQ_DATA = [
 ];
 
 export default function FAQ() {
-  // Set default open item (1 matches the screenshot)
+  // Set default open item (1 matches the design)
   const [openId, setOpenId] = useState(1);
 
   const toggleFAQ = (id) => {
-    // Click open item again to close it, or click new one to open
     setOpenId((prevId) => (prevId === id ? null : id));
   };
 
   return (
-    <section className="w-full bg-white py-12 md:py-20 px-4 md:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+    <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* ================= LEFT COLUMN: ACCORDION LIST ================= */}
         <div className="lg:col-span-7 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#0B1E36] tracking-tight mb-8">
-            Why Choose Penney's?
-          </h2>
+          {/* Section Header */}
+          <div>
+            <span className="text-xs sm:text-[13px] font-bold tracking-widest text-[#278393] uppercase block mb-3">
+              WHY CHOOSE FINSPARK
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#083761] leading-[1.18] tracking-tight">
+              Why Choose Finspark?
+            </h2>
+          </div>
 
-          <div className="space-y-3.5">
+          {/* Accordion Items */}
+          <div className="space-y-3.5 pt-2">
             {FAQ_DATA.map((item) => {
               const isOpen = openId === item.id;
 
@@ -62,10 +68,10 @@ export default function FAQ() {
                 <div
                   key={item.id}
                   onClick={() => toggleFAQ(item.id)}
-                  className={`group cursor-pointer rounded-2xl border transition-all duration-300 ease-out hover:scale-[1.01] active:scale-[0.99] ${
+                  className={`group cursor-pointer rounded-2xl border transition-all duration-300 ease-out ${
                     isOpen
-                      ? "bg-white border-slate-300 shadow-lg shadow-slate-100 ring-1 ring-slate-200"
-                      : "bg-white border-slate-200/80 hover:border-slate-300 hover:shadow-md"
+                      ? "bg-white border-[#278393]/40 shadow-lg shadow-[#278393]/5 ring-1 ring-[#278393]/20"
+                      : "bg-slate-50/70 border-slate-100 hover:border-slate-200 hover:bg-slate-50"
                   }`}
                 >
                   <div className="p-5 sm:p-6">
@@ -74,8 +80,8 @@ export default function FAQ() {
                       <h3
                         className={`text-base sm:text-lg font-bold transition-colors duration-200 ${
                           isOpen
-                            ? "text-[#0B1E36]"
-                            : "text-slate-800 group-hover:text-[#0B1E36]"
+                            ? "text-[#083761]"
+                            : "text-slate-800 group-hover:text-[#083761]"
                         }`}
                       >
                         {item.question}
@@ -83,10 +89,10 @@ export default function FAQ() {
 
                       {/* Rotating Chevron Icon */}
                       <div
-                        className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
+                        className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
                           isOpen
-                            ? "bg-slate-100 text-slate-900 rotate-180"
-                            : "bg-transparent text-slate-500 group-hover:bg-slate-50"
+                            ? "bg-[#278393]/15 text-[#278393] rotate-180"
+                            : "bg-white text-slate-400 border border-slate-200 group-hover:border-slate-300 group-hover:text-slate-600"
                         }`}
                       >
                         <svg
@@ -127,14 +133,20 @@ export default function FAQ() {
 
         {/* ================= RIGHT COLUMN: FEATURE IMAGE ================= */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-lg lg:max-w-none aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-            <Image
-              src="/images/Faq.jpg"
-              width={100}
-              height={100}
-              alt="Why Choose Penney's Accountancy Team"
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
+          <div className="relative w-full max-w-lg lg:max-w-none">
+            {/* Theme Background Frame */}
+            <div className="absolute -inset-3 bg-[#278393]/10 rounded-[32px] -z-10" />
+
+            {/* Main Image Wrapper */}
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-slate-100">
+              <Image
+                src="/images/Faq.jpg"
+                alt="Why Choose Finspark Accountancy Team"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 40vw"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -2,14 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, CalendarCheck, ShieldCheck } from "lucide-react";
+import { CalendarCheck, Check, ShieldCheck } from "lucide-react";
 import Form from "../ui/Form";
 import AnimatedBtn from "../ui/AnimatedBtn";
 
-// A utility function for class names
-const cn = (...classes) => classes.filter(Boolean).join(" ");
-
-// The main hero component
 const Hero = () => {
   const canvasRef = React.useRef(null);
 
@@ -20,9 +16,8 @@ const Hero = () => {
     const ctx = canvas.getContext("2d");
     let animationFrameId;
     let particles = [];
-    const mouse = { x: null, y: null, radius: 200 };
+    const mouse = { x: null, y: null, radius: 180 };
 
-    // Moved Particle class definition here to avoid initialization errors
     class Particle {
       constructor(x, y, directionX, directionY, size, color) {
         this.x = x;
@@ -57,8 +52,8 @@ const Hero = () => {
             const forceDirectionX = dx / distance;
             const forceDirectionY = dy / distance;
             const force = (mouse.radius - distance) / mouse.radius;
-            this.x -= forceDirectionX * force * 5;
-            this.y -= forceDirectionY * force * 5;
+            this.x -= forceDirectionX * force * 4;
+            this.y -= forceDirectionY * force * 4;
           }
         }
 
@@ -73,20 +68,26 @@ const Hero = () => {
       let numberOfParticles = (canvas.height * canvas.width) / 9000;
       for (let i = 0; i < numberOfParticles; i++) {
         let size = Math.random() * 3 + 1;
-        let x = Math.random() * (innerWidth - size * 2 - size * 2) + size * 2;
-        let y = Math.random() * (innerHeight - size * 2 - size * 2) + size * 2;
+        let x = Math.random() * (canvas.width - size * 4) + size * 2;
+        let y = Math.random() * (canvas.height - size * 4) + size * 2;
         let directionX = Math.random() * 0.4 - 0.2;
         let directionY = Math.random() * 0.4 - 0.2;
-        let color = "rgba(41, 133, 147, 0.8)"; // Brighter purple
+        let color = "rgba(39, 131, 147, 0.8)"; // Finspark Brand Teal (#278393)
         particles.push(new Particle(x, y, directionX, directionY, size, color));
       }
     }
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      if (canvas.parentElement) {
+        canvas.width = canvas.parentElement.offsetWidth;
+        canvas.height = canvas.parentElement.offsetHeight;
+      } else {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
       init();
     };
+
     window.addEventListener("resize", resizeCanvas);
     resizeCanvas();
 
@@ -103,16 +104,20 @@ const Hero = () => {
           if (distance < (canvas.width / 7) * (canvas.height / 7)) {
             opacityValue = 1 - distance / 20000;
 
-            let dx_mouse_a = particles[a].x - mouse.x;
-            let dy_mouse_a = particles[a].y - mouse.y;
-            let distance_mouse_a = Math.sqrt(
-              dx_mouse_a * dx_mouse_a + dy_mouse_a * dy_mouse_a,
-            );
+            if (mouse.x !== null && mouse.y !== null) {
+              let dx_mouse_a = particles[a].x - mouse.x;
+              let dy_mouse_a = particles[a].y - mouse.y;
+              let distance_mouse_a = Math.sqrt(
+                dx_mouse_a * dx_mouse_a + dy_mouse_a * dy_mouse_a,
+              );
 
-            if (mouse.x && distance_mouse_a < mouse.radius) {
-              ctx.strokeStyle = `rgba(255, 255, 255, ${opacityValue})`;
+              if (distance_mouse_a < mouse.radius) {
+                ctx.strokeStyle = `rgba(255, 255, 255, ${opacityValue})`;
+              } else {
+                ctx.strokeStyle = `rgba(39, 131, 147, ${opacityValue})`;
+              }
             } else {
-              ctx.strokeStyle = `rgba(41, 133, 147, ${opacityValue})`;
+              ctx.strokeStyle = `rgba(39, 131, 147, ${opacityValue})`;
             }
 
             ctx.lineWidth = 1;
@@ -127,9 +132,8 @@ const Hero = () => {
 
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
-      // Set the background color inside the canvas draw loop
-      ctx.fillStyle = "#083761";
-      ctx.fillRect(0, 0, innerWidth, innerHeight);
+      ctx.fillStyle = "#083761"; // Primary Navy Background
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
@@ -138,25 +142,26 @@ const Hero = () => {
     };
 
     const handleMouseMove = (event) => {
-      mouse.x = event.clientX;
-      mouse.y = event.clientY;
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = event.clientX - rect.left;
+      mouse.y = event.clientY - rect.top;
     };
 
-    const handleMouseOut = () => {
+    const handleMouseLeave = () => {
       mouse.x = null;
       mouse.y = null;
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseout", handleMouseOut);
+    canvas.addEventListener("mousemove", handleMouseMove);
+    canvas.addEventListener("mouseleave", handleMouseLeave);
 
     init();
     animate();
 
     return () => {
       window.removeEventListener("resize", resizeCanvas);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseout", handleMouseOut);
+      canvas.removeEventListener("mousemove", handleMouseMove);
+      canvas.removeEventListener("mouseleave", handleMouseLeave);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -167,7 +172,7 @@ const Hero = () => {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.2 + 0.5,
+        delay: i * 0.15 + 0.3,
         duration: 0.8,
         ease: "easeInOut",
       },
@@ -175,72 +180,115 @@ const Hero = () => {
   };
 
   return (
-    <>
-      <div className="relative w-full flex py-6 flex-col lg:flex-row items-center justify-between px-12 overflow-hidden ">
-        {/* The canvas is now the primary background */}
-        <canvas
-          ref={canvasRef}
-          className="absolute top-0 left-0 w-full h-full"
-        ></canvas>
+    <section className="relative w-full min-h-screen flex py-12 lg:py-20 flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-12 overflow-hidden bg-[#083761]">
+      {/* Background Interactive Particle Canvas */}
+      <canvas
+        ref={canvasRef}
+        className="absolute top-0 left-0 w-full h-full pointer-events-auto"
+      />
 
-        {/* Overlay HTML Content */}
-        <div className="relative z-10 p-6 basis-full md:basis-1/2">
-          <motion.div
-            custom={0}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6 backdrop-blur-sm"
-          >
-            <ShieldCheck className="h-4 w-4 text-blue-400" />
-            <span className="text-sm font-medium text-gray-200">
-              Trusted Accountancy Services in Haven Lane
-            </span>
-          </motion.div>
+      {/* Left Content Column */}
+      <div className="relative z-10 basis-full lg:basis-1/2 mb-12 lg:mb-0 space-y-6 max-w-2xl">
+        {/* Trust Badge */}
+        <motion.div
+          custom={0}
+          variants={fadeUpVariants}
+          initial="hidden"
+          animate="visible"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#278393]/20 border border-[#278393]/40 backdrop-blur-md"
+        >
+          <ShieldCheck className="h-4 w-4 text-[#278393]" />
+          <span className="text-xs sm:text-sm font-medium text-slate-200 tracking-wide">
+            Trusted Accountancy Services in Haven Lane
+          </span>
+        </motion.div>
 
-          <motion.h1
-            custom={1}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-            className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400"
-          >
-            Bookkeeping & Accountancy in Haven Lane
-          </motion.h1>
+        {/* Main Heading */}
+        <motion.h1
+          custom={1}
+          variants={fadeUpVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-300"
+        >
+          Bookkeeping & Accountancy in Haven Lane
+        </motion.h1>
 
-          <motion.p
-            custom={2}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-            className="max-w-2xl mx-auto text-lg text-gray-400 mb-10"
-          >
-            An intelligent, adaptive framework for creating fluid digital
-            experiences that feel alive and respond to user interaction in
-            real-time.
-          </motion.p>
+        {/* Updated Subtitle Paragraph */}
+        <motion.p
+          custom={2}
+          variants={fadeUpVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed"
+        >
+          Streamline your finances with tailored accounting, VAT compliance, and
+          expert business advisory built to help small businesses thrive.
+        </motion.p>
 
-          <motion.div
-            custom={3}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
+        {/* Feature Pill Grid */}
+        <motion.div
+          custom={3}
+          variants={fadeUpVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2"
+        >
+          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
+            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
+              <Check size={18} strokeWidth={3} />
+            </div>
+            <span>Bookkeeping & VAT</span>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
+            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
+              <Check size={18} strokeWidth={3} />
+            </div>
+            <span>Company Year-End Accounts</span>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
+            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
+              <Check size={18} strokeWidth={3} />
+            </div>
+            <span>Self Assessment Tax</span>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
+            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
+              <Check size={18} strokeWidth={3} />
+            </div>
+            <span>Payroll & CIS Schemes</span>
+          </div>
+        </motion.div>
+
+        {/* CTA Button */}
+        <motion.div
+          custom={4}
+          variants={fadeUpVariants}
+          initial="hidden"
+          animate="visible"
+          className="pt-2"
+        >
+          <AnimatedBtn
+            hoverText="Book an Appointment Now"
+            icon={CalendarCheck}
+            bgColor="bg-[#278393]"
+            hoverBgColor="hover:bg-[#1f6875]"
+            textColor="text-white"
+            hoverTextColor="hover:text-white"
           >
-            <AnimatedBtn
-              hoverText="Book an Appointment Now"
-              icon={CalendarCheck}
-              bgColor="bg-[#278392]"
-              hoverBgColor="hover:bg-[#083761]"
-              textColor="text-white"
-              hoverTextColor="hover:text-gray-100"
-            >
-              Book an Appointment
-            </AnimatedBtn>
-          </motion.div>
-        </div>
+            Book an Appointment
+          </AnimatedBtn>
+        </motion.div>
+      </div>
+
+      {/* Right Form Column */}
+      <div className="relative z-10 basis-full lg:basis-1/2 max-w-lg w-full">
         <Form />
       </div>
-    </>
+    </section>
   );
 };
 
