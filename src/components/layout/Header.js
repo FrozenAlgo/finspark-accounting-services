@@ -56,7 +56,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="navigations hidden lg:flex items-center gap-6 xl:gap-8 text-[#083761] text-sm xl:text-base font-semibold">
+          <ul className="navigations hidden lg:flex items-center gap-6 lg:gap-10 xl:gap-8 text-[#083761] text-sm lg:text-lg md:tracking-wide font-semibold">
             <li>
               <Link
                 href="/"
@@ -83,6 +83,7 @@ export default function Header() {
                 <span>Services</span>
                 <ChevronDown
                   size={16}
+                  strokeWidth={3}
                   className="transition-transform duration-200 group-hover:rotate-180 text-[#278393]"
                 />
               </button>

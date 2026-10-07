@@ -13,11 +13,17 @@ import {
   CheckCircleIcon,
   MapPin,
   Send,
+  Users,
+  FileCheck,
+  TrendingUp,
+  ShieldCheck,
+  FileSpreadsheet,
 } from "lucide-react";
 import TestimonialCard from "@/components/testimonials/TestimonialCard";
 import AnimatedBtn from "@/components/ui/AnimatedBtn";
 import FAQ from "@/components/home/FAQ";
 import ServiceCard from "@/components/services/ServiceCard";
+import AmbientBackground from "@/components/ui/AmbientBackground";
 export const servicesData = [
   {
     id: "bookkeeping-vat",
@@ -28,7 +34,7 @@ export const servicesData = [
       "Cloud software setups (Xero, QuickBooks)",
       "Digital ledger management & MTD VAT filing",
     ],
-    iconName: "Calculator",
+    icon: "Calculator",
   },
   {
     id: "company-accounts-tax",
@@ -39,7 +45,7 @@ export const servicesData = [
       "Complete statutory financial statements",
       "Corporate tax planning & relief reviews",
     ],
-    iconName: "Building2",
+    icon: "Building2",
   },
   {
     id: "payroll",
@@ -50,7 +56,7 @@ export const servicesData = [
       "RTI submissions directly to HMRC",
       "Pension compliance & CIS subcontractor statements",
     ],
-    iconName: "Users",
+    icon: "Users",
   },
   {
     id: "self-assessment",
@@ -61,7 +67,7 @@ export const servicesData = [
       "Allowable expense optimization",
       "Rental income & dividend tax calculations",
     ],
-    iconName: "FileCheck",
+    icon: "FileCheck",
   },
   {
     id: "capital-gains",
@@ -72,7 +78,7 @@ export const servicesData = [
       "UK property disposal 60-day reporting",
       "Maximum relief & tax allowance utilization",
     ],
-    iconName: "TrendingUp",
+    icon: "TrendingUp",
   },
   {
     id: "secretarial",
@@ -83,7 +89,7 @@ export const servicesData = [
       "Annual Confirmation Statement filings",
       "Shareholder & director register maintenance",
     ],
-    iconName: "ShieldCheck",
+    icon: "ShieldCheck",
   },
   {
     id: "adhoc-mortgage",
@@ -94,7 +100,7 @@ export const servicesData = [
       "Accountant reference letters for mortgages",
       "Income verification & SA302 calculations",
     ],
-    iconName: "FileSpreadsheet",
+    icon: "FileSpreadsheet",
   },
 ];
 
@@ -142,37 +148,50 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 py-8">
+      <section className="grid grid-cols-1 md:grid-cols-4  gap-4 py-8">
         <div className="text-center">
-          <h6 className="text-[#278393] text-3xl font-bold ">10+ Years</h6>
-          <p className="text-sm font-semibold  text-gray-600">
+          <h6 className="text-[#278393] text-2xl  lg:text-3xl font-bold ">
+            10+ Years
+          </h6>
+          <p className="text-xs lg:text-sm font-semibold  text-gray-600">
             Established Practice
           </p>
         </div>
         <div className="text-center">
-          <h6 className="text-[#278393] text-3xl font-bold ">350+</h6>
-          <p className="text-sm font-semibold  text-gray-600">
+          <h6 className="text-[#278393] text-2xl  lg:text-3xl font-bold ">
+            350+
+          </h6>
+          <p className="text-xs lg:text-sm font-semibold  text-gray-600">
             Local Business Clients
           </p>
         </div>
         <div className="text-center">
-          <h6 className="text-[#278393] text-3xl font-bold ">100%</h6>
-          <p className="text-sm font-semibold  text-gray-600">
+          <h6 className="text-[#278393] text-2xl  lg:text-3xl font-bold ">
+            100%
+          </h6>
+          <p className="text-xs lg:text-sm font-semibold  text-gray-600">
             On-Time HMRC Submissions
           </p>
         </div>
         <div className="text-center">
-          <h6 className="text-[#278393] text-3xl font-bold ">&lt; 4 Hours</h6>
-          <p className="text-sm font-semibold  text-gray-600">
+          <h6 className="text-[#278393] text-2xl  lg:text-3xl font-bold ">
+            &lt; 4 Hours
+          </h6>
+          <p className="text-xs lg:text-sm font-semibold  text-gray-600">
             Avg Response Turnaround
           </p>
         </div>
       </section>
 
-      <section className="bg-gray-100 py-4">
-        <div className="text-sm text-center py-4">
+      <section className="relative overflow-hidden bg-slate-50/60 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <AmbientBackground
+          variant="light"
+          theme="minimal"
+          glowPosition="center"
+        />
+        <div className="text-sm text-center py-4 z-10">
           <h6 className="text-[#278393] font-bold">WHAT WE DO</h6>
-          <h1 className="text-5xl font-bold my-2">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#083761] my-3 tracking-tight">
             Comprehensive Accountancy Solutions
           </h1>
           <p className="text-gray-500">
@@ -271,7 +290,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <TestimonialCard />
       <section className="w-full bg-gray-100 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* ================= LEFT COLUMN: IMAGE WITH BACKDROP & BADGE ================= */}
@@ -360,7 +379,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <TestimonialCard />
 
       <FAQ />
 

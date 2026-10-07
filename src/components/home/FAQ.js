@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import AmbientBackground from "../ui/AmbientBackground";
 
 const FAQ_DATA = [
   {
@@ -45,7 +46,12 @@ export default function FAQ() {
   };
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 relative">
+      <AmbientBackground
+        variant="light"
+        theme="trust"
+        glowPosition="top-right"
+      />
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
         {/* ================= LEFT COLUMN: ACCORDION LIST ================= */}
         <div className="lg:col-span-7 space-y-6">

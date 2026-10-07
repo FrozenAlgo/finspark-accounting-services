@@ -180,7 +180,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex py-12 lg:py-20 flex-col lg:flex-row items-center justify-between px-4 sm:px-8 lg:px-12 overflow-hidden bg-[#083761]">
+    <section className="relative w-full min-h-screen lg:max-h-screen flex py-12 lg:py-10 flex-col lg:flex-row items-center md:justify-between px-4 sm:px-8 lg:px-12 overflow-hidden lg:justify-around gap-6 bg-[#083761]">
       {/* Background Interactive Particle Canvas */}
       <canvas
         ref={canvasRef}
@@ -188,7 +188,7 @@ const Hero = () => {
       />
 
       {/* Left Content Column */}
-      <div className="relative z-10 basis-full lg:basis-1/2 mb-12 lg:mb-0 space-y-6 max-w-2xl">
+      <div className="relative z-10 basis-full lg:basis-[60%]  mb-12 lg:mb-0 space-y-6 max-w-2xl">
         {/* Trust Badge */}
         <motion.div
           custom={0}
@@ -285,7 +285,7 @@ const Hero = () => {
       </div>
 
       {/* Right Form Column */}
-      <div className="relative z-10 basis-full lg:basis-1/2 max-w-lg w-full">
+      <div className="relative z-10 basis-full lg:basis-[40%] max-w-lg w-full">
         <Form />
       </div>
     </section>

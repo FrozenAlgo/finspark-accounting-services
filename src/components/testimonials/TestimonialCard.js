@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import AmbientBackground from "../ui/AmbientBackground";
 
 const TESTIMONIALS = [
   {
@@ -20,7 +21,7 @@ const TESTIMONIALS = [
     initials: "SH",
     avatarBg: "bg-[#1e293b]",
     quote:
-      '"We have worked with Penney’s Accountancy for over 7 years. Friendly, highly responsive, and zero jargon. They ensure we never miss a VAT or Companies House deadline."',
+      '"We have worked with Finspark for over 7 years. Friendly, highly responsive, and zero jargon. They ensure we never miss a VAT or Companies House deadline."',
   },
   {
     id: 3,
@@ -29,7 +30,7 @@ const TESTIMONIALS = [
     initials: "RT",
     avatarBg: "bg-[#083761]",
     quote:
-      '"Switching from our old accounting firm was completely painless. Penney’s handled the transition letter and took over our CIS and payroll with zero downtime for our tradespeople."',
+      '"Switching from our old accounting firm was completely painless. Finspark handled the transition letter and took over our CIS and payroll with zero downtime for our tradespeople."',
   },
   {
     id: 4,
@@ -47,7 +48,7 @@ const TESTIMONIALS = [
     initials: "JM",
     avatarBg: "bg-[#0f172a]",
     quote:
-      '"Instant response times, transparent monthly pricing, and top-tier tax planning. Penney\'s saved us thousands on our annual tax bill within the very first six months alone."',
+      '"Instant response times, transparent monthly pricing, and top-tier tax planning. Finspark saved us thousands on our annual tax bill within the very first six months alone."',
   },
 ];
 
@@ -56,7 +57,6 @@ export default function TestimonialsCard() {
   const [isPaused, setIsPaused] = useState(false);
   const [visibleCount, setVisibleCount] = useState(3);
 
-  // Dynamically calculate visible cards for smooth translation percentage
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
@@ -73,7 +73,7 @@ export default function TestimonialsCard() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const maxIndex = TESTIMONIALS.length - visibleCount;
+  const maxIndex = Math.max(0, TESTIMONIALS.length - visibleCount);
 
   const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
@@ -83,7 +83,6 @@ export default function TestimonialsCard() {
     setCurrentIndex((prev) => (prev === 0 ? maxIndex : prev - 1));
   };
 
-  // Autoplay functionality with pause-on-hover
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(() => {
@@ -94,8 +93,16 @@ export default function TestimonialsCard() {
   }, [isPaused, nextSlide]);
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div className="max-w-7xl mx-auto space-y-12">
+    <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative">
+      {/* Background Decorator */}
+      <AmbientBackground
+        variant="light"
+        theme="finance"
+        glowPosition="top-left"
+      />
+
+      {/* Main Content (Layered above ambient background) */}
+      <div className="relative z-10 max-w-7xl mx-auto space-y-12">
         {/* ================= HEADER ================= */}
         <div className="text-center space-y-3 max-w-3xl mx-auto">
           <span className="text-xs sm:text-[13px] font-bold tracking-widest text-[#278393] uppercase block">
@@ -105,8 +112,7 @@ export default function TestimonialsCard() {
             Trusted By Local Business Leaders
           </h2>
           <p className="text-slate-600 text-sm sm:text-base font-normal">
-            Here is what local directors and sole traders say about Penney's
-            Accountancy.
+            Here is what local directors and sole traders say about Finspark.
           </p>
         </div>
 
@@ -129,7 +135,7 @@ export default function TestimonialsCard() {
                   key={item.id}
                   className="w-full sm:w-1/2 lg:w-1/3 shrink-0 px-3"
                 >
-                  <div className="h-full bg-[#f8fafc] hover:bg-white border border-slate-100 hover:border-[#278393]/30 rounded-[28px] p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-2xl hover:shadow-[#278393]/10 transition-all duration-300 hover:-translate-y-1.5 group">
+                  <div className="h-full bg-white/85 backdrop-blur-md hover:bg-white border border-slate-200/80 hover:border-[#278393]/40 rounded-[28px] p-7 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-2xl hover:shadow-[#278393]/10 transition-all duration-300 hover:-translate-y-1.5 group">
                     {/* Upper Section */}
                     <div>
                       {/* Star Rating */}
@@ -155,14 +161,12 @@ export default function TestimonialsCard() {
                       <div className="w-full h-[1px] bg-slate-200/60 mb-6" />
 
                       <div className="flex items-center gap-3.5">
-                        {/* Avatar Initials Badge */}
                         <div
                           className={`w-11 h-11 rounded-full ${item.avatarBg} text-white font-bold flex items-center justify-center shrink-0 text-sm tracking-wide shadow-xs`}
                         >
                           {item.initials}
                         </div>
 
-                        {/* Author Info */}
                         <div className="min-w-0">
                           <h4 className="font-bold text-[#083761] text-base leading-tight truncate">
                             {item.name}
@@ -188,7 +192,7 @@ export default function TestimonialsCard() {
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
                   aria-label={`Go to slide ${idx + 1}`}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                     currentIndex === idx
                       ? "w-8 bg-[#278393]"
                       : "w-2.5 bg-slate-200 hover:bg-slate-300"
@@ -202,14 +206,14 @@ export default function TestimonialsCard() {
               <button
                 onClick={prevSlide}
                 aria-label="Previous testimonial"
-                className="w-10 h-10 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#278393] hover:text-white hover:border-[#278393] transition-all shadow-xs active:scale-95"
+                className="w-10 h-10 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#278393] hover:text-white hover:border-[#278393] transition-all shadow-xs active:scale-95 cursor-pointer"
               >
                 <ChevronLeft size={20} strokeWidth={2.2} />
               </button>
               <button
                 onClick={nextSlide}
                 aria-label="Next testimonial"
-                className="w-10 h-10 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#278393] hover:text-white hover:border-[#278393] transition-all shadow-xs active:scale-95"
+                className="w-10 h-10 rounded-full border border-slate-200 bg-white text-slate-700 flex items-center justify-center hover:bg-[#278393] hover:text-white hover:border-[#278393] transition-all shadow-xs active:scale-95 cursor-pointer"
               >
                 <ChevronRight size={20} strokeWidth={2.2} />
               </button>
