@@ -5,18 +5,11 @@ import { Calendar, MailPlus, Phone, Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedBtn from "../ui/AnimatedBtn";
+import { companyEmail, contactsNo, serviceLinks } from "@/lib/data";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
-
-  const serviceLinks = [
-    { name: "Bookkeeping & VAT", href: "#bookkeeping-vat" },
-    { name: "Year-End Accounts", href: "#year-end-accounts" },
-    { name: "Self Assessment", href: "#self-assessment" },
-    { name: "Payroll & CIS Schemes", href: "#payroll-cis" },
-    { name: "Outsourced FD Services", href: "#outsourced-fd font-normal" },
-  ];
 
   return (
     <header className="site-header   z-50 transition-all duration-300">
@@ -24,18 +17,18 @@ export default function Header() {
       <div className="top-bar bg-[#083761] text-white px-4 md:px-10 py-2.5 w-full text-xs sm:text-sm font-semibold border-b border-white/10">
         <div className="contact-info flex flex-wrap justify-center sm:justify-end items-center gap-3 sm:gap-5 max-w-7xl mx-auto">
           <a
-            href="tel:+447587486885"
+            href={contactsNo[0].href}
             className="flex gap-1.5 items-center px-3 sm:px-4 py-1 border border-white/30 rounded-full hover:bg-white/10 transition-colors"
           >
             <Phone size={13} className="text-[#278393]" />
-            <span>+44 7587 486885</span>
+            <span>{contactsNo[0].number}</span>
           </a>
           <a
-            href="mailto:info@finspark.co.uk"
+            href={companyEmail.href}
             className="flex gap-1.5 items-center px-3 sm:px-4 py-1 border border-white/30 rounded-full hover:bg-white/10 transition-colors"
           >
             <MailPlus size={13} className="text-[#278393]" />
-            <span>info@finspark.co.uk</span>
+            <span>{companyEmail.email}</span>
           </a>
         </div>
       </div>
@@ -49,7 +42,7 @@ export default function Header() {
               src="/logo.png"
               width={180}
               height={60}
-              alt="Finspark Limited Logo"
+              alt="Finspark Accounting and Business Services Limited Logo"
               className="w-32 sm:w-40 md:w-[170px] h-auto object-contain"
               priority
             />
@@ -69,7 +62,7 @@ export default function Header() {
 
             <li>
               <Link
-                href="#about"
+                href="/about"
                 className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
               >
                 About Us
@@ -79,14 +72,17 @@ export default function Header() {
 
             {/* Services Dropdown Menu */}
             <li className="relative group py-2">
-              <button className="flex items-center gap-1.5 hover:text-[#278393] transition-colors duration-200 focus:outline-none py-1">
+              <Link
+                className="flex items-center gap-1.5 hover:text-[#278393] transition-colors duration-200 focus:outline-none py-1"
+                href="/services"
+              >
                 <span>Services</span>
                 <ChevronDown
                   size={16}
                   strokeWidth={3}
                   className="transition-transform duration-200 group-hover:rotate-180 text-[#278393]"
                 />
-              </button>
+              </Link>
 
               {/* Hover Floating Dropdown */}
               <div className="absolute left-0 top-full pt-2 w-60 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 ease-in-out">
@@ -106,7 +102,7 @@ export default function Header() {
 
             <li>
               <Link
-                href="#testimonials"
+                href="/testimonials"
                 className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
               >
                 Testimonials
@@ -116,7 +112,7 @@ export default function Header() {
 
             <li>
               <Link
-                href="#contact"
+                href="/contact"
                 className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
               >
                 Contact

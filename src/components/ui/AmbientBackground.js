@@ -1,31 +1,10 @@
 "use client";
 
 import React from "react";
-import {
-  TrendingUp,
-  PieChart,
-  BarChart3,
-  ShieldCheck,
-  Calculator,
-  Coins,
-  CheckCircle2,
-  Building,
-  Users,
-} from "lucide-react";
+
+import { ICON_SETS } from "@/lib/data";
 
 // Preset icon sets for different section themes
-const ICON_SETS = {
-  finance: [TrendingUp, Calculator, ShieldCheck, BarChart3, Coins, PieChart],
-  trust: [
-    ShieldCheck,
-    CheckCircle2,
-    Building,
-    Users,
-    ShieldCheck,
-    CheckCircle2,
-  ],
-  minimal: [], // No floating icons, only soft glow & grid
-};
 
 export default function AmbientBackground({
   variant = "light", // "light" | "dark"

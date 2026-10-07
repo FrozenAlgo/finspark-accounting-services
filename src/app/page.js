@@ -24,126 +24,15 @@ import AnimatedBtn from "@/components/ui/AnimatedBtn";
 import FAQ from "@/components/home/FAQ";
 import ServiceCard from "@/components/services/ServiceCard";
 import AmbientBackground from "@/components/ui/AmbientBackground";
-export const servicesData = [
-  {
-    id: "bookkeeping-vat",
-    title: "Bookkeeping & VAT Returns",
-    description:
-      "Making Tax Digital (MTD) compliant workflows. We reconcile bank statements, log expenses, and submit flawless quarterly VAT returns on time.",
-    points: [
-      "Cloud software setups (Xero, QuickBooks)",
-      "Digital ledger management & MTD VAT filing",
-    ],
-    icon: "Calculator",
-  },
-  {
-    id: "company-accounts-tax",
-    title: "Company Accounts & Tax Return",
-    description:
-      "Statutory Companies House submissions and Corporation Tax (CT600) filings. We systematically identify allowances to reduce your tax burden.",
-    points: [
-      "Complete statutory financial statements",
-      "Corporate tax planning & relief reviews",
-    ],
-    icon: "Building2",
-  },
-  {
-    id: "payroll",
-    title: "Payroll & Auto-Enrolment",
-    description:
-      "Hassle-free PAYE payroll management, automated employee digital payslips, workplace pension compliance, and CIS monthly returns.",
-    points: [
-      "RTI submissions directly to HMRC",
-      "Pension compliance & CIS subcontractor statements",
-    ],
-    icon: "Users",
-  },
-  {
-    id: "self-assessment",
-    title: "Self Assessment Tax Returns",
-    description:
-      "Stress-free personal tax returns for sole traders, company directors, partners, and landlords. No last-minute January panic or penalty stress.",
-    points: [
-      "Allowable expense optimization",
-      "Rental income & dividend tax calculations",
-    ],
-    icon: "FileCheck",
-  },
-  {
-    id: "capital-gains",
-    title: "Capital Gains Tax Returns",
-    description:
-      "Expert guidance and timely reporting for property sales, crypto, shares, and asset disposals within strict HMRC 60-day filing deadlines.",
-    points: [
-      "UK property disposal 60-day reporting",
-      "Maximum relief & tax allowance utilization",
-    ],
-    icon: "TrendingUp",
-  },
-  {
-    id: "secretarial",
-    title: "Secretarial & Statutory Work",
-    description:
-      "Keep your company fully compliant with Companies House requirements. We handle annual filings, record management, and official registers.",
-    points: [
-      "Annual Confirmation Statement filings",
-      "Shareholder & director register maintenance",
-    ],
-    icon: "ShieldCheck",
-  },
-  {
-    id: "adhoc-mortgage",
-    title: "Adhoc Work & Mortgage Support",
-    description:
-      "Fast, certified accountant certificates and administrative verification for mortgage applications, tenancy checks, and official loan approvals.",
-    points: [
-      "Accountant reference letters for mortgages",
-      "Income verification & SA302 calculations",
-    ],
-    icon: "FileSpreadsheet",
-  },
-];
+import {
+  companyEmail,
+  companyName,
+  contactsNo,
+  servicesData,
+  stats,
+  steps,
+} from "@/lib/data";
 
-const steps = [
-  {
-    num: "1",
-    title: "Rapid & Accessible Communication",
-    desc: "Direct phone lines and dedicated email responses. We don’t leave your questions parked in queues.",
-  },
-  {
-    num: "2",
-    title: "Fixed, Transparent Monthly Fees",
-    desc: "Never receive a surprise bill for a quick telephone call. Everything agreed upfront.",
-  },
-  {
-    num: "3",
-    title: "Genuine Local Presence",
-    desc: "Conveniently situated in Tongham and Farnborough. Drop by our office anytime to discuss your accounts.",
-  },
-];
-
-const stats = [
-  {
-    value: "0",
-    title: "Unexplained Bills",
-    desc: "Every price is crystal clear from day one.",
-  },
-  {
-    value: "1:1",
-    title: "Dedicated Contact",
-    desc: "Know exactly who is managing your file.",
-  },
-  {
-    value: "100%",
-    title: "Digital or Paper",
-    desc: "We adapt to your preferred way of working.",
-  },
-  {
-    value: "Free",
-    title: "Initial Review",
-    desc: "Zero-commitment health-check on current setup.",
-  },
-];
 export default function Home() {
   return (
     <div>
@@ -222,8 +111,7 @@ export default function Home() {
               <p className="mt-4 text-slate-600 text-base leading-relaxed max-w-xl font-normal">
                 Most business owners tell us their previous accountant felt
                 distant, speaking in confusing acronyms and sending unexpected
-                invoices. At Finspark Accounting and Business Services Limited,
-                we redefine that experience.
+                invoices. At {companyName}, we redefine that experience.
               </p>
             </div>
 
@@ -435,10 +323,10 @@ export default function Home() {
                       Phone Support:
                     </h4>
                     <a
-                      href="tel:+447587486885"
+                      href={contactsNo[0].href}
                       className="text-xs sm:text-sm text-slate-300 hover:text-white transition-colors"
                     >
-                      +44 7587 486885
+                      {contactsNo[0].number}
                     </a>
                   </div>
                 </div>
@@ -453,10 +341,10 @@ export default function Home() {
                       Email Address:
                     </h4>
                     <a
-                      href="mailto:info@finspark.co.uk"
+                      href={companyEmail.href}
                       className="text-xs sm:text-sm text-slate-300 hover:text-white transition-colors"
                     >
-                      info@finspark.co.uk
+                      {companyEmail.email}
                     </a>
                   </div>
                 </div>
@@ -466,7 +354,7 @@ export default function Home() {
             {/* Footer Note */}
             <div className="pt-8 mt-8 border-t border-white/10 relative z-10">
               <p className="text-xs text-slate-400 font-normal">
-                Finspark Accounting and Business Services Limited.
+                {companyName}.
               </p>
             </div>
           </div>

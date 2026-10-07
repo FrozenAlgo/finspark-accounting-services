@@ -3,39 +3,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import AmbientBackground from "../ui/AmbientBackground";
-
-const FAQ_DATA = [
-  {
-    id: 1,
-    question: "Fast, reliable communication",
-    answer:
-      "When you contact us, you'll get a prompt response and clear answers. No chasing, no being passed around, just straightforward support when you need it.",
-  },
-  {
-    id: 2,
-    question: "One dedicated team that knows your business",
-    answer:
-      "You'll work directly with experienced accountants who understand your specific industry, goals, and day-to-day operations inside and out.",
-  },
-  {
-    id: 3,
-    question: "Clear advice, without the jargon",
-    answer:
-      "We speak plain English. No complicated accounting terminology or hidden complexities—just simple, actionable insights to grow your business.",
-  },
-  {
-    id: 4,
-    question: "Built around small businesses",
-    answer:
-      "Our accounting and advisory services are tailored specifically for sole traders, SMEs, and ambitious entrepreneurs looking for flexible support.",
-  },
-  {
-    id: 5,
-    question: "Local, personal, and accountable",
-    answer:
-      "Based nearby, we offer both virtual convenience and face-to-face meetings, ensuring you always have a trusted partner in your corner.",
-  },
-];
+import { companyName, FAQ_DATA } from "@/lib/data";
 
 export default function FAQ() {
   // Set default open item (1 matches the design)
@@ -58,10 +26,10 @@ export default function FAQ() {
           {/* Section Header */}
           <div>
             <span className="text-xs sm:text-[13px] font-bold tracking-widest text-[#278393] uppercase block mb-3">
-              WHY CHOOSE Finspark Accounting and Business Services Limited
+              WHY CHOOSE {companyName}
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#083761] leading-[1.18] tracking-tight">
-              Why Choose Finspark Accounting and Business Services Limited ?
+              Why Choose {companyName} ?
             </h2>
           </div>
 

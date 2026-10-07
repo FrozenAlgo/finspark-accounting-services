@@ -3,54 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import AmbientBackground from "../ui/AmbientBackground";
-
-const TESTIMONIALS = [
-  {
-    id: 1,
-    name: "Mark Davies",
-    role: "Director, Precision Engineering Ltd",
-    initials: "MD",
-    avatarBg: "bg-[#2563eb]",
-    quote:
-      '"Callum and the team have transformed our bookkeeping. In the past, accounts were a huge source of anxiety. Now, everything runs seamlessly on Xero and questions are answered within hours."',
-  },
-  {
-    id: 2,
-    name: "Sarah Hughes",
-    role: "Founder, Surrey Digital Agency",
-    initials: "SH",
-    avatarBg: "bg-[#1e293b]",
-    quote:
-      '"We have worked with Finspark for over 7 years. Friendly, highly responsive, and zero jargon. They ensure we never miss a VAT or Companies House deadline."',
-  },
-  {
-    id: 3,
-    name: "Richard Taylor",
-    role: "Commercial Contractor, Hampshire",
-    initials: "RT",
-    avatarBg: "bg-[#083761]",
-    quote:
-      '"Switching from our old accounting firm was completely painless. Finspark handled the transition letter and took over our CIS and payroll with zero downtime for our tradespeople."',
-  },
-  {
-    id: 4,
-    name: "Elena Rostova",
-    role: "Managing Director, Apex Retail Group",
-    initials: "ER",
-    avatarBg: "bg-[#278393]",
-    quote:
-      '"Their strategic cash flow forecasting gave us the confidence to expand. They aren\'t just bookkeepers—they are genuinely an essential, proactive extension of our senior team."',
-  },
-  {
-    id: 5,
-    name: "James Miller",
-    role: "Owner, Miller & Sons Logistics",
-    initials: "JM",
-    avatarBg: "bg-[#0f172a]",
-    quote:
-      '"Instant response times, transparent monthly pricing, and top-tier tax planning. Finspark saved us thousands on our annual tax bill within the very first six months alone."',
-  },
-];
+import { TESTIMONIALS } from "@/lib/data";
 
 export default function TestimonialsCard() {
   const [currentIndex, setCurrentIndex] = useState(0);

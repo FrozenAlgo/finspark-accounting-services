@@ -1,5 +1,6 @@
 "use client";
 
+import { companyName, contactsNo, serviceLinks } from "@/lib/data";
 import { MessageCircleCheck, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,9 +26,9 @@ export default function Footer() {
             </div>
 
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-sm">
-              Finspark Accounting and Business Services Limited provides bespoke
-              accounting, statutory compliance, tax planning, and strategic
-              advisory services to small and medium enterprises.
+              {companyName} provides bespoke accounting, statutory compliance,
+              tax planning, and strategic advisory services to small and medium
+              enterprises.
             </p>
 
             <p className="text-xs text-slate-400 font-medium">
@@ -41,46 +42,16 @@ export default function Footer() {
               Core Services
             </h3>
             <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
-              <li>
-                <Link
-                  href="#services"
-                  className="hover:text-white transition-colors"
-                >
-                  Bookkeeping & VAT
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#services"
-                  className="hover:text-white transition-colors"
-                >
-                  Year-End Accounts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#services"
-                  className="hover:text-white transition-colors"
-                >
-                  Self Assessment
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#services"
-                  className="hover:text-white transition-colors"
-                >
-                  Payroll & CIS Schemes
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#services"
-                  className="hover:text-white transition-colors"
-                >
-                  Outsourced FD Services
-                </Link>
-              </li>
+              {serviceLinks.map((service, idx) => (
+                <li key={idx}>
+                  <Link
+                    href={service.href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -96,19 +67,19 @@ export default function Footer() {
               <p className="pt-2 font-semibold text-white flex items-center gap-1">
                 <Phone size={16} />
                 <a
-                  href="tel:+447587486885"
+                  href={contactsNo[0].href}
                   className="hover:text-[#278393] transition-colors"
                 >
-                  +44 7587 486885
+                  {contactsNo[0].number}
                 </a>
               </p>
               <p className="pt-2 font-semibold text-white  flex items-center gap-1">
                 <MessageCircleCheck size={16} />
                 <a
-                  href="tel:+447884003546"
+                  href={contactsNo[1].href}
                   className="hover:text-[#278393] transition-colors"
                 >
-                  +44 7884 003546
+                  {contactsNo[1].number}
                 </a>
               </p>
             </div>
@@ -162,12 +133,6 @@ export default function Footer() {
             </Link>
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms of Business
-            </Link>
-            <Link
-              href="/cookies"
-              className="hover:text-white transition-colors"
-            >
-              Cookie Notice
             </Link>
           </div>
         </div>
