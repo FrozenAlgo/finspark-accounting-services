@@ -222,7 +222,8 @@ export default function Home() {
               <p className="mt-4 text-slate-600 text-base leading-relaxed max-w-xl font-normal">
                 Most business owners tell us their previous accountant felt
                 distant, speaking in confusing acronyms and sending unexpected
-                invoices. At Penney’s Accountancy, we redefine that experience.
+                invoices. At Finspark Accounting and Business Services Limited,
+                we redefine that experience.
               </p>
             </div>
 
@@ -418,7 +419,8 @@ export default function Home() {
                       Office Location:
                     </h4>
                     <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                      4 The Old Coach House, Tongham, Farnham, Surrey, GU10 1DW
+                      7 Haven Lane, Ealing, London Borough of Ealing, Greater
+                      London, W5 2HZ, England, United Kingdom
                     </p>
                   </div>
                 </div>
@@ -464,7 +466,7 @@ export default function Home() {
             {/* Footer Note */}
             <div className="pt-8 mt-8 border-t border-white/10 relative z-10">
               <p className="text-xs text-slate-400 font-normal">
-                Finspark Limited is an Acumist Group practice.
+                Finspark Accounting and Business Services Limited.
               </p>
             </div>
           </div>

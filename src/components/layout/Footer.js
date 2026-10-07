@@ -1,5 +1,6 @@
 "use client";
 
+import { MessageCircleCheck, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -24,9 +25,9 @@ export default function Footer() {
             </div>
 
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-sm">
-              Finspark Limited provides bespoke accounting, statutory
-              compliance, tax planning, and strategic advisory services to small
-              and medium enterprises.
+              Finspark Accounting and Business Services Limited provides bespoke
+              accounting, statutory compliance, tax planning, and strategic
+              advisory services to small and medium enterprises.
             </p>
 
             <p className="text-xs text-slate-400 font-medium">
@@ -86,14 +87,14 @@ export default function Footer() {
           {/* COLUMN 3: OFFICE LOCATION (Col 2) */}
           <div className="lg:col-span-2 space-y-4">
             <h3 className="text-xs sm:text-sm font-extrabold tracking-widest text-[#278393] uppercase">
-              Tongham Office
+              London Office
             </h3>
             <div className="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
-              <p>4 The Old Coach House</p>
-              <p>Tongham, Farnham</p>
-              <p>Surrey, GU10 1DW</p>
-              <p className="pt-2 font-semibold text-white">
-                T:{" "}
+              <p>7 Haven Lane</p>
+              <p>Ealing, London</p>
+              <p>W5 2HZ, United Kingdom</p>
+              <p className="pt-2 font-semibold text-white flex items-center gap-1">
+                <Phone size={16} />
                 <a
                   href="tel:+447587486885"
                   className="hover:text-[#278393] transition-colors"
@@ -101,21 +102,30 @@ export default function Footer() {
                   +44 7587 486885
                 </a>
               </p>
+              <p className="pt-2 font-semibold text-white  flex items-center gap-1">
+                <MessageCircleCheck size={16} />
+                <a
+                  href="tel:+447884003546"
+                  className="hover:text-[#278393] transition-colors"
+                >
+                  +44 7884 003546
+                </a>
+              </p>
             </div>
           </div>
 
-          {/* COLUMN 4: ACUMIST GROUP (Col 3) */}
+          {/* COLUMN 4: Office timing  (Col 3) */}
           <div className="lg:col-span-3 space-y-4">
             <h3 className="text-xs sm:text-sm font-extrabold tracking-widest text-[#278393] uppercase">
-              Acumist Group
+              Office Hours
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Finspark Limited operates as a proud part of Acumist, delivering
-              robust financial governance and cutting-edge software support.
+              Our team is available Monday through Friday to assist with your
+              accounting, tax, and business support needs.
             </p>
             <div className="pt-1">
               <span className="inline-block text-xs font-bold text-[#278393] bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                By Acumist Certified
+                Mon – Fri: 9:00 AM – 5:00 PM
               </span>
             </div>
           </div>
@@ -125,7 +135,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           {/* Copyright */}
           <div>
-            © {new Date().getFullYear()} Finspark Limited. All rights reserved.
+            © {new Date().getFullYear()} Finspark Accounting and Business
+            Services Limited. All rights reserved.
           </div>
 
           {/* Agency Credit */}

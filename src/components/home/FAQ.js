@@ -58,10 +58,10 @@ export default function FAQ() {
           {/* Section Header */}
           <div>
             <span className="text-xs sm:text-[13px] font-bold tracking-widest text-[#278393] uppercase block mb-3">
-              WHY CHOOSE FINSPARK
+              WHY CHOOSE Finspark Accounting and Business Services Limited
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#083761] leading-[1.18] tracking-tight">
-              Why Choose Finspark?
+              Why Choose Finspark Accounting and Business Services Limited ?
             </h2>
           </div>
 

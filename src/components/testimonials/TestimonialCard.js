@@ -112,7 +112,8 @@ export default function TestimonialsCard() {
             Trusted By Local Business Leaders
           </h2>
           <p className="text-slate-600 text-sm sm:text-base font-normal">
-            Here is what local directors and sole traders say about Finspark.
+            Here is what local directors and sole traders say about Finspark
+            Accounting and Business Services Limited.
           </p>
         </div>
 
