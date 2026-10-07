@@ -164,7 +164,7 @@ export default function Header() {
 
               <li>
                 <Link
-                  href="#about"
+                  href="/about"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
                 >
@@ -207,7 +207,7 @@ export default function Header() {
 
               <li>
                 <Link
-                  href="#testimonials"
+                  href="/testimonials"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
                 >
@@ -218,7 +218,7 @@ export default function Header() {
 
               <li>
                 <Link
-                  href="#contact"
+                  href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
                 >

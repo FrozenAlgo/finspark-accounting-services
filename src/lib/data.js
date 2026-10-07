@@ -101,13 +101,21 @@ export const serviceLinks = [
 export const companyName = "Finspark Accounting and Business Services Limited";
 export const companyEmail = {
   email: "info@finsparkaccounting.co.uk",
-  href: "mailto:info@finsparkaccounting.co.u",
+  href: "mailto:info@finsparkaccounting.co.uk",
 };
 
 export const contactsNo = [
   { number: "+44 7587 486885", href: "tel:+447587486885" },
   { number: "+44 7884 003546", href: "tel:+447884003546" },
 ];
+export const companyInfo = {
+  legalName: "Finspark Accounting and Business Services Limited",
+  address: "7 Haven Lane, London, England",
+  phone: "+44 7587 486885",
+  whatsapp: "+44 7884 003546",
+  email: "info@finsparkaccounting.co.uk",
+  hours: "Mon - Fri: 9:00 AM - 5:00 PM",
+};
 export const steps = [
   {
     num: "1",
