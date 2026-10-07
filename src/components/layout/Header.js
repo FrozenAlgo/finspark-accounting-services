@@ -39,17 +39,17 @@ export default function Header() {
           {/* Clickable Logo */}
           <Link href="/" className="logo shrink-0 block">
             <Image
-              src="/logo.png"
-              width={180}
+              src="/logo1.png"
+              width={120}
               height={60}
               alt="Finspark Accounting and Business Services Limited Logo"
-              className="w-32 sm:w-40 md:w-[170px] h-auto object-contain"
+              className="w-32 sm:w-40 md:w-[120px] h-auto object-contain"
               priority
             />
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="navigations hidden lg:flex items-center gap-6 lg:gap-10 xl:gap-8 text-[#083761] text-sm lg:text-lg md:tracking-wide font-semibold">
+          <ul className="navigations hidden lg:flex items-center gap-6 lg:gap-15 text-[#083761] text-sm lg:text-lg md:tracking-wide font-semibold">
             <li>
               <Link
                 href="/"
