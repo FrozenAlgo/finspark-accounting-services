@@ -21,6 +21,7 @@ export const servicesData = [
       "Digital ledger management & MTD VAT filing",
     ],
     icon: "Calculator",
+    href: "/services#bookkeeping-vat",
   },
   {
     id: "company-accounts-tax",
@@ -32,6 +33,7 @@ export const servicesData = [
       "Corporate tax planning & relief reviews",
     ],
     icon: "Building2",
+    href: "/services#company-accounts-tax",
   },
   {
     id: "payroll",
@@ -43,6 +45,7 @@ export const servicesData = [
       "Pension compliance & CIS subcontractor statements",
     ],
     icon: "Users",
+    href: "/services#self-assessment",
   },
   {
     id: "self-assessment",
@@ -54,6 +57,7 @@ export const servicesData = [
       "Rental income & dividend tax calculations",
     ],
     icon: "FileCheck",
+    href: "/services#payroll",
   },
   {
     id: "capital-gains",
@@ -65,6 +69,7 @@ export const servicesData = [
       "Maximum relief & tax allowance utilization",
     ],
     icon: "TrendingUp",
+    href: "/services#capital-gains",
   },
   {
     id: "secretarial",
@@ -76,6 +81,7 @@ export const servicesData = [
       "Shareholder & director register maintenance",
     ],
     icon: "ShieldCheck",
+    href: "/services#secretarial",
   },
   {
     id: "adhoc-mortgage",
@@ -87,6 +93,7 @@ export const servicesData = [
       "Income verification & SA302 calculations",
     ],
     icon: "FileSpreadsheet",
+    href: "/services#adhoc-mortgage",
   },
 ];
 export const serviceLinks = [
@@ -98,6 +105,7 @@ export const serviceLinks = [
   { name: "Secretarial Work", href: "/services#secretarial" },
   { name: "Adhoc & Mortgage Support", href: "/services#adhoc-mortgage" },
 ];
+
 export const companyName = "Finspark Accounting and Business Services Limited";
 export const companyEmail = {
   email: "info@finsparkaccounting.co.uk",

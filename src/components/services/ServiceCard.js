@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   FileSpreadsheet,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const ICON_MAP = {
   Calculator,
@@ -23,8 +24,12 @@ const ICON_MAP = {
 
 export default function ServiceCard({ service }) {
   const Icon = ICON_MAP[service.icon || service.iconName] || Calculator;
+  const router = useRouter();
   return (
-    <div className="bg-white/80 backdrop-blur-md border border-slate-200/80 hover:border-[#278393]/40 rounded-2xl p-6 sm:p-7 shadow-xs hover:shadow-xl hover:shadow-[#278393]/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-pointer">
+    <div
+      className="bg-white/80 backdrop-blur-md border border-slate-200/80 hover:border-[#278393]/40 rounded-2xl p-6 sm:p-7 shadow-xs hover:shadow-xl hover:shadow-[#278393]/10 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between group cursor-pointer"
+      onClick={() => service.href && router.push(service.href)}
+    >
       {/* Upper Content */}
       <div>
         {/* Icon Container */}
