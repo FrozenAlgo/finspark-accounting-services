@@ -26,6 +26,7 @@ import ServiceCard from "@/components/services/ServiceCard";
 import AmbientBackground from "@/components/ui/AmbientBackground";
 import {
   companyEmail,
+  companyInfo,
   companyName,
   contactsNo,
   servicesData,
@@ -111,7 +112,8 @@ export default function Home() {
               <p className="mt-4 text-slate-600 text-base leading-relaxed max-w-xl font-normal">
                 Most business owners tell us their previous accountant felt
                 distant, speaking in confusing acronyms and sending unexpected
-                invoices. At {companyName}, we redefine that experience.
+                invoices. At {companyInfo.legalName}, we redefine that
+                experience.
               </p>
             </div>
 
