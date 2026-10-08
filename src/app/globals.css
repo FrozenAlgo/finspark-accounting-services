@@ -1,26 +1,19 @@
 @import "tailwindcss";
 
-:root {
-  /* --background: #ffffff;
-  --foreground: #171717; */
-}
-
 @theme inline {
- 
+  --color-navy: #083761;
+  --color-navy-hover: #062a4a;
+  
+  --color-teal: #278393;
+  --color-teal-hover: #1f6875;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* --background: #0a0a0a;
-    --foreground: #ededed; */
-  }
+:root {
+  /* You can still keep standard CSS variables if needed elsewhere */
+  --navy: #083761;
+  --teal: #278393;
 }
 
-body {
-  /* background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif; */
-}
 @keyframes floatSlow {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);

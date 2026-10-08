@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="site-header   z-50 transition-all duration-300">
       {/* Top Contact Bar */}
-      <div className="top-bar bg-[#083761] text-white px-4 md:px-10 py-2.5 w-full text-xs sm:text-sm font-semibold border-b border-white/10">
+      <div className="top-bar bg-[#083761] text-white px-4 md:px-10 py-2.5 w-full text-xs sm:text-sm font-semibold border-b border-white/5">
         <div className="contact-info flex flex-wrap justify-center sm:justify-end items-center gap-3 sm:gap-5 max-w-7xl mx-auto">
           <a
             href={contactsNo[0].href}
@@ -34,8 +34,8 @@ export default function Header() {
       </div>
 
       {/* Main Navigation Bar */}
-      <nav className="bg-[#083761] pb-2.5 md:pb-3.5 pt-2">
-        <div className="main-nav flex justify-between items-center px-4 sm:px-8 lg:px-10 bg-white mx-3 sm:mx-6 md:mx-12 rounded-2xl shadow-lg py-2.5 md:py-3 border border-slate-100">
+      <nav className="bg-[#083761] pb-2.5 md:pb-3.5 ">
+        <div className="main-nav flex justify-between items-center px-4 sm:px-8 lg:px-10 bg-white mx-3 sm:mx-6 md:mx-12 rounded-2xl shadow-lg py-2.5 md:py-1 border border-slate-100">
           {/* Clickable Logo */}
           <Link href="/" className="logo shrink-0 block">
             <Image

@@ -13,6 +13,7 @@ import {
 export const servicesData = [
   {
     id: "bookkeeping-vat",
+    slug: "bookkeeping-vat",
     title: "Bookkeeping & VAT Returns",
     description:
       "Making Tax Digital (MTD) compliant workflows. We reconcile bank statements, log expenses, and submit flawless quarterly VAT returns on time.",
@@ -21,10 +22,11 @@ export const servicesData = [
       "Digital ledger management & MTD VAT filing",
     ],
     icon: "Calculator",
-    href: "/services#bookkeeping-vat",
+    href: "/services/bookkeeping-vat",
   },
   {
     id: "company-accounts-tax",
+    slug: "company-accounts-tax",
     title: "Company Accounts & Tax Return",
     description:
       "Statutory Companies House submissions and Corporation Tax (CT600) filings. We systematically identify allowances to reduce your tax burden.",
@@ -33,10 +35,11 @@ export const servicesData = [
       "Corporate tax planning & relief reviews",
     ],
     icon: "Building2",
-    href: "/services#company-accounts-tax",
+    href: "/services/company-accounts-tax",
   },
   {
     id: "payroll",
+    slug: "payroll",
     title: "Payroll & Auto-Enrolment",
     description:
       "Hassle-free PAYE payroll management, automated employee digital payslips, workplace pension compliance, and CIS monthly returns.",
@@ -45,10 +48,11 @@ export const servicesData = [
       "Pension compliance & CIS subcontractor statements",
     ],
     icon: "Users",
-    href: "/services#payroll",
+    href: "/services/payroll",
   },
   {
     id: "self-assessment",
+    slug: "self-assessment",
     title: "Self Assessment Tax Returns",
     description:
       "Stress-free personal tax returns for sole traders, company directors, partners, and landlords. No last-minute January panic or penalty stress.",
@@ -57,10 +61,11 @@ export const servicesData = [
       "Rental income & dividend tax calculations",
     ],
     icon: "FileCheck",
-    href: "/services#self-assessment",
+    href: "/services/self-assessment",
   },
   {
     id: "capital-gains",
+    slug: "capital-gains",
     title: "Capital Gains Tax Returns",
     description:
       "Expert guidance and timely reporting for property sales, crypto, shares, and asset disposals within strict HMRC 60-day filing deadlines.",
@@ -69,10 +74,11 @@ export const servicesData = [
       "Maximum relief & tax allowance utilization",
     ],
     icon: "TrendingUp",
-    href: "/services#capital-gains",
+    href: "/services/capital-gains",
   },
   {
     id: "secretarial",
+    slug: "secretarial",
     title: "Secretarial & Statutory Work",
     description:
       "Keep your company fully compliant with Companies House requirements. We handle annual filings, record management, and official registers.",
@@ -81,10 +87,11 @@ export const servicesData = [
       "Shareholder & director register maintenance",
     ],
     icon: "ShieldCheck",
-    href: "/services#secretarial",
+    href: "/services/secretarial",
   },
   {
     id: "adhoc-mortgage",
+    slug: "adhoc-mortgage",
     title: "Adhoc Work & Mortgage Support",
     description:
       "Fast, certified accountant certificates and administrative verification for mortgage applications, tenancy checks, and official loan approvals.",
@@ -93,17 +100,17 @@ export const servicesData = [
       "Income verification & SA302 calculations",
     ],
     icon: "FileSpreadsheet",
-    href: "/services#adhoc-mortgage",
+    href: "/services/adhoc-mortgage",
   },
 ];
 export const serviceLinks = [
-  { name: "Bookkeeping & VAT", href: "/services#bookkeeping-vat" },
-  { name: "Company Accounts & Tax", href: "/services#company-accounts-tax" },
-  { name: "Self Assessment", href: "/services#self-assessment" },
-  { name: "Payroll", href: "/services#payroll" },
-  { name: "Capital Gains", href: "/services#capital-gains" },
-  { name: "Secretarial Work", href: "/services#secretarial" },
-  { name: "Adhoc & Mortgage Support", href: "/services#adhoc-mortgage" },
+  { name: "Bookkeeping & VAT", href: "/services/bookkeeping-vat" },
+  { name: "Company Accounts & Tax", href: "/services/company-accounts-tax" },
+  { name: "Self Assessment", href: "/services/self-assessment" },
+  { name: "Payroll", href: "/services/payroll" },
+  { name: "Capital Gains", href: "/services/capital-gains" },
+  { name: "Secretarial Work", href: "/services/secretarial" },
+  { name: "Adhoc & Mortgage Support", href: "/services/adhoc-mortgage" },
 ];
 
 export const companyName = "Finspark Accounting and Business Services Limited";
