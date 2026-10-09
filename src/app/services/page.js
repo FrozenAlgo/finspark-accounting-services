@@ -5,7 +5,7 @@ import TestimonialsCard from "@/components/testimonials/TestimonialCard";
 import Banner from "@/components/ui/Banner";
 import ContactForm from "@/components/ui/ContactForm";
 import TargetAudience from "@/components/ui/TargetAudience";
-import { servicesData } from "@/lib/data";
+import { companyName, contactsNo, servicesData } from "@/lib/data";
 import { CalendarCheck, Phone } from "lucide-react";
 const buttons = [
   {
@@ -18,9 +18,9 @@ const buttons = [
   },
   {
     show: true,
-    text: "Call 020 8123 4567",
+    text: `Call ${contactsNo[0].number}`,
     hoverText: "Speak with an Expert",
-    href: "tel:02081234567", // Telephone link
+    href: `${contactsNo[0].href}`, // Telephone link
     icon: Phone,
     variant: "secondary",
   },
@@ -41,7 +41,7 @@ export default function ServicesPage() {
         para="At Finspark Accounting, we keep your bookkeeping organized, up to date for reporting, and HMRC ready, with a responsive team on hand whenever you need support."
         buttons={buttons}
         pills={pills}
-        imageSrc="/images/faq.jpg"
+        imageSrc="/images/Faq.jpg"
         showSubHeading={true}
         showButtons={true}
         showPills={true}
@@ -58,9 +58,8 @@ export default function ServicesPage() {
             <p className="pt-2">
               Keeping your bookkeeping up to date is essential for understanding
               your finances, meeting HMRC requirements, and avoiding unnecessary
-              stress. At Penney's Accountancy, we provide reliable bookkeeping
-              services that give you clarity, confidence, and control over your
-              numbers.
+              stress. At {companyName}, we provide reliable bookkeeping services
+              that give you clarity, confidence, and control over your numbers.
             </p>
             <p className="pb-2">
               We don't just record transactions and disappear. Our team is
