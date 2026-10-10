@@ -255,6 +255,50 @@ export const servicesData = [
         },
       ],
     },
+    workflowSection: {
+      tag: "DIGITAL CLOUD ECOSYSTEM",
+      heading: "How we make daily bookkeeping effortless for you",
+      subHeading:
+        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+      steps: [
+        {
+          num: "1",
+          title: "Snap & Upload",
+          description:
+            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+        },
+        {
+          num: "2",
+          title: "Reconcile & Validate",
+          description:
+            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+        },
+        {
+          num: "3",
+          title: "Review & Relax",
+          description:
+            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+        },
+      ],
+      platforms: [
+        {
+          title: "Xero Accounting",
+          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+        },
+        {
+          title: "QuickBooks",
+          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+        },
+        {
+          title: "Dext & Hubdoc",
+          desc: "Instant optical receipt capture and automatic filing.",
+        },
+        {
+          title: "Sage & Bespoke",
+          desc: "Custom legacy conversions and spreadsheet transfers.",
+        },
+      ],
+    },
   },
 
   {
@@ -339,6 +383,50 @@ export const servicesData = [
         },
       ],
     },
+    workflowSection: {
+      tag: "DIGITAL CLOUD ECOSYSTEM",
+      heading: "How we make daily bookkeeping effortless for you",
+      subHeading:
+        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+      steps: [
+        {
+          num: "1",
+          title: "Snap & Upload",
+          description:
+            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+        },
+        {
+          num: "2",
+          title: "Reconcile & Validate",
+          description:
+            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+        },
+        {
+          num: "3",
+          title: "Review & Relax",
+          description:
+            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+        },
+      ],
+      platforms: [
+        {
+          title: "Xero Accounting",
+          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+        },
+        {
+          title: "QuickBooks",
+          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+        },
+        {
+          title: "Dext & Hubdoc",
+          desc: "Instant optical receipt capture and automatic filing.",
+        },
+        {
+          title: "Sage & Bespoke",
+          desc: "Custom legacy conversions and spreadsheet transfers.",
+        },
+      ],
+    },
   },
 
   {
@@ -416,6 +504,50 @@ export const servicesData = [
         },
       ],
     },
+    workflowSection: {
+      tag: "DIGITAL CLOUD ECOSYSTEM",
+      heading: "How we make daily bookkeeping effortless for you",
+      subHeading:
+        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+      steps: [
+        {
+          num: "1",
+          title: "Snap & Upload",
+          description:
+            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+        },
+        {
+          num: "2",
+          title: "Reconcile & Validate",
+          description:
+            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+        },
+        {
+          num: "3",
+          title: "Review & Relax",
+          description:
+            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+        },
+      ],
+      platforms: [
+        {
+          title: "Xero Accounting",
+          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+        },
+        {
+          title: "QuickBooks",
+          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+        },
+        {
+          title: "Dext & Hubdoc",
+          desc: "Instant optical receipt capture and automatic filing.",
+        },
+        {
+          title: "Sage & Bespoke",
+          desc: "Custom legacy conversions and spreadsheet transfers.",
+        },
+      ],
+    },
   },
 
   {
@@ -486,6 +618,50 @@ export const servicesData = [
         },
       ],
     },
+    workflowSection: {
+      tag: "DIGITAL CLOUD ECOSYSTEM",
+      heading: "How we make daily bookkeeping effortless for you",
+      subHeading:
+        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+      steps: [
+        {
+          num: "1",
+          title: "Snap & Upload",
+          description:
+            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+        },
+        {
+          num: "2",
+          title: "Reconcile & Validate",
+          description:
+            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+        },
+        {
+          num: "3",
+          title: "Review & Relax",
+          description:
+            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+        },
+      ],
+      platforms: [
+        {
+          title: "Xero Accounting",
+          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+        },
+        {
+          title: "QuickBooks",
+          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+        },
+        {
+          title: "Dext & Hubdoc",
+          desc: "Instant optical receipt capture and automatic filing.",
+        },
+        {
+          title: "Sage & Bespoke",
+          desc: "Custom legacy conversions and spreadsheet transfers.",
+        },
+      ],
+    },
   },
 
   {
@@ -545,6 +721,50 @@ export const servicesData = [
             "Ensure your business never gets struck off due to missed statutory filings.",
           tag: "Legal Security",
           icon: "Building2",
+        },
+      ],
+    },
+    workflowSection: {
+      tag: "DIGITAL CLOUD ECOSYSTEM",
+      heading: "How we make daily bookkeeping effortless for you",
+      subHeading:
+        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+      steps: [
+        {
+          num: "1",
+          title: "Snap & Upload",
+          description:
+            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+        },
+        {
+          num: "2",
+          title: "Reconcile & Validate",
+          description:
+            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+        },
+        {
+          num: "3",
+          title: "Review & Relax",
+          description:
+            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+        },
+      ],
+      platforms: [
+        {
+          title: "Xero Accounting",
+          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+        },
+        {
+          title: "QuickBooks",
+          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+        },
+        {
+          title: "Dext & Hubdoc",
+          desc: "Instant optical receipt capture and automatic filing.",
+        },
+        {
+          title: "Sage & Bespoke",
+          desc: "Custom legacy conversions and spreadsheet transfers.",
         },
       ],
     },
@@ -609,6 +829,50 @@ export const servicesData = [
             "Prove your historical earnings and future dividend projections to lenders.",
           tag: "Fast Track",
           icon: "User",
+        },
+      ],
+    },
+    workflowSection: {
+      tag: "DIGITAL CLOUD ECOSYSTEM",
+      heading: "How we make daily bookkeeping effortless for you",
+      subHeading:
+        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+      steps: [
+        {
+          num: "1",
+          title: "Snap & Upload",
+          description:
+            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+        },
+        {
+          num: "2",
+          title: "Reconcile & Validate",
+          description:
+            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+        },
+        {
+          num: "3",
+          title: "Review & Relax",
+          description:
+            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+        },
+      ],
+      platforms: [
+        {
+          title: "Xero Accounting",
+          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+        },
+        {
+          title: "QuickBooks",
+          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+        },
+        {
+          title: "Dext & Hubdoc",
+          desc: "Instant optical receipt capture and automatic filing.",
+        },
+        {
+          title: "Sage & Bespoke",
+          desc: "Custom legacy conversions and spreadsheet transfers.",
         },
       ],
     },
