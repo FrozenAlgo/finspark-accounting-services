@@ -38,6 +38,7 @@ export default async function ServiceDetailPage({ params }) {
   return (
     <main className="min-h-screen">
       {/* Top banner */}
+      <section></section>
       <section className="bg-[#083761] text-white py-14 px-6">
         <div className="max-w-3xl mx-auto">
           <Link

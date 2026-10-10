@@ -102,6 +102,15 @@ export default function Header() {
 
             <li>
               <Link
+                href="/team"
+                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
+              >
+                Our Team
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/testimonials"
                 className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
               >
@@ -115,7 +124,7 @@ export default function Header() {
                 href="/contact"
                 className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
               >
-                Contact
+                Contact Us
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
               </Link>
             </li>
@@ -190,6 +199,13 @@ export default function Header() {
 
                 {isMobileServicesOpen && (
                   <ul className="pl-4 pr-2 py-2 my-1 bg-slate-50 rounded-xl space-y-1.5 border border-slate-100">
+                    <Link
+                      href="/services"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="text-xs text-slate-600 hover:text-[#278393] py-1.5 px-2 block rounded-md hover:bg-white font-medium transition-colors"
+                    >
+                      All Services
+                    </Link>
                     {serviceLinks.map((service, idx) => (
                       <li key={idx}>
                         <Link
@@ -207,6 +223,16 @@ export default function Header() {
 
               <li>
                 <Link
+                  href="/team"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
+                >
+                  <span>Our Team</span>
+                  <span className="text-slate-300 text-xs">&rarr;</span>
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/testimonials"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
@@ -222,7 +248,7 @@ export default function Header() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
                 >
-                  <span>Contact</span>
+                  <span>Contact us</span>
                   <span className="text-slate-300 text-xs">&rarr;</span>
                 </Link>
               </li>
