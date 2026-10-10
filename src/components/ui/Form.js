@@ -12,19 +12,39 @@ import {
 } from "lucide-react";
 import AnimatedBtn from "./AnimatedBtn";
 
-export default function Form() {
+export default function Form({ headingColor }) {
+  const isLight = Boolean(headingColor);
+
   return (
-    <div className="z-10 p-6 sm:p-8 text-white bg-white/10 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 relative">
+    <div
+      className={`z-10 p-6 sm:p-8 rounded-2xl shadow-2xl relative ${
+        isLight
+          ? "bg-white text-slate-900 border border-slate-200 shadow-slate-200/50"
+          : "text-white bg-white/10 backdrop-blur-xl border border-white/20"
+      }`}
+    >
       {/* Header */}
-      <div className="border-b border-white/20 pb-4 mb-6">
-        <h2 className="text-2xl sm:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-300 font-bold tracking-tight">
-          Send An Enquiry
-        </h2>
-        <p className="py-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
-          Please enter your contact details below and our team will get back to
-          you within 24 hours.
-        </p>
-      </div>
+      {isLight ? (
+        <div className="border-b border-slate-200 pb-4 mb-6">
+          <h2 className="text-2xl sm:text-3xl text-slate-900 font-bold tracking-tight">
+            Send An Enquiry
+          </h2>
+          <p className="py-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+            Please enter your contact details below and our team will get back
+            to you within 24 hours.
+          </p>
+        </div>
+      ) : (
+        <div className="border-b border-white/20 pb-4 mb-6">
+          <h2 className="text-2xl sm:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-300 font-bold tracking-tight">
+            Send An Enquiry
+          </h2>
+          <p className="py-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Please enter your contact details below and our team will get back
+            to you within 24 hours.
+          </p>
+        </div>
+      )}
 
       {/* Form Fields */}
       <form id="contact-form" className="space-y-6">
@@ -37,17 +57,29 @@ export default function Form() {
               id="name"
               placeholder=" "
               required
-              className="peer w-full bg-transparent border-b-2 border-slate-300/60 py-2 pr-10 text-white placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 text-sm"
+              className={`peer w-full bg-transparent border-b-2 py-2 pr-10 placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 text-sm ${
+                isLight
+                  ? "border-slate-300 text-slate-900"
+                  : "border-slate-300/60 text-white"
+              }`}
             />
             <label
               htmlFor="name"
-              className="absolute left-0 -top-1 text-xs text-slate-300 transition-all duration-300 
-                         peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-slate-400 
-                         peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text"
+              className={`absolute left-0 -top-1 text-xs transition-all duration-300 peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text ${
+                isLight
+                  ? "text-slate-600 peer-placeholder-shown:text-slate-500"
+                  : "text-slate-300 peer-placeholder-shown:text-slate-400"
+              }`}
             >
-              Your Name <span className="text-rose-400">*</span>
+              Your Name <span className="text-rose-500">*</span>
             </label>
-            <User className="absolute right-0 bottom-2 w-5 h-5 text-slate-400 peer-focus:text-[#278393] pointer-events-none transition-colors duration-300" />
+            <User
+              className={`absolute right-0 bottom-2 w-5 h-5 pointer-events-none transition-colors duration-300 ${
+                isLight
+                  ? "text-slate-400 peer-focus:text-[#278393]"
+                  : "text-slate-400 peer-focus:text-[#278393]"
+              }`}
+            />
           </div>
 
           {/* Your Email */}
@@ -57,17 +89,29 @@ export default function Form() {
               id="email"
               placeholder=" "
               required
-              className="peer w-full bg-transparent border-b-2 border-slate-300/60 py-2 pr-10 text-white placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 text-sm"
+              className={`peer w-full bg-transparent border-b-2 py-2 pr-10 placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 text-sm ${
+                isLight
+                  ? "border-slate-300 text-slate-900"
+                  : "border-slate-300/60 text-white"
+              }`}
             />
             <label
               htmlFor="email"
-              className="absolute left-0 -top-1 text-xs text-slate-300 transition-all duration-300 
-                         peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-slate-400 
-                         peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text"
+              className={`absolute left-0 -top-1 text-xs transition-all duration-300 peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text ${
+                isLight
+                  ? "text-slate-600 peer-placeholder-shown:text-slate-500"
+                  : "text-slate-300 peer-placeholder-shown:text-slate-400"
+              }`}
             >
-              Your Email <span className="text-rose-400">*</span>
+              Your Email <span className="text-rose-500">*</span>
             </label>
-            <Mail className="absolute right-0 bottom-2 w-5 h-5 text-slate-400 peer-focus:text-[#278393] pointer-events-none transition-colors duration-300" />
+            <Mail
+              className={`absolute right-0 bottom-2 w-5 h-5 pointer-events-none transition-colors duration-300 ${
+                isLight
+                  ? "text-slate-400 peer-focus:text-[#278393]"
+                  : "text-slate-400 peer-focus:text-[#278393]"
+              }`}
+            />
           </div>
         </div>
 
@@ -80,17 +124,29 @@ export default function Form() {
               id="business"
               placeholder=" "
               required
-              className="peer w-full bg-transparent border-b-2 border-slate-300/60 py-2 pr-10 text-white placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 text-sm"
+              className={`peer w-full bg-transparent border-b-2 py-2 pr-10 placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 text-sm ${
+                isLight
+                  ? "border-slate-300 text-slate-900"
+                  : "border-slate-300/60 text-white"
+              }`}
             />
             <label
               htmlFor="business"
-              className="absolute left-0 -top-1 text-xs text-slate-300 transition-all duration-300 
-                         peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-slate-400 
-                         peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text"
+              className={`absolute left-0 -top-1 text-xs transition-all duration-300 peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text ${
+                isLight
+                  ? "text-slate-600 peer-placeholder-shown:text-slate-500"
+                  : "text-slate-300 peer-placeholder-shown:text-slate-400"
+              }`}
             >
-              Your Business Name <span className="text-rose-400">*</span>
+              Your Business Name <span className="text-rose-500">*</span>
             </label>
-            <Building2 className="absolute right-0 bottom-2 w-5 h-5 text-slate-400 peer-focus:text-[#278393] pointer-events-none transition-colors duration-300" />
+            <Building2
+              className={`absolute right-0 bottom-2 w-5 h-5 pointer-events-none transition-colors duration-300 ${
+                isLight
+                  ? "text-slate-400 peer-focus:text-[#278393]"
+                  : "text-slate-400 peer-focus:text-[#278393]"
+              }`}
+            />
           </div>
 
           {/* Your Phone */}
@@ -100,17 +156,29 @@ export default function Form() {
               id="phone"
               placeholder=" "
               required
-              className="peer w-full bg-transparent border-b-2 border-slate-300/60 py-2 pr-10 text-white placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 text-sm"
+              className={`peer w-full bg-transparent border-b-2 py-2 pr-10 placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 text-sm ${
+                isLight
+                  ? "border-slate-300 text-slate-900"
+                  : "border-slate-300/60 text-white"
+              }`}
             />
             <label
               htmlFor="phone"
-              className="absolute left-0 -top-1 text-xs text-slate-300 transition-all duration-300 
-                         peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-slate-400 
-                         peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text"
+              className={`absolute left-0 -top-1 text-xs transition-all duration-300 peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text ${
+                isLight
+                  ? "text-slate-600 peer-placeholder-shown:text-slate-500"
+                  : "text-slate-300 peer-placeholder-shown:text-slate-400"
+              }`}
             >
-              Your Phone <span className="text-rose-400">*</span>
+              Your Phone <span className="text-rose-500">*</span>
             </label>
-            <Phone className="absolute right-0 bottom-2 w-5 h-5 text-slate-400 peer-focus:text-[#278393] pointer-events-none transition-colors duration-300" />
+            <Phone
+              className={`absolute right-0 bottom-2 w-5 h-5 pointer-events-none transition-colors duration-300 ${
+                isLight
+                  ? "text-slate-400 peer-focus:text-[#278393]"
+                  : "text-slate-400 peer-focus:text-[#278393]"
+              }`}
+            />
           </div>
         </div>
 
@@ -121,17 +189,29 @@ export default function Form() {
             rows={3}
             placeholder=" "
             required
-            className="peer w-full bg-transparent border-b-2 border-slate-300/60 py-2 pr-10 text-white placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 resize-none text-sm"
+            className={`peer w-full bg-transparent border-b-2 py-2 pr-10 placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300 resize-none text-sm ${
+              isLight
+                ? "border-slate-300 text-slate-900"
+                : "border-slate-300/60 text-white"
+            }`}
           ></textarea>
           <label
             htmlFor="message"
-            className="absolute left-0 -top-1 text-xs text-slate-300 transition-all duration-300 
-                       peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-slate-400 
-                       peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text"
+            className={`absolute left-0 -top-1 text-xs transition-all duration-300 peer-placeholder-shown:top-5 peer-placeholder-shown:text-sm peer-focus:-top-1 peer-focus:text-xs peer-focus:text-[#278393] font-medium cursor-text ${
+              isLight
+                ? "text-slate-600 peer-placeholder-shown:text-slate-500"
+                : "text-slate-300 peer-placeholder-shown:text-slate-400"
+            }`}
           >
-            How can we help? <span className="text-rose-400">*</span>
+            How can we help? <span className="text-rose-500">*</span>
           </label>
-          <MessageSquare className="absolute right-0 bottom-3 w-5 h-5 text-slate-400 peer-focus:text-[#278393] pointer-events-none transition-colors duration-300" />
+          <MessageSquare
+            className={`absolute right-0 bottom-3 w-5 h-5 pointer-events-none transition-colors duration-300 ${
+              isLight
+                ? "text-slate-400 peer-focus:text-[#278393]"
+                : "text-slate-400 peer-focus:text-[#278393]"
+            }`}
+          />
         </div>
 
         {/* Submit Button */}

@@ -39,7 +39,6 @@ export default function Banner({
   subHeading,
   para,
   buttons = [],
-  nonactionBtn = [],
   pills = [],
   imageSrc,
   imageAlt = "Service Banner",
@@ -167,7 +166,6 @@ export default function Banner({
                   </AnimatedBtn>
                 );
               })}
-              {nonactionBtn.length > 0}
             </motion.div>
           )}
 
