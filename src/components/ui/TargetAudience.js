@@ -1,49 +1,73 @@
 "use client";
 
 import React from "react";
-import { User, Building2, Wrench, Clock } from "lucide-react";
+import {
+  // Navigation & General UI
+  Home,
+  ChevronRight,
+  User,
+  Users,
+  Clock,
+  Check,
+  Star,
+  ShieldCheck,
+  Phone,
+  CalendarCheck,
+  CheckCircle2,
 
-const DEFAULT_AUDIENCE = [
-  {
-    id: "sole-traders",
-    title: "Sole Traders",
-    description:
-      "If you're running your business on your own, bookkeeping can quickly become time-consuming. We provide clarity, handle HMRC filings, and explain your cash flow in plain English.",
-    tag: "Clarity & Compliance",
-    icon: User,
-  },
-  {
-    id: "limited-companies",
-    title: "Limited Companies",
-    description:
-      "Essential foundation for corporate tax, VAT returns, payroll, and directors' loans. Consistent bookkeeping that keeps management accounts in flawless shape.",
-    tag: "Structured Reporting",
-    icon: Building2,
-  },
-  {
-    id: "trades-services",
-    title: "Trades & Services",
-    description:
-      "Handling frequent payments, supplier invoices, material costs, and CIS deductions. Clean records so you never face end-of-quarter or supplier panics.",
-    tag: "High Transaction Flow",
-    icon: Wrench,
-  },
-  {
-    id: "growing-businesses",
-    title: "Growing Businesses",
-    description:
-      "Business owners wanting to reclaim evenings and weekends. Eliminate financial admin stress with a responsive team that proactively spots discrepancies.",
-    tag: "Time Reclaimed",
-    icon: Clock,
-  },
-];
+  // Financial & Accounting Specific
+  TrendingUp,
+  PieChart,
+  BarChart3,
+  Calculator,
+  Coins,
+  Building,
+  Building2,
+  Wrench,
+  Receipt,
+  Landmark,
+  Folder,
+  RefreshCw,
+  FileText,
+  FileSpreadsheet,
+  FileCheck,
+  Calendar,
+} from "lucide-react";
 
-export default function TargetAudience({
-  badge = "Tailored Accounting Support",
-  heading = "Who our bookkeeping services are for",
-  subHeading = "Whether you're starting out or running a multi-team company, we adapt to the cadence of your daily operations.",
-  items = DEFAULT_AUDIENCE,
-}) {
+const ICON_MAP = {
+  // Navigation & General UI
+  Home,
+  ChevronRight,
+  User,
+  Users,
+  Clock,
+  Check,
+  Star,
+  ShieldCheck,
+  Phone,
+  CalendarCheck,
+  CheckCircle2,
+
+  // Financial & Accounting Specific
+  TrendingUp,
+  PieChart,
+  BarChart3,
+  Calculator,
+  Coins,
+  Building,
+  Building2,
+  Wrench,
+  Receipt,
+  Landmark,
+  Folder,
+  RefreshCw,
+  FileText,
+  FileSpreadsheet,
+  FileCheck,
+  Calendar,
+};
+
+export default function TargetAudience({ badge, heading, subHeading, items }) {
   return (
     <section className="relative w-full py-16 px-4 sm:px-6 lg:px-12 bg-slate-50/60 overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-12">
@@ -71,7 +95,8 @@ export default function TargetAudience({
         {/* 4-Column Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item) => {
-            const Icon = item.icon || User;
+            const Icon =
+              typeof item.icon === "string" ? ICON_MAP[item.icon] : item.icon;
 
             return (
               <div

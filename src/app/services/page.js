@@ -6,7 +6,15 @@ import Banner from "@/components/ui/Banner";
 import ContactForm from "@/components/ui/ContactForm";
 import TargetAudience from "@/components/ui/TargetAudience";
 import { companyName, contactsNo, servicesData } from "@/lib/data";
-import { CalendarCheck, Phone } from "lucide-react";
+import {
+  CalendarCheck,
+  ChevronDown,
+  Phone,
+  User,
+  Building2,
+  Wrench,
+  Clock,
+} from "lucide-react";
 const buttons = [
   {
     show: true,
@@ -18,10 +26,10 @@ const buttons = [
   },
   {
     show: true,
-    text: `Call ${contactsNo[0].number}`,
-    hoverText: "Speak with an Expert",
-    href: `${contactsNo[0].href}`, // Telephone link
-    icon: Phone,
+    text: "Explore Services Below",
+    hoverText: "Explore Our Services",
+    href: "#services", // Telephone link
+    icon: ChevronDown,
     variant: "secondary",
   },
 ];
@@ -29,6 +37,40 @@ const pills = [
   { title: "Xero & QuickBooks", sub: "Gold Accredited Partners" },
   { title: "Zero Jargon", sub: "Clear English explanations" },
   { title: "Fixed Monthly Fees", sub: "Transparent, no surprises" },
+];
+const targetedAudience = [
+  {
+    id: "sole-traders",
+    title: "Sole Traders",
+    description:
+      "If you're running your business on your own, bookkeeping can quickly become time-consuming. We provide clarity, handle HMRC filings, and explain your cash flow in plain English.",
+    tag: "Clarity & Compliance",
+    icon: User,
+  },
+  {
+    id: "limited-companies",
+    title: "Limited Companies",
+    description:
+      "Essential foundation for corporate tax, VAT returns, payroll, and directors' loans. Consistent bookkeeping that keeps management accounts in flawless shape.",
+    tag: "Structured Reporting",
+    icon: Building2,
+  },
+  {
+    id: "trades-services",
+    title: "Trades & Services",
+    description:
+      "Handling frequent payments, supplier invoices, material costs, and CIS deductions. Clean records so you never face end-of-quarter or supplier panics.",
+    tag: "High Transaction Flow",
+    icon: Wrench,
+  },
+  {
+    id: "growing-businesses",
+    title: "Growing Businesses",
+    description:
+      "Business owners wanting to reclaim evenings and weekends. Eliminate financial admin stress with a responsive team that proactively spots discrepancies.",
+    tag: "Time Reclaimed",
+    icon: Clock,
+  },
 ];
 export default function ServicesPage() {
   return (
@@ -46,7 +88,7 @@ export default function ServicesPage() {
         showButtons={true}
         showPills={true}
       />
-      <section className="my-6">
+      <section className="my-6 " id="services">
         <div className="max-w-4xl px-8">
           <span className="text-navy font-bold text-sm py-2">
             STRESS-FREE COMPLIANCE
@@ -78,7 +120,12 @@ export default function ServicesPage() {
       <section>
         <TestimonialsCard />
       </section>
-      <TargetAudience />
+      <TargetAudience
+        badge="Tailored Accounting Support"
+        heading="Who our bookkeeping services are for"
+        subHeading="Whether you're starting out or running a multi-team company, we adapt to the cadence of your daily operations."
+        items={targetedAudience}
+      />
       <section>
         <FAQ />
       </section>

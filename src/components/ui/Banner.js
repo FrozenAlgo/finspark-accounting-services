@@ -13,6 +13,11 @@ import {
 } from "lucide-react";
 import AnimatedBtn from "./AnimatedBtn";
 
+const ICON_MAP = {
+  CalendarCheck,
+  Phone,
+};
+
 // Motion Animation Variants
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 18 },
@@ -34,6 +39,7 @@ export default function Banner({
   subHeading,
   para,
   buttons = [],
+  nonactionBtn = [],
   pills = [],
   imageSrc,
   imageAlt = "Service Banner",
@@ -44,7 +50,7 @@ export default function Banner({
   const hasImage = Boolean(imageSrc);
 
   return (
-    <section className="relative w-full py-12 lg:py-10 px-4 sm:px-6 lg:px-12 bg-slate-50/50 overflow-hidden">
+    <section className="relative w-full min-h-[80vh] py-12 lg:py-10 px-4 sm:px-6 lg:px-12 bg-slate-50/50 overflow-hidden">
       <div className="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* LEFT COLUMN: Main Content */}
         <div
@@ -126,12 +132,18 @@ export default function Banner({
                 if (btn.show === false) return null;
                 const isPrimary = btn.variant !== "secondary";
 
+                // Safe icon resolution: supports both string names ("CalendarCheck") and direct icon components
+                const IconComponent =
+                  typeof btn.icon === "string"
+                    ? ICON_MAP[btn.icon] || (isPrimary ? CalendarCheck : Phone)
+                    : btn.icon || (isPrimary ? CalendarCheck : Phone);
+
                 return (
                   <AnimatedBtn
                     key={idx}
                     href={btn.href || "#"}
                     hoverText={btn.hoverText || btn.text}
-                    icon={btn.icon || (isPrimary ? CalendarCheck : Phone)}
+                    icon={IconComponent}
                     bgColor={
                       btn.bgColor ||
                       (isPrimary
@@ -155,6 +167,7 @@ export default function Banner({
                   </AnimatedBtn>
                 );
               })}
+              {nonactionBtn.length > 0}
             </motion.div>
           )}
 
