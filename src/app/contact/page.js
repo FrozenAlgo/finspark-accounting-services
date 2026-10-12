@@ -218,7 +218,7 @@ export default function ContactPage() {
               <p className="text-xs sm:text-sm text-slate-300 font-medium max-w-xl">
                 Call Asif, Asim and the team directly on{" "}
                 <Link
-                  className="text-white font-bold me-1"
+                  className="text-white font-bold mx-1"
                   href={contactsNo[0].href}
                 >
                   {contactsNo[0].number}
@@ -226,7 +226,7 @@ export default function ContactPage() {
                 or
                 <Link
                   className="text-white font-bold ms-1"
-                  href={contactsNo[0].href}
+                  href={contactsNo[1].href}
                 >
                   {contactsNo[1].number}
                 </Link>

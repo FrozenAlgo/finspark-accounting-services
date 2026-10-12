@@ -46,7 +46,10 @@ export default function TestimonialsCard() {
   }, [isPaused, nextSlide]);
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative">
+    <section
+      id="reviews"
+      className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8 overflow-hidden relative"
+    >
       {/* Background Decorator */}
       <AmbientBackground
         variant="light"

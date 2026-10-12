@@ -10,12 +10,19 @@ import {
   Star,
   CalendarCheck,
   Phone,
+  User,
+  ArrowDown,
+  MessageSquareText,
+  Headset,
 } from "lucide-react";
 import AnimatedBtn from "./AnimatedBtn";
 
 const ICON_MAP = {
   CalendarCheck,
   Phone,
+  ArrowDown,
+  MessageSquareText,
+  Headset,
 };
 
 // Motion Animation Variants
@@ -40,13 +47,17 @@ export default function Banner({
   para,
   buttons = [],
   pills = [],
+  testimonialSection,
   imageSrc,
   imageAlt = "Service Banner",
   showSubHeading = true,
   showButtons = true,
   showPills = true,
+  bannerImageStuff,
 }) {
   const hasImage = Boolean(imageSrc);
+  const hasTestimonial = Boolean(testimonialSection);
+  const hasBannerImageStuff = Boolean(bannerImageStuff);
 
   return (
     <section className="relative w-full min-h-[80vh] py-12 lg:py-10 px-4 sm:px-6 lg:px-12 bg-slate-50/50 overflow-hidden">
@@ -117,7 +128,70 @@ export default function Banner({
               {para}
             </motion.p>
           )}
+          {hasTestimonial ? (
+            <motion.div
+              custom={5}
+              variants={fadeUpVariants}
+              initial="hidden"
+              animate="visible"
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-3"
+            >
+              {/* Card 1: Google Rating */}
+              <div className="bg-white/90 backdrop-blur-md border border-slate-200/80 p-3.5 rounded-2xl flex items-center gap-3 shadow-2xs hover:shadow-sm transition-all">
+                <div className="flex items-center gap-0.5 text-amber-400 shrink-0">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className="w-4 h-4 fill-current"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                    </svg>
+                  ))}
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-bold text-[#083761] truncate">
+                    5.0 / 5.0
+                  </p>
+                  <p className="text-[11px] text-slate-500 font-medium leading-tight">
+                    Verified Google Rating
+                  </p>
+                </div>
+              </div>
 
+              {/* Card 2: HMRC & MTD Compliant */}
+              <div className="bg-white/90 backdrop-blur-md border border-slate-200/80 p-3.5 rounded-2xl flex items-center gap-3 shadow-2xs hover:shadow-sm transition-all">
+                <div className="bg-[#278393]/10 text-[#278393] p-2 rounded-xl shrink-0">
+                  <ShieldCheck size={16} strokeWidth={2.5} />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-bold text-[#083761] truncate">
+                    100%
+                  </p>
+                  <p className="text-[11px] text-slate-500 font-medium leading-tight">
+                    HMRC & MTD Compliant
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3: Regional Presence */}
+              <div className="bg-white/90 backdrop-blur-md border border-slate-200/80 p-3.5 rounded-2xl flex items-center gap-3 shadow-2xs hover:shadow-sm transition-all">
+                <div className="bg-[#278393]/10 text-[#278393] p-2 rounded-xl shrink-0">
+                  <User size={16} strokeWidth={2.5} />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm font-bold text-[#083761] truncate">
+                    15+ Yrs
+                  </p>
+                  <p className="text-[11px] text-slate-500 font-medium leading-tight">
+                    London & UK Presence
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ) : (
+            ""
+          )}
           {/* Animated CTA Buttons (Conditional) */}
           {showButtons && buttons.length > 0 && (
             <motion.div
@@ -243,14 +317,25 @@ export default function Banner({
               <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md border border-white/40 p-3.5 rounded-2xl shadow-lg flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-xl bg-[#278393] text-white flex items-center justify-center shrink-0">
-                    <Check size={18} strokeWidth={2.5} />
+                    {hasBannerImageStuff && bannerImageStuff?.icon ? (
+                      React.createElement(
+                        ICON_MAP[bannerImageStuff.icon] || Check,
+                        { size: 18, strokeWidth: 2.5 },
+                      )
+                    ) : (
+                      <Check size={18} strokeWidth={2.5} />
+                    )}
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm font-bold text-[#083761]">
-                      Real-Time Clarity
+                      {hasBannerImageStuff && bannerImageStuff?.text
+                        ? bannerImageStuff.text
+                        : "Real-Time Clarity"}
                     </p>
                     <p className="text-[11px] text-slate-500 font-medium">
-                      Books reconciled weekly & monthly
+                      {hasBannerImageStuff && bannerImageStuff?.subText
+                        ? bannerImageStuff.subText
+                        : "Books reconciled weekly & monthly"}
                     </p>
                   </div>
                 </div>
