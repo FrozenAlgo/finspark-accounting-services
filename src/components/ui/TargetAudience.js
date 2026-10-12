@@ -14,6 +14,7 @@ import {
   Phone,
   CalendarCheck,
   CheckCircle2,
+  MessageSquare,
 
   // Financial & Accounting Specific
   TrendingUp,
@@ -32,6 +33,7 @@ import {
   FileSpreadsheet,
   FileCheck,
   Calendar,
+  ScrollText,
 } from "lucide-react";
 
 const ICON_MAP = {
@@ -47,6 +49,7 @@ const ICON_MAP = {
   Phone,
   CalendarCheck,
   CheckCircle2,
+  MessageSquare,
 
   // Financial & Accounting Specific
   TrendingUp,
@@ -65,6 +68,7 @@ const ICON_MAP = {
   FileSpreadsheet,
   FileCheck,
   Calendar,
+  ScrollText,
 };
 
 export default function TargetAudience({ badge, heading, subHeading, items }) {

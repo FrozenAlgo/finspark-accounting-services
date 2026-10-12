@@ -54,18 +54,19 @@ export default function Banner({
   showButtons = true,
   showPills = true,
   bannerImageStuff,
+  rightComponent,
 }) {
   const hasImage = Boolean(imageSrc);
   const hasTestimonial = Boolean(testimonialSection);
   const hasBannerImageStuff = Boolean(bannerImageStuff);
-
+  const hasRightComponent = Boolean(rightComponent);
   return (
     <section className="relative w-full min-h-[80vh] py-12 lg:py-10 px-4 sm:px-6 lg:px-12 bg-slate-50/50 overflow-hidden">
       <div className="max-w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* LEFT COLUMN: Main Content */}
         <div
           className={`space-y-6 ${
-            hasImage
+            hasImage || hasRightComponent
               ? "lg:col-span-7"
               : "lg:col-span-12 max-w-4xl mx-auto text-left"
           }`}
@@ -282,7 +283,16 @@ export default function Banner({
         </div>
 
         {/* RIGHT COLUMN: Image with Glass Badges */}
-        {hasImage && (
+        {hasRightComponent ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="lg:col-span-5 relative"
+          >
+            {rightComponent}
+          </motion.div>
+        ) : hasImage ? (
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -345,7 +355,7 @@ export default function Banner({
               </div>
             </div>
           </motion.div>
-        )}
+        ) : null}
       </div>
     </section>
   );
