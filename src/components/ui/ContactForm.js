@@ -113,14 +113,25 @@ export default function ContactForm() {
           </div>
 
           {/* Form Body */}
-          <form id="contact-form" className="space-y-6">
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/mrpeyqod"
+            method="POST"
+            className="space-y-6"
+          >
             {/* Row 1: Name & Email */}
+            <input
+              type="hidden"
+              name="_subject"
+              value="New enquiry from Finspark website"
+            />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Your Name */}
               <div className="relative pt-4">
                 <input
                   type="text"
                   id="client-name"
+                  name="client-name"
                   placeholder=" "
                   required
                   className="peer w-full bg-transparent border-b-2 border-slate-300 py-2 pr-10 text-slate-800 placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300"
@@ -141,6 +152,7 @@ export default function ContactForm() {
                 <input
                   type="email"
                   id="client-email"
+                  name="client-email"
                   placeholder=" "
                   required
                   className="peer w-full bg-transparent border-b-2 border-slate-300 py-2 pr-10 text-slate-800 placeholder-transparent focus:border-[#278393] focus:outline-none transition-colors duration-300"
@@ -163,6 +175,7 @@ export default function ContactForm() {
               <div className="relative pt-4">
                 <input
                   type="text"
+                  name="client-business"
                   id="client-business"
                   placeholder=" "
                   required
@@ -183,6 +196,7 @@ export default function ContactForm() {
               <div className="relative pt-4">
                 <input
                   type="tel"
+                  name="client-phone"
                   id="client-phone"
                   placeholder=" "
                   required
@@ -203,6 +217,7 @@ export default function ContactForm() {
             {/* Row 3: How Can We Help (Textarea) */}
             <div className="relative pt-4">
               <textarea
+                name="client-message"
                 id="client-message"
                 rows={3}
                 placeholder=" "
@@ -229,6 +244,7 @@ export default function ContactForm() {
                 hoverBgColor="hover:bg-[#083761]"
                 textColor="text-white"
                 hoverTextColor="hover:text-gray-100"
+                typeSubmit={true}
               >
                 Send Consultation Request
               </AnimatedBtn>
