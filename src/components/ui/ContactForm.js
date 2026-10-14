@@ -10,7 +10,15 @@ import {
   User,
 } from "lucide-react";
 import AnimatedBtn from "./AnimatedBtn";
-
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrpeyqod";
+const initial = {
+  "client-name": "",
+  "client-email": "",
+  "client-business": "",
+  "client-phone": "",
+  "client-message": "",
+  _gotcha: "", // honeypot — leave empty; bots fill it
+};
 export default function ContactForm() {
   return (
     <div className="max-w-7xl mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-slate-100 bg-white grid grid-cols-1 lg:grid-cols-12 relative">
