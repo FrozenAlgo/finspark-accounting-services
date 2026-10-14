@@ -896,8 +896,18 @@ export const companyEmail = {
 };
 
 export const contactsNo = [
-  { number: "+44 7587 486885", href: "tel:+447587486885" },
-  { number: "+44 7884 003546", href: "tel:+447884003546" },
+  {
+    number: "+44 7884 003546",
+    href: "https://wa.me/447884003546",
+    label: "WhatsApp",
+    primary: true,
+  },
+  {
+    number: "+44 7587 486885",
+    href: "tel:+447587486885",
+    label: "Phone",
+    primary: false,
+  },
 ];
 export const companyInfo = {
   legalName: "Finspark Accounting and Business Services Limited",

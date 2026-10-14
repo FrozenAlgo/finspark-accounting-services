@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedBtn from "../ui/AnimatedBtn";
 import { companyEmail, contactsNo, serviceLinks } from "@/lib/data";
+import { GmailIcon, WhatsappIcon } from "../ui/BrandIcon";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,16 +19,24 @@ export default function Header() {
         <div className="contact-info flex flex-wrap justify-center sm:justify-end items-center gap-3 sm:gap-5 max-w-7xl mx-auto">
           <a
             href={contactsNo[0].href}
-            className="flex gap-1.5 items-center px-3 sm:px-4 py-1 border border-white/30 rounded-full hover:bg-white/10 transition-colors"
+            className="flex gap-1.5 items-center px-3 sm:px-4 py-1 border border-white/30 rounded-full hover:bg-white/10 transition-colors relative group transition-all duration-600"
           >
-            <Phone size={13} className="text-[#278393]" />
-            <span>{contactsNo[0].number}</span>
+            <WhatsappIcon className="h-4 w-4 text-green-500 hover:text-green-600 transition" />
+            <span>
+              {contactsNo[0].number}{" "}
+              <span className="text-[11px] text-green-200"> WhatsApp Only</span>
+            </span>
+            <span className="absolute  right-full min-w-max px-2  lg:group-hover:visible lg:group-hover:opacity-100 invisible opacity-0">
+              <span className="rounded-full p-2 text-xs text-green-200 bg-white/30  ">
+                Chat on Whatsapp
+              </span>
+            </span>
           </a>
           <a
             href={companyEmail.href}
             className="flex gap-1.5 items-center px-3 sm:px-4 py-1 border border-white/30 rounded-full hover:bg-white/10 transition-colors"
           >
-            <MailPlus size={13} className="text-[#278393]" />
+            <GmailIcon className="w-4 h-4 text-red-500 hover:text-red-600 transition" />
             <span>{companyEmail.email}</span>
           </a>
         </div>

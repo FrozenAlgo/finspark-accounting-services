@@ -4,6 +4,7 @@ import { companyName, contactsNo, serviceLinks } from "@/lib/data";
 import { MessageCircleCheck, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { WhatsappIcon } from "../ui/BrandIcon";
 
 export default function Footer() {
   return (
@@ -64,17 +65,22 @@ export default function Footer() {
               <p>7 Haven Lane</p>
               <p>Ealing, London</p>
               <p>W5 2HZ, United Kingdom</p>
-              <p className="pt-2 font-semibold text-white flex items-center gap-1">
-                <Phone size={16} />
+              <p className="pt-2 font-semibold text-white flex  gap-1">
+                <WhatsappIcon className="h-6 w-6 text-green-500 hover:text-green-600 transition" />
                 <a
                   href={contactsNo[0].href}
                   className="hover:text-[#278393] transition-colors"
                 >
                   {contactsNo[0].number}
+                  <span className="text-[11px]  text-green-200">
+                    {" "}
+                    WhatsApp Only
+                  </span>
                 </a>
               </p>
+
               <p className="pt-2 font-semibold text-white  flex items-center gap-1">
-                <MessageCircleCheck size={16} />
+                <Phone size={16} />
                 <a
                   href={contactsNo[1].href}
                   className="hover:text-[#278393] transition-colors"
