@@ -48,7 +48,7 @@ export default function Header() {
           {/* Clickable Logo */}
           <Link href="/" className="logo shrink-0 block">
             <Image
-              src="/logo1.png"
+              src="/FinsparklogoCropped.webp"
               width={120}
               height={60}
               alt="Finspark Accounting and Business Services Limited Logo"

@@ -13,7 +13,7 @@ import {
   X,
 } from "lucide-react";
 import AnimatedBtn from "./AnimatedBtn";
-import { companyName } from "@/lib/data";
+import { companyName, FormspreeEndpoint } from "@/lib/data";
 
 const initial = {
   name: "",
@@ -26,7 +26,7 @@ const initial = {
 
 // Keep empty while testing UI — no Formspree tokens used
 // const FORMSPREE_ENDPOINT = "";
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrpeyqod";
+const FORMSPREE_ENDPOINT = FormspreeEndpoint;
 
 function validate(values) {
   const errors = {};

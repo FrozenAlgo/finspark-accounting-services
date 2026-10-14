@@ -50,7 +50,8 @@ const teamMembers = [
     phone: contactsNo[0].number,
     phoneHref: contactsNo[0].href,
     location: "London Office",
-    image: "/team/member.png",
+    image: "/team/Member1.webp",
+    alt: "Asif Chaudhry Image",
   },
   {
     name: "Asim Malik",
@@ -63,6 +64,7 @@ const teamMembers = [
     phoneHref: contactsNo[1].href,
     location: "London Office",
     image: "/team/member.png",
+    alt: "Asim Malik Image",
   },
 ];
 const promises = [
@@ -139,10 +141,10 @@ export default function Team() {
               >
                 <div className="space-y-5">
                   {/* Image Container with Floating Badge */}
-                  <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200">
+                  <div className="relative w-full aspect-square rounded-2xl overflow-hidden bg-slate-100 border border-slate-200">
                     <Image
                       src={member.image}
-                      alt={member.name}
+                      alt={member.alt}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />

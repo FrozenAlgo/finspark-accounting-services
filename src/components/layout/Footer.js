@@ -17,7 +17,7 @@ export default function Footer() {
             {/* Logo Wrapper Container */}
             <div className="inline-block bg-white p-3 rounded-xl shadow-md border border-white/20">
               <Image
-                src="/logo.png"
+                src="/FinsparklogoCropped.webp"
                 alt="Finspark Limited Logo"
                 width={180}
                 height={60}

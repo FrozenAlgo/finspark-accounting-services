@@ -1070,3 +1070,4 @@ export const teamData = [
     image: "/team/asim-malik.jpg",
   },
 ];
+export const FormspreeEndpoint = "https://formspree.io/f/mrpeyqod";
