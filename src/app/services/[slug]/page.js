@@ -74,7 +74,7 @@ export default async function ServiceDetailPage({ params }) {
           para={service.description}
           buttons={buttons}
           pills={pills}
-          imageSrc="/images/Faq.jpg"
+          imageSrc={service.banner.image}
           showSubHeading={true}
           showButtons={true}
           showPills={true}

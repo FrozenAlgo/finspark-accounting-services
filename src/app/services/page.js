@@ -83,7 +83,7 @@ export default function ServicesPage() {
         para="At Finspark Accounting, we keep your bookkeeping organized, up to date for reporting, and HMRC ready, with a responsive team on hand whenever you need support."
         buttons={buttons}
         pills={pills}
-        imageSrc="/images/Faq.jpg"
+        imageSrc="/images/services.webp"
         showSubHeading={true}
         showButtons={true}
         showPills={true}

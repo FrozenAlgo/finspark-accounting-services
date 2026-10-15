@@ -126,7 +126,7 @@ export default function AboutPage() {
         para="At Finspark Accounting, we keep your bookkeeping organized, up to date for reporting, and HMRC ready, with a responsive team on hand whenever you need support."
         buttons={buttons}
         pills={pills}
-        imageSrc="/images/Faq.jpg"
+        imageSrc="/images/accountingoffice.webp"
         showSubHeading={true}
         showButtons={true}
         showPills={true}
@@ -138,7 +138,7 @@ export default function AboutPage() {
           <div className="lg:col-span-6 relative flex justify-center">
             <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
               <Image
-                src="/images/Faq.jpg"
+                src="/images/handshake.webp"
                 alt="Finspark Accounting Team"
                 fill
                 className="object-cover"

@@ -49,7 +49,7 @@ export default function Banner({
   pills = [],
   testimonialSection,
   imageSrc,
-  imageAlt = "Service Banner",
+  imageAlt = "Banner Image",
   showSubHeading = true,
   showButtons = true,
   showPills = true,

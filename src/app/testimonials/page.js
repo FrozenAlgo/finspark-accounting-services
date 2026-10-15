@@ -32,7 +32,7 @@ const caseStudies = [
     badge: "Limited Company • Digital Agency",
     title: "Velaris Marketing",
     subtitle: "Creative Agency Founder • London",
-    image: "/images/Faq.jpg", // Replace with your image asset
+    image: "/images/review1.webp", // Replace with your image asset
     quote:
       "“Honest, transparent advice from day one. Asif, Asim, and the team helped navigate corporation tax and proactive growth advisory without confusion.”",
     description:
@@ -46,7 +46,7 @@ const caseStudies = [
     badge: "10+ Year Client Relationship",
     title: "Mark Willard",
     subtitle: "Director, Commercial Construction & Maintenance",
-    image: "/images/Faq.jpg", // Replace with your image asset
+    image: "/images/review2.webp", // Replace with your image asset
     quote:
       "“My company has used Finspark for over a decade. Always competent, immediate responses, and seamless CIS/payroll management. The ideal partner for small businesses.”",
     description:

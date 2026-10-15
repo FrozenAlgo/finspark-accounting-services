@@ -28,7 +28,7 @@ export const servicesData = [
       badge: "Core Accountancy Service",
       subBadge: "Weekly & Monthly Support",
       subHeading: "Accurate bookkeeping, handled properly — and on time.",
-      image: "/images/Faq.jpg",
+      image: "/images/bookkeeping.webp",
     },
 
     featuresSection: {
@@ -184,7 +184,7 @@ export const servicesData = [
       badge: "Corporate Tax & Filing",
       subBadge: "Companies House & HMRC Compliant",
       subHeading: "Flawless corporate accounts with optimized tax efficiency.",
-      image: "/images/Faq.jpg",
+      image: "/images/companytax.webp",
     },
 
     featuresSection: {
@@ -318,7 +318,7 @@ export const servicesData = [
       badge: "PAYE & Auto-Enrolment",
       subBadge: "Timely & Accurate Pay Runs",
       subHeading: "Seamless payroll management for teams of all sizes.",
-      image: "/images/Faq.jpg",
+      image: "/images/payroll.webp",
     },
 
     featuresSection: {
@@ -447,7 +447,7 @@ export const servicesData = [
       subBadge: "January Panic Free",
       subHeading:
         "Accurate, stress-free personal tax filing for peace of mind.",
-      image: "/images/Faq.jpg",
+      image: "/images/taxreturn.webp",
     },
 
     featuresSection: {
@@ -568,7 +568,7 @@ export const servicesData = [
       subBadge: "60-Day HMRC Deadline Compliant",
       subHeading:
         "Protect your capital assets and meet strict UK disposal deadlines.",
-      image: "/images/Faq.jpg",
+      image: "/images/capitalgain.webp",
     },
 
     featuresSection: {
@@ -681,7 +681,7 @@ export const servicesData = [
       badge: "Corporate Governance",
       subBadge: "Companies House Registered",
       subHeading: "Keep your legal business register up-to-date and compliant.",
-      image: "/images/Faq.jpg",
+      image: "/images/secretarialwork.webp",
     },
 
     featuresSection: {
@@ -788,7 +788,7 @@ export const servicesData = [
       subBadge: "Fast Turnaround",
       subHeading:
         "Certified accountant letters to secure your mortgage or business loans.",
-      image: "/images/Faq.jpg",
+      image: "/images/mortgage.webp",
     },
 
     featuresSection: {
@@ -972,7 +972,7 @@ export const TESTIMONIALS = [
     initials: "MD",
     avatarBg: "bg-[#2563eb]",
     quote:
-      '"Callum and the team have transformed our bookkeeping. In the past, accounts were a huge source of anxiety. Now, everything runs seamlessly on Xero and questions are answered within hours."',
+      '"Asif, Asim and the team have transformed our bookkeeping. Accounts used to be a constant worry. Now everything runs cleanly on Xero and we get clear answers the same day."',
   },
   {
     id: 2,
@@ -981,7 +981,7 @@ export const TESTIMONIALS = [
     initials: "SH",
     avatarBg: "bg-[#1e293b]",
     quote:
-      '"We have worked with Finspark for over 7 years. Friendly, highly responsive, and zero jargon. They ensure we never miss a VAT or Companies House deadline."',
+      '"Friendly, highly responsive, and zero jargon. Finspark keep our VAT and Companies House filings on track so we can focus on growing the agency."',
   },
   {
     id: 3,
@@ -990,7 +990,7 @@ export const TESTIMONIALS = [
     initials: "RT",
     avatarBg: "bg-[#083761]",
     quote:
-      '"Switching from our old accounting firm was completely painless. Finspark handled the transition letter and took over our CIS and payroll with zero downtime for our tradespeople."',
+      '"Switching accountants was completely painless. Finspark handled the handover and took over our CIS and payroll with no disruption to our tradespeople."',
   },
   {
     id: 4,
@@ -999,7 +999,7 @@ export const TESTIMONIALS = [
     initials: "ER",
     avatarBg: "bg-[#278393]",
     quote:
-      '"Their strategic cash flow forecasting gave us the confidence to expand. They aren\'t just bookkeepers—they are genuinely an essential, proactive extension of our senior team."',
+      '"Their cash flow insight and tax planning gave us the confidence to expand. They are not just bookkeepers — they feel like a proactive extension of our senior team."',
   },
   {
     id: 5,
@@ -1008,7 +1008,7 @@ export const TESTIMONIALS = [
     initials: "JM",
     avatarBg: "bg-[#0f172a]",
     quote:
-      '"Instant response times, transparent monthly pricing, and top-tier tax planning. Finspark saved us thousands on our annual tax bill within the very first six months alone."',
+      '"Fast responses, transparent fixed monthly fees, and practical tax advice. Finspark helped us reduce our year-end tax bill in the first six months alone."',
   },
 ];
 export const FAQ_DATA = [

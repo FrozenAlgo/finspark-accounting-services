@@ -53,7 +53,7 @@ export default function ContactPage() {
         subHeading="Speak directly with our expert team for clear, prompt guidance."
         para="Whether you have an urgent HMRC deadline, need assistance with your bookkeeping, or want to discuss corporate tax planning, we are here to help."
         pills={pills}
-        imageSrc="/images/Faq.jpg"
+        imageSrc="/images/contact.webp"
         showSubHeading={true}
         showButtons={false}
         showPills={true}

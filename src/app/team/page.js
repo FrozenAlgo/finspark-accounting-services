@@ -97,7 +97,7 @@ export default function Team() {
         subHeading="Speak directly with our expert team for clear, prompt guidance."
         para="Whether you have an urgent HMRC deadline, need assistance with your bookkeeping, or want to discuss corporate tax planning, we are here to help."
         buttons={buttons}
-        imageSrc="/images/Faq.jpg"
+        imageSrc="/images/team.webp"
         showSubHeading={true}
         showButtons={true}
         showPills={true}

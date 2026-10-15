@@ -114,7 +114,7 @@ export default function FAQ() {
             {/* Main Image Wrapper */}
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-slate-100">
               <Image
-                src="/images/Faq.jpg"
+                src="/images/investment.webp"
                 alt="Why Choose Finspark Accountancy Team"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"

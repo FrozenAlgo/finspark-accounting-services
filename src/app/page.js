@@ -194,7 +194,7 @@ export default function Home() {
               {/* Main Image Container */}
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[14/11] shadow-sm">
                 <Image
-                  src="/images/businesssupport.jpg"
+                  src="/images/meeting.webp"
                   alt="Callum & The Dedicated Surrey Team"
                   fill
                   className="object-cover"
