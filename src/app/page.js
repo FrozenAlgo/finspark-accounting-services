@@ -35,7 +35,7 @@ import {
 } from "@/lib/data";
 import ContactForm from "@/components/ui/ContactForm";
 export const metadata = {
-  title: "Homepage",
+  title: "Accountants in London",
   description:
     "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
 };
