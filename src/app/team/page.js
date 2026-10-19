@@ -1,6 +1,6 @@
 import TestimonialsCard from "@/components/testimonials/TestimonialCard";
 import Banner from "@/components/ui/Banner";
-import { companyEmail, companyName, contactsNo } from "@/lib/data";
+import { companyEmail, companyName, contactsNo, teamData } from "@/lib/data";
 import {
   ArrowDown,
   Clock,
@@ -39,34 +39,6 @@ const bannerImageStuff = {
   subText: "Speak directly to your appointed specialist",
 };
 
-const teamMembers = [
-  {
-    name: "Asif Chaudhry",
-    role: "Partner & Senior Managing Director",
-    badge: "Practice Lead",
-    tags: ["FCCA Qualified", "Tax Advisory", "15+ Yrs Exp"],
-    bio: "Chartered accountant directing owner-managed business growth, statutory compliance, corporate tax planning, and HMRC strategic advisory across London and the UK.",
-    email: companyEmail.email,
-    phone: contactsNo[0].number,
-    phoneHref: contactsNo[0].href,
-    location: "London Office",
-    image: "/team/Member1.webp",
-    alt: "Asif Chaudhry Image",
-  },
-  {
-    name: "Asim Malik",
-    role: "Partner & Senior Accounting Director",
-    badge: "Advisory Lead",
-    tags: ["FCCA Qualified", "Audit & Assurance", "Corporate Finance"],
-    bio: "Oversees statutory accountancy, Making Tax Digital (MTD) compliance, complex payroll structures, and high-level corporate tax review clearances for scaling businesses.",
-    email: companyEmail.email,
-    phone: contactsNo[1].number,
-    phoneHref: contactsNo[1].href,
-    location: "London Office",
-    image: "/team/member.png",
-    alt: "Asim Malik Image",
-  },
-];
 const promises = [
   {
     icon: UserCheck,
@@ -134,7 +106,7 @@ export default function Team() {
 
           {/* 2-Member Centered Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {teamMembers.map((member, idx) => (
+            {teamData.map((member, idx) => (
               <div
                 key={idx}
                 className="bg-white border border-slate-200/80 rounded-3xl p-6 shadow-xl shadow-slate-100 flex flex-col justify-between hover:border-[#278393]/40 transition-all duration-300 group"

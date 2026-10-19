@@ -43,7 +43,7 @@ const buttons = [
 const pills = [
   { title: "FCCA Qualified Partners", sub: "Senior-led oversight" },
   { title: "Fixed Monthly Fees", sub: "Transparent pricing upfront" },
-  { title: "Local Presence", sub: "Tongham & Farnborough offices" },
+  { title: "Local Presence", sub: "7 Haven Lane Office" },
 ];
 
 const targetedAudience = [

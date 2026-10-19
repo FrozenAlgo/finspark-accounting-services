@@ -914,7 +914,7 @@ export const companyInfo = {
   address: "7 Haven Lane, London, England",
   phone: [
     { number: "+44 7587 486885", href: "tel:+447587486885" },
-    { number: "+44 7884 003546", href: "tel:+447884003546" },
+    { number: "+44 7884 003546", href: "https://wa.me/447884003546" },
   ],
   whatsapp: "+44 7884 003546",
   emailAddress: [
@@ -1059,15 +1059,29 @@ export const ICON_SETS = {
 export const teamData = [
   {
     name: "Asif Chaudhry",
-    role: "Partner",
-    qualification: "FCCA",
-    image: "/team/asif-chaudhry.jpg", // placeholder until photos arrive
+    role: "Partner & Senior Managing Director",
+    badge: "Practice Lead",
+    tags: ["FCCA Qualified", "Tax Advisory", "15+ Yrs Exp"],
+    bio: "Chartered accountant directing owner-managed business growth, statutory compliance, corporate tax planning, and HMRC strategic advisory across London and the UK.",
+    email: companyEmail.email,
+    phone: contactsNo[0].number,
+    phoneHref: contactsNo[0].href,
+    location: "London Office",
+    image: "/team/Member1.webp",
+    alt: "Asif Chaudhry Image",
   },
   {
     name: "Asim Malik",
-    role: "Partner",
-    qualification: "FCCA",
-    image: "/team/asim-malik.jpg",
+    role: "Partner & Senior Accounting Director",
+    badge: "Advisory Lead",
+    tags: ["FCCA Qualified", "Audit & Assurance", "Corporate Finance"],
+    bio: "Oversees statutory accountancy, Making Tax Digital (MTD) compliance, complex payroll structures, and high-level corporate tax review clearances for scaling businesses.",
+    email: companyEmail.email,
+    phone: contactsNo[1].number,
+    phoneHref: contactsNo[1].href,
+    location: "London Office",
+    image: "/team/member.png",
+    alt: "Asim Malik Image",
   },
 ];
 export const FormspreeEndpoint = "https://formspree.io/f/mrpeyqod";
