@@ -14,8 +14,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Finspark Accounting and Business Services",
-  description: "Finspark Accounting and Business Services Limited",
+  metadataBase: new URL("https://finsparkaccounting.co.uk"),
+  title: {
+    default: "Finspark Accounting | Accountants in London",
+    template: "%s | Finspark Accounting",
+  },
+  description:
+    "Finspark Accounting and Business Services Limited provides bookkeeping, VAT, company accounts, self assessment and tax support in London. Led by FCCA partners Asif Chaudhry and Asim Malik.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+  },
 };
 
 export default function RootLayout({ children }) {

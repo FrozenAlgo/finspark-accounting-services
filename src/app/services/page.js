@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import FAQ from "@/components/home/FAQ";
 import ServiceCard from "@/components/services/ServiceCard";
 import TestimonialsCard from "@/components/testimonials/TestimonialCard";
@@ -15,6 +15,12 @@ import {
   Wrench,
   Clock,
 } from "lucide-react";
+
+export const metadata = {
+  title: "Our Services",
+  description:
+    "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
+};
 const buttons = [
   {
     show: true,

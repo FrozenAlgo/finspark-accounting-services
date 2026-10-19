@@ -17,6 +17,11 @@ import Banner from "@/components/ui/Banner";
 import Form from "@/components/ui/Form";
 import { companyEmail, contactsNo, companyInfo, companyName } from "@/lib/data";
 
+// export const metadata = {
+//   title: "About Us",
+//   description:
+//     "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
+// };
 const pills = [
   { title: "Direct Line", sub: contactsNo[0].number },
   { title: "Enquiries", sub: companyEmail.email },

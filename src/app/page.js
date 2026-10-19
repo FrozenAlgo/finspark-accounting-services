@@ -34,7 +34,11 @@ import {
   steps,
 } from "@/lib/data";
 import ContactForm from "@/components/ui/ContactForm";
-
+export const metadata = {
+  title: "Homepage",
+  description:
+    "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
+};
 export default function Home() {
   return (
     <div>

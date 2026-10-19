@@ -15,6 +15,11 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+export const metadata = {
+  title: "Our Team",
+  description:
+    "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
+};
 const buttons = [
   {
     show: true,
