@@ -15,13 +15,10 @@ import {
   CloudCheck,
   FileCheck,
   MessageSquare,
-  Phone,
   ScrollText,
   ShieldCheck,
   TrendingUp,
-  User,
   Users,
-  Wrench,
 } from "lucide-react";
 import Image from "next/image";
 const buttons = [
