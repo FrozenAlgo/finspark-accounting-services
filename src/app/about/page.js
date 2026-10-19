@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import FAQ from "@/components/home/FAQ";
 import Banner from "@/components/ui/Banner";
@@ -22,18 +22,18 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-// export const metadata = {
-//   title: "About Us",
-//   description:
-//     "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
-// };
+export const metadata = {
+  title: "About Us",
+  description:
+    "Meet Finspark Accounting in London. FCCA partners Asif Chaudhry and Asim Malik provide clear, practical accountancy for limited companies and sole traders.",
+};
 const buttons = [
   {
     show: true,
     text: "Book an Appointment",
     hoverText: "Book an Appointment Now",
     href: "/contact", // URL link passed here
-    icon: CalendarCheck,
+    icon: "CalendarCheck",
     variant: "primary",
   },
   {
@@ -41,7 +41,7 @@ const buttons = [
     text: "Meet Our Team",
     hoverText: "Meet The Expert Team",
     href: "/team", // URL link passed here
-    icon: Users,
+    icon: "Users",
     variant: "secondary",
   },
 ];
@@ -59,7 +59,7 @@ const targetedAudience = [
     description:
       "We translate HMRC taxlegislation, statutory filings, and CIS regulations into plain, straightforward English you can make decisions on.",
     tag: "Clear explanations",
-    icon: MessageSquare,
+    icon: "MessageSquare",
   },
   {
     id: 2,
@@ -67,7 +67,7 @@ const targetedAudience = [
     description:
       "No waiting weeks for an answer. Urgent tax queries and payroll clarifications are handled within hours during business days.",
     tag: "Guaranteed speed",
-    icon: Clock,
+    icon: "Clock",
   },
   {
     id: 3,
@@ -75,7 +75,7 @@ const targetedAudience = [
     description:
       "Say goodbye to surprise invoices for simple emails. Our monthly packages provide total clarity and unencumbered communication.",
     tag: "No hidden costs",
-    icon: ScrollText,
+    icon: "ScrollText",
   },
   {
     id: 4,
@@ -83,7 +83,7 @@ const targetedAudience = [
     description:
       "We do not just look backward at what you earned; we review quarterly reports to extract maximum legal tax allowances and cash-flow health.",
     tag: "Forward planning",
-    icon: TrendingUp,
+    icon: "TrendingUp",
   },
 ];
 const accreditations = [
