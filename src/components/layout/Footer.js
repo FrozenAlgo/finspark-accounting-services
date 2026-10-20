@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 3: OFFICE LOCATION (Col 2) */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-4" id="contact">
             <h3 className="text-xs sm:text-sm font-extrabold tracking-widest text-[#278393] uppercase">
               London Office
             </h3>
