@@ -6,15 +6,6 @@ import Banner from "@/components/ui/Banner";
 import ContactForm from "@/components/ui/ContactForm";
 import TargetAudience from "@/components/ui/TargetAudience";
 import { companyName, contactsNo, servicesData } from "@/lib/data";
-import {
-  CalendarCheck,
-  ChevronDown,
-  Phone,
-  User,
-  Building2,
-  Wrench,
-  Clock,
-} from "lucide-react";
 
 export const metadata = {
   title: "Our Services",
@@ -27,7 +18,7 @@ const buttons = [
     text: "Book an Appointment",
     hoverText: "Book an Appointment Now",
     href: "/contact", // URL link passed here
-    icon: CalendarCheck,
+    icon: "CalendarCheck",
     variant: "primary",
   },
   {
@@ -35,7 +26,7 @@ const buttons = [
     text: "Explore Services Below",
     hoverText: "Explore Our Services",
     href: "#services", // Telephone link
-    icon: ChevronDown,
+    icon: "ChevronDown",
     variant: "secondary",
   },
 ];
@@ -51,7 +42,7 @@ const targetedAudience = [
     description:
       "If you're running your business on your own, bookkeeping can quickly become time-consuming. We provide clarity, handle HMRC filings, and explain your cash flow in plain English.",
     tag: "Clarity & Compliance",
-    icon: User,
+    icon: "User",
   },
   {
     id: "limited-companies",
@@ -59,7 +50,7 @@ const targetedAudience = [
     description:
       "Essential foundation for corporate tax, VAT returns, payroll, and directors' loans. Consistent bookkeeping that keeps management accounts in flawless shape.",
     tag: "Structured Reporting",
-    icon: Building2,
+    icon: "Building2",
   },
   {
     id: "trades-services",
@@ -67,7 +58,7 @@ const targetedAudience = [
     description:
       "Handling frequent payments, supplier invoices, material costs, and CIS deductions. Clean records so you never face end-of-quarter or supplier panics.",
     tag: "High Transaction Flow",
-    icon: Wrench,
+    icon: "Wrench",
   },
   {
     id: "growing-businesses",
@@ -75,7 +66,7 @@ const targetedAudience = [
     description:
       "Business owners wanting to reclaim evenings and weekends. Eliminate financial admin stress with a responsive team that proactively spots discrepancies.",
     tag: "Time Reclaimed",
-    icon: Clock,
+    icon: "Clock",
   },
 ];
 export default function ServicesPage() {

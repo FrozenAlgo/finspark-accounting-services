@@ -24,15 +24,7 @@ import AnimatedBtn from "@/components/ui/AnimatedBtn";
 import FAQ from "@/components/home/FAQ";
 import ServiceCard from "@/components/services/ServiceCard";
 import AmbientBackground from "@/components/ui/AmbientBackground";
-import {
-  companyEmail,
-  companyInfo,
-  companyName,
-  contactsNo,
-  servicesData,
-  stats,
-  steps,
-} from "@/lib/data";
+import { companyInfo, servicesData, stats, steps } from "@/lib/data";
 import ContactForm from "@/components/ui/ContactForm";
 export const metadata = {
   title: "Accountants in London",

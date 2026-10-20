@@ -23,7 +23,7 @@ export const metadata = {
     "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
 };
 const pills = [
-  { title: "Direct Line", sub: contactsNo[0].number },
+  { title: "Contact on WhatsApp", sub: contactsNo[0].number },
   { title: "Enquiries", sub: companyEmail.email },
   { title: "Office Timing", sub: "Mon-Fri 9:00 AM - 5:00 PM" },
 ];
