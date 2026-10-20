@@ -184,9 +184,9 @@ export default function ContactForm() {
                 <MapPin size={20} strokeWidth={2.2} />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white mb-0.5">
+                <p className="text-sm font-bold text-white mb-0.5">
                   Office Location:
-                </h4>
+                </p>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   7 Haven Lane, Ealing, London Borough of Ealing, Greater
                   London, W5 2HZ, England, United Kingdom
@@ -199,9 +199,9 @@ export default function ContactForm() {
                 <Phone size={20} strokeWidth={2.2} />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white mb-0.5">
+                <p className="text-sm font-bold text-white mb-0.5">
                   Phone Support:
-                </h4>
+                </p>
                 <a
                   href={contactsNo[0].href}
                   className="text-xs sm:text-sm text-slate-300 hover:text-white transition-colors"
@@ -216,9 +216,9 @@ export default function ContactForm() {
                 <Mail size={20} strokeWidth={2.2} />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white mb-0.5">
+                <p className="text-sm font-bold text-white mb-0.5">
                   Email Address:
-                </h4>
+                </p>
                 <a
                   href={companyEmail.href}
                   className="text-xs sm:text-sm text-slate-300 hover:text-white transition-colors"

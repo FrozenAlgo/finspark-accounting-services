@@ -368,9 +368,9 @@ export default function Form({ headingColor }) {
           <CheckCircleIcon size={18} />
         </div>
         <div>
-          <h6 className="text-slate-400 text-[10px] sm:text-xs font-medium leading-none">
+          <p className="text-slate-600 text-[10px] sm:text-xs font-medium leading-none">
             Client Peace of mind
-          </h6>
+          </p>
           <p className="font-bold text-[#083761] mt-0.5">100% HMRC Compliant</p>
         </div>
       </div>

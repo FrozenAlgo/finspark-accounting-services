@@ -125,9 +125,9 @@ export default function TestimonialsCard() {
                         </div>
 
                         <div className="min-w-0">
-                          <h4 className="font-bold text-[#083761] text-base leading-tight truncate">
+                          <p className="font-bold text-[#083761] text-base leading-tight truncate">
                             {item.name}
-                          </h4>
+                          </p>
                           <p className="text-slate-500 text-xs truncate mt-0.5">
                             {item.role}
                           </p>
@@ -149,7 +149,7 @@ export default function TestimonialsCard() {
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
                   aria-label={`Go to slide ${idx + 1}`}
-                  className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
+                  className={`h-8 w-8 flex items-center justify-center rounded-full transition-all duration-300 cursor-pointer ${
                     currentIndex === idx
                       ? "w-8 bg-[#278393]"
                       : "w-2.5 bg-slate-200 hover:bg-slate-300"

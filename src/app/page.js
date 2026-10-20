@@ -77,7 +77,7 @@ export default function Home() {
           glowPosition="center"
         />
         <div className="text-sm text-center py-4 z-10">
-          <h6 className="text-[#278393] font-bold">WHAT WE DO</h6>
+          <p className="text-[#278393] font-bold">WHAT WE DO</p>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#083761] my-3 tracking-tight">
             Comprehensive Accountancy Solutions
           </h1>

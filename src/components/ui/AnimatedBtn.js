@@ -5,9 +5,9 @@ export default function AnimatedBtn({
   hoverText = "Click here",
   href = "#",
   icon: Icon, // Destructures the Lucide component passed down as a prop
-  bgColor = "bg-[#278391]",
-  hoverBgColor = "hover:bg-amber-900",
-  textColor = "text-[#083761]",
+  bgColor = "bg-[#278393]",
+  hoverBgColor = "hover:bg-[#083761]",
+  textColor = "text-white",
   hoverTextColor = "hover:text-white",
   className = "",
   typeSubmit = false,
