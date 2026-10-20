@@ -79,12 +79,9 @@ export default function Footer() {
                 </a>
               </p>
 
-              <p className="pt-2 font-semibold text-white  flex items-center gap-1">
+              <p className="pt-2 font-semibold text-white hover:text-[#9fc4cb] transition-colors flex items-center gap-1">
                 <Phone size={16} />
-                <a
-                  href={contactsNo[1].href}
-                  className="hover:text-[#278393] transition-colors"
-                >
+                <a href={contactsNo[1].href} className=" ">
                   {contactsNo[1].number}
                 </a>
               </p>
@@ -102,7 +99,7 @@ export default function Footer() {
             </p>
             <div className="pt-1">
               <span className="inline-block text-xs font-bold text-[#278393] bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                Mon – Fri: 9:00 AM – 5:00 PM
+                Mon - Fri: 9:00 AM - 5:00 PM
               </span>
             </div>
           </div>
@@ -120,7 +117,7 @@ export default function Footer() {
           <div className="text-slate-400 font-medium">
             Website designed & managed by{" "}
             <a
-              href="https://offscript.co"
+              href="https://portfolio-kappa-nine-204xtzt9as.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#278393] font-bold underline underline-offset-4 transition-colors"

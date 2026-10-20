@@ -158,7 +158,10 @@ export default function ContactForm() {
     "absolute right-0 bottom-2 w-5 h-5 text-slate-400 peer-focus:text-[#278393] pointer-events-none transition-colors duration-300";
 
   return (
-    <div className="max-w-7xl mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-slate-100 bg-white grid grid-cols-1 lg:grid-cols-12 relative">
+    <div
+      className="max-w-7xl mx-auto rounded-[32px] overflow-hidden shadow-2xl border border-slate-100 bg-white grid grid-cols-1 lg:grid-cols-12 relative"
+      id="contact"
+    >
       {/* ================= LEFT COLUMN ================= */}
       <div className="lg:col-span-5 bg-[#083761] text-white p-8 sm:p-12 flex flex-col justify-between relative overflow-hidden">
         <div className="absolute -top-24 -left-24 w-72 h-72 bg-[#278393]/20 rounded-full blur-3xl pointer-events-none" />

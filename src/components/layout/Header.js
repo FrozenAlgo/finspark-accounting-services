@@ -148,6 +148,7 @@ export default function Header() {
               hoverBgColor="hover:bg-[#083761]"
               textColor="text-white"
               hoverTextColor="hover:text-white"
+              href="#contact"
             >
               Book An Appointment
             </AnimatedBtn>
