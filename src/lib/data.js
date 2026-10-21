@@ -283,11 +283,11 @@ export const servicesData = [
       platforms: [
         {
           title: "Xero Accounting",
-          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
         },
         {
           title: "QuickBooks",
-          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
         },
         {
           title: "Dext & Hubdoc",
@@ -411,11 +411,11 @@ export const servicesData = [
       platforms: [
         {
           title: "Xero Accounting",
-          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
         },
         {
           title: "QuickBooks",
-          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
         },
         {
           title: "Dext & Hubdoc",
@@ -532,11 +532,11 @@ export const servicesData = [
       platforms: [
         {
           title: "Xero Accounting",
-          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
         },
         {
           title: "QuickBooks",
-          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
         },
         {
           title: "Dext & Hubdoc",
@@ -646,11 +646,11 @@ export const servicesData = [
       platforms: [
         {
           title: "Xero Accounting",
-          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
         },
         {
           title: "QuickBooks",
-          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
         },
         {
           title: "Dext & Hubdoc",
@@ -752,11 +752,11 @@ export const servicesData = [
       platforms: [
         {
           title: "Xero Accounting",
-          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
         },
         {
           title: "QuickBooks",
-          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
         },
         {
           title: "Dext & Hubdoc",
@@ -860,11 +860,11 @@ export const servicesData = [
       platforms: [
         {
           title: "Xero Accounting",
-          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
         },
         {
           title: "QuickBooks",
-          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
         },
         {
           title: "Dext & Hubdoc",

@@ -182,10 +182,10 @@ export default function Banner({
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs sm:text-sm font-bold text-[#083761] truncate">
-                    15+ Yrs
+                    FCCA Partners
                   </p>
                   <p className="text-[11px] text-slate-500 font-medium leading-tight">
-                    London & UK Presence
+                    Senior-led advice
                   </p>
                 </div>
               </div>
