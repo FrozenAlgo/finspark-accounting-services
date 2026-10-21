@@ -160,7 +160,10 @@ export default function ContactPage() {
           </div>
 
           {/* RIGHT COLUMN: Reused Form Component */}
-          <div className="w-full lg:basis-[40%] max-w-lg mx-auto lg:mx-0 shrink-0 sticky top-6">
+          <div
+            className="w-full lg:basis-[40%] max-w-lg mx-auto lg:mx-0 shrink-0 sticky top-6"
+            id="contact"
+          >
             <Form headingColor="black" />
           </div>
         </div>
