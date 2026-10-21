@@ -191,7 +191,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] sm:aspect-[14/11] shadow-sm">
                 <Image
                   src="/images/meeting.webp"
-                  alt="Callum & The Dedicated Surrey Team"
+                  alt="Haven Lane, London Dedicated Team"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -202,7 +202,7 @@ export default function Home() {
               {/* Overlapping Floating Bottom Badge */}
               <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 w-[90%] sm:w-[85%] bg-white rounded-2xl px-6 py-4 shadow-xl border border-slate-100 text-center z-10">
                 <span className="text-xs font-semibold text-slate-500 block mb-0.5">
-                  Callum & The Dedicated Surrey Team
+                  Haven Lane, London Dedicated Team
                 </span>
                 <h4 className="text-sm sm:text-base font-bold text-[#083761] leading-tight">
                   Collaborative Advisory That Puts You First

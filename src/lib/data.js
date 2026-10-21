@@ -943,7 +943,7 @@ export const steps = [
   {
     num: "3",
     title: "Genuine Local Presence",
-    desc: "Conveniently situated in Tongham and Farnborough. Drop by our office anytime to discuss your accounts.",
+    desc: "Conveniently situated in Haven Lane. Drop by our office anytime to discuss your accounts.",
   },
 ];
 export const stats = [
