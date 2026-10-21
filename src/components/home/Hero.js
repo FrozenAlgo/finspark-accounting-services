@@ -278,7 +278,7 @@ const Hero = () => {
             hoverBgColor="hover:bg-[#1f6875]"
             textColor="text-white"
             hoverTextColor="hover:text-white"
-            href="#contact"
+            href="/contact#contact"
           >
             Book an Appointment
           </AnimatedBtn>
