@@ -37,35 +37,35 @@ export default function Home() {
       <Hero />
       <section className="grid grid-cols-1 md:grid-cols-4  gap-4 py-8">
         <div className="text-center">
-          <h6 className="text-[#278393] text-2xl  lg:text-3xl font-bold ">
-            10+ Years
+          <h6 className="text-[#278393] text-xl  lg:text-2xl font-bold ">
+            VAT & MTD
           </h6>
-          <p className="text-xs lg:text-sm font-semibold  text-gray-600">
-            Established Practice
+          <p className="text-[10px] lg:text-xs font-semibold  text-gray-600">
+            Returns Filed On Time
           </p>
         </div>
         <div className="text-center">
-          <h6 className="text-[#278393] text-2xl  lg:text-3xl font-bold ">
-            350+
+          <h6 className="text-[#278393] text-xl  lg:text-2xl font-bold ">
+            Payroll & CIS
           </h6>
-          <p className="text-xs lg:text-sm font-semibold  text-gray-600">
-            Local Business Clients
+          <p className="text-[10px] lg:text-xs font-semibold  text-gray-600">
+            For Trades & Limited Companies
           </p>
         </div>
         <div className="text-center">
-          <h6 className="text-[#278393] text-2xl  lg:text-3xl font-bold ">
-            100%
+          <h6 className="text-[#278393] text-xl  lg:text-2xl font-bold ">
+            Year-End
           </h6>
-          <p className="text-xs lg:text-sm font-semibold  text-gray-600">
-            On-Time HMRC Submissions
+          <p className="text-[10px] lg:text-xs font-semibold  text-gray-600">
+            Accounts & Corporation Tax
           </p>
         </div>
         <div className="text-center">
-          <h6 className="text-[#278393] text-2xl  lg:text-3xl font-bold ">
-            &lt; 4 Hours
+          <h6 className="text-[#278393] text-xl  lg:text-2xl font-bold ">
+            Self Assessment
           </h6>
-          <p className="text-xs lg:text-sm font-semibold  text-gray-600">
-            Avg Response Turnaround
+          <p className="text-[10px] lg:text-xs font-semibold  text-gray-600">
+            Sole Traders & Directors
           </p>
         </div>
       </section>

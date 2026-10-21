@@ -228,7 +228,7 @@ export default function TestimonialsPage() {
                 Prefer to talk right now?
               </h3>
               <p className=" text-xs sm:text-sm text-slate-300 font-medium max-w-xl">
-                Call Asif, Asim and the team directly on
+                Reach out Asif, Asim and the team directly on
                 <Link
                   className="text-white font-bold mx-1"
                   href={contactsNo[0].href}
@@ -252,7 +252,7 @@ export default function TestimonialsPage() {
                 className="inline-flex items-center gap-2.5 bg-white text-[#083761] hover:bg-slate-100 px-6 py-3.5 rounded-2xl font-bold text-sm shadow-lg transition-all"
               >
                 <Phone size={18} className="text-[#278393]" />
-                <span>Call {contactsNo[0].number}</span>
+                <span>Contact {contactsNo[0].number}</span>
               </a>
 
               <a

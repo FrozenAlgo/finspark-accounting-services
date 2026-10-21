@@ -372,7 +372,9 @@ export default function Form({ headingColor }) {
           <p className="text-slate-600 text-[10px] sm:text-xs font-medium leading-none">
             Client Peace of mind
           </p>
-          <p className="font-bold text-[#083761] mt-0.5">100% HMRC Compliant</p>
+          <p className="font-bold text-[#083761] mt-0.5">
+            HMRC-Focused Practice
+          </p>
         </div>
       </div>
 

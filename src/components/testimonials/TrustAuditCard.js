@@ -76,7 +76,9 @@ export default function TrustAuditCard() {
           <Lock size={14} className="text-[#278393]" />
           <span>Independent Client Audit</span>
         </div>
-        <span className="text-[#278393] font-extrabold">100% Recommended</span>
+        <span className="text-[#278393] font-extrabold">
+          Client-Focused Support
+        </span>
       </div>
     </div>
   );

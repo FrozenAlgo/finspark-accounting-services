@@ -294,7 +294,7 @@ export default function Team() {
                 Prefer to talk right now?
               </h3>
               <p className=" text-xs sm:text-sm text-slate-300 font-medium max-w-xl">
-                Call Asif, Asim and the team directly on
+                Reach out Asif, Asim and the team directly on
                 <Link
                   className="text-white font-bold mx-1"
                   href={contactsNo[0].href}

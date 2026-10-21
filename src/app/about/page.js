@@ -63,7 +63,7 @@ const targetedAudience = [
   },
   {
     id: 2,
-    title: "Responsive Turnaround (<4h)",
+    title: "Responsive Turnaround",
     description:
       "No waiting weeks for an answer. Urgent tax queries and payroll clarifications are handled within hours during business days.",
     tag: "Guaranteed speed",

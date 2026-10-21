@@ -149,11 +149,11 @@ export const servicesData = [
       platforms: [
         {
           title: "Xero Accounting",
-          desc: "Gold Partner setup, migrations & day-to-day oversight.",
+          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
         },
         {
           title: "QuickBooks",
-          desc: "Comprehensive ProAdvisor workflows & bank feeds.",
+          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
         },
         {
           title: "Dext & Hubdoc",
@@ -1068,8 +1068,8 @@ export const teamData = [
     tags: ["FCCA Qualified", "Tax Advisory", "Highly experienced"],
     bio: "Chartered accountant directing owner-managed business growth, statutory compliance, corporate tax planning, and HMRC strategic advisory across London and the UK.",
     email: companyEmail.email,
-    phone: contactsNo[0].number,
-    phoneHref: contactsNo[0].href,
+    phone: contactsNo[1].number,
+    phoneHref: contactsNo[1].href,
     location: "London Office",
     image: "/team/Member1.webp",
     alt: "Asif Chaudhry Image",
@@ -1081,8 +1081,8 @@ export const teamData = [
     tags: ["FCCA Qualified", "Audit & Assurance", "Corporate Finance"],
     bio: "Oversees statutory accountancy, Making Tax Digital (MTD) compliance, complex payroll structures, and high-level corporate tax review clearances for scaling businesses.",
     email: companyEmail.email,
-    phone: contactsNo[1].number,
-    phoneHref: contactsNo[1].href,
+    phone: contactsNo[0].number,
+    phoneHref: contactsNo[0].href,
     location: "London Office",
     image: "/team/member.png",
     alt: "Asim Malik Image",
