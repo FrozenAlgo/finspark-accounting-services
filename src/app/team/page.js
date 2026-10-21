@@ -43,7 +43,11 @@ const bannerImageStuff = {
   text: "Direct Phone & Email",
   subText: "Speak directly to your appointed specialist",
 };
-
+const pills = [
+  { title: "FCCA Partners", sub: "Senior-led advice" },
+  { title: "Direct Access", sub: "Speak to your adviser" },
+  { title: "Fast Response", sub: "Within 4 business hours" },
+];
 const promises = [
   {
     icon: UserCheck,
@@ -53,8 +57,8 @@ const promises = [
   },
   {
     icon: Clock,
-    title: "4-Hour Weekday Response Commitment",
-    desc: "Tax deadlines and invoice queries can't wait days. All client enquiries submitted during standard office hours receive a concrete reply or phone consultation within 4 business hours.",
+    title: "Fast Response Commitment",
+    desc: "Tax deadlines and invoice queries can't wait days. All client enquiries submitted during standard office hours receive a concrete reply or phone consultation within few business hours.",
     tag: "Fast Reliable Action",
   },
   {
@@ -77,8 +81,8 @@ export default function Team() {
         imageSrc="/images/team.webp"
         showSubHeading={true}
         showButtons={true}
-        showPills={true}
-        testimonialSection={true}
+        // pills={pills}
+        // showPills={true}
         bannerImageStuff={bannerImageStuff}
         bannerImageStuffPassed={true}
       />
@@ -314,7 +318,7 @@ export default function Team() {
                 className="inline-flex items-center gap-2.5 bg-white text-[#083761] hover:bg-slate-100 px-6 py-3.5 rounded-2xl font-bold text-sm shadow-lg transition-all"
               >
                 <Phone size={18} className="text-[#278393]" />
-                <span>Call {contactsNo[0].number}</span>
+                <span>Whatsapp : {contactsNo[0].number}</span>
               </a>
 
               <a

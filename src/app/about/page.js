@@ -102,21 +102,22 @@ const accreditations = [
     title: "MTD Compliant",
     subtitle: "Making Tax Digital Ready",
   },
-  {
-    icon: TrendingUp,
-    title: "Xero Gold",
-    subtitle: "Certified Advisor Partner",
-  },
-  {
-    icon: Calculator,
-    title: "QuickBooks",
-    subtitle: "Certified ProAdvisor",
-  },
-  {
-    icon: FileCheck,
-    title: "AAT Qualified",
-    subtitle: "Professional Practice",
-  },
+
+  // {
+  //   icon: TrendingUp,
+  //   title: "Xero Gold",
+  //   subtitle: "Certified Advisor Partner",
+  // },
+  // {
+  //   icon: Calculator,
+  //   title: "QuickBooks",
+  //   subtitle: "Certified ProAdvisor",
+  // },
+  // {
+  //   icon: FileCheck,
+  //   title: "AAT Qualified",
+  //   subtitle: "Professional Practice",
+  // },
 ];
 export default function AboutPage() {
   return (
@@ -323,7 +324,7 @@ export default function AboutPage() {
           </div>
 
           {/* Accreditations Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 sm:gap-6">
             {accreditations.map((item, idx) => {
               const Icon = item.icon;
 

@@ -1065,7 +1065,7 @@ export const teamData = [
     name: "Asif Chaudhry",
     role: "Partner & Senior Managing Director",
     badge: "Practice Lead",
-    tags: ["FCCA Qualified", "Tax Advisory", "15+ Yrs Exp"],
+    tags: ["FCCA Qualified", "Tax Advisory", "Highly experienced"],
     bio: "Chartered accountant directing owner-managed business growth, statutory compliance, corporate tax planning, and HMRC strategic advisory across London and the UK.",
     email: companyEmail.email,
     phone: contactsNo[0].number,

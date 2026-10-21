@@ -31,7 +31,7 @@ const buttons = [
   },
 ];
 const pills = [
-  { title: "Xero & QuickBooks", sub: "Gold Accredited Partners" },
+  { title: "FCCA Qualified Partners", sub: "Senior-led oversight" },
   { title: "Zero Jargon", sub: "Clear English explanations" },
   { title: "Fixed Monthly Fees", sub: "Transparent, no surprises" },
 ];

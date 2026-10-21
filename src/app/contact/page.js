@@ -23,7 +23,7 @@ export const metadata = {
     "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
 };
 const pills = [
-  { title: "Contact on WhatsApp", sub: contactsNo[0].number },
+  { title: "Message us on WhatsApp", sub: contactsNo[0].number },
   { title: "Enquiries", sub: companyEmail.email },
   { title: "Office Timing", sub: "Mon-Fri 9:00 AM - 5:00 PM" },
 ];
@@ -245,7 +245,7 @@ export default function ContactPage() {
                 className="inline-flex items-center gap-2.5 bg-white text-[#083761] hover:bg-slate-100 px-6 py-3.5 rounded-2xl font-bold text-sm shadow-lg transition-all"
               >
                 <Phone size={18} className="text-[#278393]" />
-                <span>Call {contactsNo[0].number}</span>
+                <span>WhatsApp : {contactsNo[0].number}</span>
               </a>
 
               <a

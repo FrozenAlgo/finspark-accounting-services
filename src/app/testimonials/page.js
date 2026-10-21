@@ -28,9 +28,9 @@ const buttons = [
 ];
 
 const pills = [
-  { title: "100%", sub: "5-Star Feedback Score" },
-  { title: "< 4h", sub: "Guaranteed Response Time" },
-  { title: "15+ Yrs", sub: "London & UK Presence" },
+  { title: "Excellent Feedback Score", sub: "Highly Recommended by clients" },
+  { title: "Quick Response", sub: "Guaranteed Response Time" },
+  { title: "Senior Specialists", sub: "London & UK Presence" },
 ];
 const caseStudies = [
   {
@@ -73,7 +73,7 @@ const targetedAudience = [
   },
   {
     id: 2,
-    title: "Responsive Turnaround (<4h)",
+    title: "Quick Response",
     description:
       "No waiting weeks for an answer. Urgent tax queries and payroll clarifications are handled within hours during business days.",
     tag: "Guaranteed speed",
