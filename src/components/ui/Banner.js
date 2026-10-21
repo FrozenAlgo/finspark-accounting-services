@@ -167,10 +167,10 @@ export default function Banner({
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs sm:text-sm font-bold text-[#083761] truncate">
-                    100%
+                    HMRC-Focused Practice
                   </p>
                   <p className="text-[11px] text-slate-500 font-medium leading-tight">
-                    HMRC & MTD Compliant
+                    Aligned with HMRC Requirements
                   </p>
                 </div>
               </div>
@@ -309,16 +309,16 @@ export default function Banner({
               />
 
               {/* Top-Right Badge */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md border border-slate-100 p-3 rounded-2xl shadow-lg flex items-center gap-2.5 max-w-[200px]">
+              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md border border-slate-100 p-3 rounded-2xl shadow-lg flex items-center gap-2.5 max-w-[300px]">
                 <div className="w-8 h-8 rounded-full bg-[#083761] text-white flex items-center justify-center shrink-0">
                   <Star size={16} className="fill-current text-amber-400" />
                 </div>
                 <div>
                   <p className="text-xs font-extrabold text-[#083761] leading-tight">
-                    100% HMRC Ready
+                    HMRC-Focused Practice
                   </p>
                   <p className="text-[10px] text-slate-500 font-medium">
-                    Audit-compliant records
+                    Aligned with HMRC Requirements
                   </p>
                 </div>
               </div>

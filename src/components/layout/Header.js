@@ -281,6 +281,16 @@ export default function Header() {
                 hoverBgColor="hover:bg-[#083761]"
                 textColor="text-white"
                 hoverTextColor="hover:text-white"
+                onClick={(e) => {
+                  const el = document.getElementById("contact");
+                  if (el) {
+                    e.preventDefault();
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                  }
+                  setIsMobileMenuOpen(false);
+                  // else default: go to /contact#contact-form
+                }}
+                href="/contact#contact"
               >
                 Book An Appointment
               </AnimatedBtn>
