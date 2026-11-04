@@ -72,10 +72,7 @@ export default function Footer() {
                   className="hover:text-[#278393] transition-colors"
                 >
                   {contactsNo[0].number}
-                  <span className="text-[11px]  text-green-200">
-                    {" "}
-                    WhatsApp Only
-                  </span>
+                  <span className="text-[11px]  text-green-200"> WhatsApp</span>
                 </a>
               </p>
 

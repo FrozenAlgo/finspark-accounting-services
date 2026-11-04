@@ -46,7 +46,7 @@ const bannerImageStuff = {
 const pills = [
   { title: "FCCA Partners", sub: "Senior-led advice" },
   { title: "Direct Access", sub: "Speak to your adviser" },
-  { title: "Fast Response", sub: "Within 4 business hours" },
+  { title: "Fast Response", sub: "within 24 hours (during business days)" },
 ];
 const promises = [
   {

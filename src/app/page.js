@@ -100,7 +100,7 @@ export default function Home() {
           <div className="lg:col-span-6 space-y-8">
             <div>
               <span className="text-xs sm:text-[13px] font-bold tracking-widest text-[#278393] uppercase block mb-3">
-                THE PAL DIFFERENCE
+                WHY CHOOSE FINSPARK
               </span>
               <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-black text-[#083761] leading-[1.18] tracking-tight">
                 No chasing. No jargon. <br className="hidden sm:inline" />
@@ -270,9 +270,9 @@ export default function Home() {
 
       <FAQ />
 
-      <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+      {/* <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <ContactForm />
-      </section>
+      </section> */}
     </div>
   );
 }

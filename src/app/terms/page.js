@@ -59,8 +59,8 @@ export default function TermsOfBusinessPage() {
               Under our <em>Client Care Promise</em>, inquiries submitted during
               standard business operating hours receive direct access to
               designated advisers with a concrete initial turnaround target
-              within 4 business hours. You will deal directly with senior
-              accountants rather than generic call centers.
+              within 24 hours (during business days). You will deal directly
+              with senior accountants rather than generic call centers.
             </p>
           </section>
 

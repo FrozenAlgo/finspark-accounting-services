@@ -53,7 +53,7 @@ const caseStudies = [
     subtitle: "Director, Commercial Construction & Maintenance",
     image: "/images/review2.webp", // Replace with your image asset
     quote:
-      "“My company has used Finspark for over a decade. Always competent, immediate responses, and seamless CIS/payroll management. The ideal partner for small businesses.”",
+      "“Clear advice and quick replies on CIS and payroll. Switching to Finspark was straightforward and the team is easy to deal with.”",
     description:
       "Construction Industry Scheme (CIS) deductions and subcontractor filings require total accuracy. With Finspark handling monthly CIS reconciliations and strict HMRC compliance deadlines, Mark has maintained flawless regulatory standing.",
     metaLeftLabel: "Client Tenure",

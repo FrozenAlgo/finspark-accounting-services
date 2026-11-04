@@ -24,7 +24,7 @@ export default function Header() {
             <WhatsappIcon className="h-4 w-4 text-green-500 hover:text-green-600 transition" />
             <span>
               {contactsNo[0].number}{" "}
-              <span className="text-[11px] text-green-200"> WhatsApp Only</span>
+              <span className="text-[11px] text-green-200"> WhatsApp </span>
             </span>
             <span className="absolute  right-full min-w-max px-2  lg:group-hover:visible lg:group-hover:opacity-100 invisible opacity-0">
               <span className="rounded-full p-2 text-xs text-green-200 bg-white/30  ">

@@ -247,7 +247,7 @@ export default function ContactForm() {
             </h3>
             <p className="text-slate-500 text-xs sm:text-sm mt-1.5">
               Please enter your contact details below and our team will get back
-              to you within 24 hours.
+              to you within 24 hours (during business days).
             </p>
           </div>
 

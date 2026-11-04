@@ -31,7 +31,7 @@ const steps = [
   {
     num: "1",
     title: "Prompt Confirmation",
-    desc: "You will receive a clear email confirmation and direct calendar invite from Asif, Asim, or your designated lead adviser within 4 business hours.",
+    desc: "You will receive a clear email confirmation and direct calendar invite from Asif, Asim, or your designated lead adviser within 24 hours (during business days).",
     footer: "Direct contact • No bot delays",
   },
   {

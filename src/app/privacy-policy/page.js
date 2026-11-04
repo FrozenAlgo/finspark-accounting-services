@@ -95,7 +95,7 @@ export default function PrivacyPolicyPage() {
               </li>
               <li>
                 Responding to legitimate consultation requests and direct
-                service inquiries within 4 office hours.
+                service inquiries within 24 hours (during business days).
               </li>
             </ul>
           </section>

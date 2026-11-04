@@ -184,7 +184,7 @@ export default function Form({ headingColor }) {
           </h2>
           <p className="py-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
             Please enter your contact details below and our team will get back
-            to you within 24 hours.
+            to you within 24 hours (during business days).
           </p>
         </div>
       ) : (
@@ -194,7 +194,7 @@ export default function Form({ headingColor }) {
           </h2>
           <p className="py-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
             Please enter your contact details below and our team will get back
-            to you within 24 hours.
+            to you within 24 hours (during business days).
           </p>
         </div>
       )}
