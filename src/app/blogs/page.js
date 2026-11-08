@@ -1,4 +1,4 @@
-import BlogListing from "@/components/blog/BlogListing";
+import BlogListing from "@/components/blogs/BlogListing";
 import { posts } from "@/lib/blogData";
 
 export const metadata = {

@@ -58,7 +58,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation Links */}
-          <ul className="navigations hidden lg:flex items-center gap-6 lg:gap-15 text-[#083761] text-sm lg:text-lg md:tracking-wide font-semibold">
+          <ul className="navigations hidden lg:flex items-center gap-6 lg:gap-10 text-[#083761] text-sm lg:text-lg md:tracking-wide font-semibold">
             <li>
               <Link
                 href="/"
@@ -127,7 +127,15 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
               </Link>
             </li>
-
+            <li>
+              <Link
+                href="/blogs"
+                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
+              >
+                Blogs
+                <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
+              </Link>
+            </li>
             <li>
               <Link
                 href="/contact"
@@ -259,7 +267,16 @@ export default function Header() {
                   <span className="text-slate-300 text-xs">&rarr;</span>
                 </Link>
               </li>
-
+              <li>
+                <Link
+                  href="/blogs"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
+                >
+                  <span>Blogs</span>
+                  <span className="text-slate-300 text-xs">&rarr;</span>
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/contact"
