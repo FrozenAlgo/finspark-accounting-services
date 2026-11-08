@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import BackToTop from "@/components/ui/BackToTop";
 
 // Configure Montserrat with all weights (variable) and styles (normal + italic)
 const montserrat = Montserrat({
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
