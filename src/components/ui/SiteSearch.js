@@ -221,21 +221,23 @@ export default function SiteSearch() {
 
   return (
     <>
-      {/* Floating search — bottom left (BackToTop is bottom right) */}
+      {/* Floating search — bottom left; tooltip only on hover */}
       <button
         type="button"
         onClick={openModal}
-        aria-label="Search the website"
-        className="fixed bottom-6 left-6 z-50 group flex items-center gap-2"
+        aria-label="Search the website (Ctrl or Cmd + K)"
+        title="Search · Ctrl / ⌘ + K"
+        className="fixed bottom-6 left-6 z-50 group"
       >
         <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#083761] text-white shadow-lg transition-colors group-hover:bg-[#278393]">
           <Search size={20} />
         </span>
-        <span className="hidden sm:inline-flex items-center rounded-full bg-white border border-slate-200 text-[#083761] text-xs font-bold px-3 py-1.5 shadow-md opacity-95 group-hover:border-[#278393]/40">
-          Search
-          <kbd className="ml-2 rounded bg-slate-100 px-1.5 py-0.5 text-[10px] font-semibold text-slate-500">
-            ⌘K
-          </kbd>
+        {/* Hover tooltip only — not always on screen */}
+        <span
+          className="pointer-events-none absolute left-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-[#083761] text-white text-[11px] font-semibold px-3 py-1.5 shadow-md opacity-0 translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0"
+          role="tooltip"
+        >
+          Search · Ctrl / ⌘ + K
         </span>
       </button>
 

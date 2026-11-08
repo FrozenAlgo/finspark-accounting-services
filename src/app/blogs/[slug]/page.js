@@ -77,7 +77,7 @@ export default async function BlogArticlePage({ params }) {
       <section className="bg-white border-b border-slate-200/80">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-8 space-y-6">
           <Link
-            href="/blog"
+            href="/blogs"
             className="inline-flex items-center gap-2 text-xs font-bold text-[#278393] hover:text-[#083761] transition-colors"
           >
             <ArrowLeft size={14} />
@@ -179,7 +179,7 @@ export default async function BlogArticlePage({ params }) {
               {related.map((r) => (
                 <Link
                   key={r.slug}
-                  href={`/blog/${r.slug}`}
+                  href={`/blogs/${r.slug}`}
                   className="group bg-slate-50 border border-slate-200/80 rounded-2xl p-5 hover:border-[#278393]/40 hover:shadow-md transition-all space-y-3"
                 >
                   <span className="text-[11px] font-bold text-[#278393]">

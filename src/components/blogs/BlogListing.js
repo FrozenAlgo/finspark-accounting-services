@@ -171,7 +171,7 @@ export default function BlogListing({ posts }) {
                   </div>
                 </div>
                 <Link
-                  href={`/blog/${featuredPost.slug}`}
+                  href={`/blogs/${featuredPost.slug}`}
                   className="inline-flex items-center justify-center gap-2 bg-[#083761] hover:bg-[#278393] text-white px-5 py-3 rounded-xl text-xs font-bold shadow-sm transition-all"
                 >
                   <span>Read Article</span>
@@ -251,7 +251,7 @@ export default function BlogListing({ posts }) {
                     </span>
                   </div>
                   <Link
-                    href={`/blog/${post.slug}`}
+                    href={`/blogs/${post.slug}`}
                     className="w-9 h-9 rounded-full bg-slate-100 group-hover:bg-[#278393] text-[#083761] group-hover:text-white flex items-center justify-center transition-all duration-300"
                     aria-label={`Read ${post.title}`}
                   >
