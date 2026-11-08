@@ -1,12 +1,16 @@
+import { getAllSlugs } from "@/lib/blogData";
+
 export default function sitemap() {
   const base = "https://finsparkaccounting.co.uk";
-  const routes = [
+
+  const staticRoutes = [
     "",
     "/about",
     "/services",
     "/team",
     "/testimonials",
     "/contact",
+    "/blogs",
     "/privacy-policy",
     "/terms",
     "/services/bookkeeping-vat",
@@ -17,7 +21,10 @@ export default function sitemap() {
     "/services/secretarial",
     "/services/adhoc-mortgage",
   ];
-  return routes.map((path) => ({
+
+  const blogRoutes = getAllSlugs().map((slug) => `/blogs/${slug}`);
+
+  return [...staticRoutes, ...blogRoutes].map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
   }));
