@@ -21,8 +21,8 @@ const buttons = [
   },
   {
     show: true,
-    text: "Leave a Google Review",
-    href: "#",
+    text: "Read client feedback",
+    href: "/testimonials",
     variant: "secondary",
   },
 ];

@@ -159,7 +159,7 @@ export default function ReviewsSection() {
 
         <div className="flex justify-center pt-4">
           <a
-            href="https://maps.google.com"
+            href="https://maps.app.goo.gl/bEvueBYfCxun5sx87"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white text-[#083761] hover:text-[#278393] border border-slate-200 hover:border-[#278393]/40 px-6 py-3 rounded-full font-bold text-xs shadow-xs transition-all duration-300"

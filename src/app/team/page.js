@@ -249,7 +249,7 @@ export default function Team() {
           <div className="bg-white border border-slate-200/80 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-1 text-center md:text-left">
               <span className="text-[11px] font-extrabold tracking-wider text-slate-400 uppercase">
-                Verified Google Business Reviews
+                Client feedback
               </span>
               <h3 className="text-2xl font-black text-[#083761] tracking-tight">
                 Loved by Local Directors & Sole Traders
