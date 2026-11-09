@@ -48,7 +48,7 @@ const caseStudies = [
     metaRightValue: "Corp Tax, VAT & Payroll",
   },
   {
-    badge: "10+ Year Client Relationship",
+    badge: "Construction • CIS & Payroll",
     title: "Mark Willard",
     subtitle: "Director, Commercial Construction & Maintenance",
     image: "/images/review2.webp", // Replace with your image asset
@@ -56,8 +56,8 @@ const caseStudies = [
       "“Clear advice and quick replies on CIS and payroll. Switching to Finspark was straightforward and the team is easy to deal with.”",
     description:
       "Construction Industry Scheme (CIS) deductions and subcontractor filings require total accuracy. With Finspark handling monthly CIS reconciliations and strict HMRC compliance deadlines, Mark has maintained flawless regulatory standing.",
-    metaLeftLabel: "Client Tenure",
-    metaLeftValue: "10 Continuous Years",
+    metaLeftLabel: "Key Benefit",
+    metaLeftValue: "Clean CIS Handover",
     metaRightLabel: "Compliance Focus",
     metaRightValue: "CIS Scheme & Year-End",
   },
@@ -75,7 +75,7 @@ const targetedAudience = [
     id: 2,
     title: "Quick Response",
     description:
-      "No waiting weeks for an answer. Urgent tax queries and payroll clarifications are handled within hours during business days.",
+      "No waiting weeks for an answer. Urgent tax queries and payroll clarifications are handled within 24 hours (during business days).",
     tag: "Guaranteed speed",
     icon: "Clock",
   },
@@ -100,8 +100,8 @@ export default function TestimonialsPage() {
   return (
     <main className="">
       <Banner
-        badge="100% VERIFIED FEEDBACK • 5.0 GOOGLE RATING"
-        heading="Trusted by Over 350+ Local Directors, Sole Traders & Growing Businesses"
+        badge="Client feedback · London & UK."
+        heading="Trusted by Local Directors, Sole Traders & Growing Businesses"
         subHeading=""
         showSubHeading={false}
         para="Read authentic feedback from business owners across London and beyond who rely on Asif Chaudhry, Asim Malik, and our dedicated team for responsive, jargon-free accounting, stress-free payroll, and compliant year-end submissions."

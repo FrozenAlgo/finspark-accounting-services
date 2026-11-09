@@ -152,7 +152,7 @@ export default function Banner({
                 </div>
                 <div className="min-w-0">
                   <p className="text-xs sm:text-sm font-bold text-[#083761] truncate">
-                    5.0 / 5.0
+                    4.5 / 5.0
                   </p>
                   <p className="text-[11px] text-slate-500 font-medium leading-tight">
                     Verified Google Rating

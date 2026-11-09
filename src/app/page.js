@@ -269,10 +269,6 @@ export default function Home() {
       </section>
 
       <FAQ />
-
-      {/* <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-        <ContactForm />
-      </section> */}
     </div>
   );
 }

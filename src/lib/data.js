@@ -977,6 +977,7 @@ export const TESTIMONIALS = [
     avatarBg: "bg-[#2563eb]",
     quote:
       '"Asif, Asim and the team have transformed our bookkeeping. Accounts used to be a constant worry. Now everything runs cleanly on Xero and we get clear answers the same day."',
+    rating: 4,
   },
   {
     id: 2,
@@ -986,6 +987,7 @@ export const TESTIMONIALS = [
     avatarBg: "bg-[#1e293b]",
     quote:
       '"Friendly, highly responsive, and zero jargon. Finspark keep our VAT and Companies House filings on track so we can focus on growing the agency."',
+    rating: 5,
   },
   {
     id: 3,
@@ -995,6 +997,7 @@ export const TESTIMONIALS = [
     avatarBg: "bg-[#083761]",
     quote:
       '"Switching accountants was completely painless. Finspark handled the handover and took over our CIS and payroll with no disruption to our tradespeople."',
+    rating: 4,
   },
   {
     id: 4,
@@ -1004,6 +1007,7 @@ export const TESTIMONIALS = [
     avatarBg: "bg-[#278393]",
     quote:
       '"Their cash flow insight and tax planning gave us the confidence to expand. They are not just bookkeepers — they feel like a proactive extension of our senior team."',
+    rating: 4,
   },
   {
     id: 5,
@@ -1013,6 +1017,7 @@ export const TESTIMONIALS = [
     avatarBg: "bg-[#0f172a]",
     quote:
       '"Fast responses, transparent fixed monthly fees, and practical tax advice. Finspark helped us reduce our year-end tax bill in the first six months alone."',
+    rating: 5,
   },
 ];
 export const FAQ_DATA = [
@@ -1066,7 +1071,7 @@ export const teamData = [
     role: "Partner & Senior Managing Director",
     badge: "Practice Lead",
     tags: ["FCCA Qualified", "Tax Advisory", "Highly experienced"],
-    bio: "Chartered accountant directing owner-managed business growth, statutory compliance, corporate tax planning, and HMRC strategic advisory across London and the UK.",
+    bio: "Asif’s career began while studying for ACCA, joining a practice to gain hands-on experience. That early grounding became a lasting focus on helping businesses grow. He is a Fellow Chartered Certified Accountant (FCCA) with experience across accounting, taxation and business advisory. Having worked in traditional bookkeeping, he moved into cloud accounting and automation (including Xero), and on 1 January 2021 relocated to Dubai as UAE Corporate Tax created new demand for structured advisory. He brings that mix of practice experience and digital working to Finspark clients in London and the UK.",
     email: companyEmail.email,
     phone: contactsNo[1].number,
     phoneHref: contactsNo[1].href,

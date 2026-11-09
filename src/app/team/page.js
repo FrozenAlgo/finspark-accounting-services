@@ -3,6 +3,7 @@ import Banner from "@/components/ui/Banner";
 import { companyEmail, companyName, contactsNo, teamData } from "@/lib/data";
 import {
   ArrowDown,
+  ArrowRight,
   Clock,
   Mail,
   MessageSquare,
@@ -58,7 +59,7 @@ const promises = [
   {
     icon: Clock,
     title: "Fast Response Commitment",
-    desc: "Tax deadlines and invoice queries can't wait days. All client enquiries submitted during standard office hours receive a concrete reply or phone consultation within few business hours.",
+    desc: "Tax deadlines and invoice queries can't wait days. All client enquiries submitted during standard office hours receive a concrete reply or phone consultation within 24 hours (during business days).",
     tag: "Fast Reliable Action",
   },
   {
@@ -267,13 +268,20 @@ export default function Team() {
                     <Star key={i} size={16} className="fill-current" />
                   ))}
                 </div>
-                <p className="text-lg font-black text-[#083761]">5.0 / 5.0</p>
+                <p className="text-lg font-black text-[#083761]">
+                  Client feedback
+                </p>
               </div>
               <div>
-                <p className="text-sm font-bold text-[#083761]">100% 5-Star</p>
-                <p className="text-xs text-slate-500 font-medium">
-                  Verified Client Feedback
+                <p className="text-sm font-bold text-[#083761]">
+                  Clear advice · Fast replies
                 </p>
+                <Link
+                  className="text-xs text-slate-500 hover:text-slate-900 hover:underline font-medium flex items-center gap-0.5"
+                  href="/testimonials"
+                >
+                  See testimonials <ArrowRight className="-mb-0.5" size={14} />
+                </Link>
               </div>
             </div>
           </div>

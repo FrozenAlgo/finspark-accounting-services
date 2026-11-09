@@ -5,12 +5,12 @@ import { ShieldCheck, Star, Lock } from "lucide-react";
 
 export default function TrustAuditCard() {
   const metrics = [
-    { label: "Clarity & Plain English Advice", value: "100%" },
+    { label: "Clarity & Plain English Advice", value: "98%" },
     { label: "Responsiveness & Support Speed", value: "100%" },
-    { label: "Accurate Tax & HMRC Compliance", value: "100%" },
+    { label: "Accurate Tax & HMRC Compliance", value: "95%" },
     { label: "Unexplained / Hidden Invoices", value: "0 recorded" },
   ];
-
+  const ratingVal = 4.5; // Your rating value
   return (
     <div className="bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
       {/* Top Header */}
@@ -37,12 +37,32 @@ export default function TrustAuditCard() {
       <div className="space-y-1">
         <div className="flex items-baseline gap-3">
           <span className="text-4xl sm:text-5xl font-black text-[#083761]">
-            5.0
+            {ratingVal}
           </span>
-          <div className="flex items-center gap-1 text-amber-400">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={18} className="fill-current" />
-            ))}
+
+          <div className="flex items-center gap-1">
+            {[...Array(5)].map((_, i) => {
+              // Calculate fill percentage for each star (e.g., star 5 gets 80% for 4.8)
+              const fillPercentage =
+                Math.max(0, Math.min(1, ratingVal - i)) * 100;
+
+              return (
+                <div key={i} className="relative text-slate-200">
+                  {/* Background Star (Empty State) */}
+                  <Star size={18} />
+
+                  {/* Foreground Star (Filled State clipped by percentage width) */}
+                  {fillPercentage > 0 && (
+                    <div
+                      className="absolute top-0 left-0 overflow-hidden text-amber-400"
+                      style={{ width: `${fillPercentage}%` }}
+                    >
+                      <Star size={18} className="fill-current" />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
         <p className="text-xs text-slate-500 font-medium">

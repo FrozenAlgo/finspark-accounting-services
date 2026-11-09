@@ -101,8 +101,11 @@ export default function TestimonialsCard() {
                           <Star
                             key={i}
                             size={16}
-                            fill="currentColor"
-                            stroke="none"
+                            className={
+                              i < (item.rating ?? 5)
+                                ? "fill-current text-amber-400"
+                                : "text-slate-300"
+                            }
                           />
                         ))}
                       </div>
