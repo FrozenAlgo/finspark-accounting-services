@@ -125,7 +125,7 @@ export default function TestimonialsPage() {
             </div>
             <p className="text-xs sm:text-sm text-slate-500 font-medium max-w-md">
               Discover how business founders transition from accounting
-              headaches to strategic financial confidence with Finspark.
+              headaches to strategic financial confidence with {companyName}.
             </p>
           </div>
 

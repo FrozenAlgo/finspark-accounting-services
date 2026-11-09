@@ -1,10 +1,19 @@
 "use client";
 
 import { companyName, contactsNo, serviceLinks } from "@/lib/data";
-import { MessageCircleCheck, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsappIcon } from "../ui/BrandIcon";
+
+const exploreLinks = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Our Team", href: "/team" },
+  { name: "Testimonials", href: "/testimonials" },
+  { name: "Blogs", href: "/blogs" },
+  { name: "Contact", href: "/contact" },
+];
 
 export default function Footer() {
   return (
@@ -12,9 +21,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         {/* ================= MAIN FOOTER GRID ================= */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12">
-          {/* COLUMN 1: LOGO & ABOUT (Col 4) */}
+          {/* COLUMN 1: LOGO & ABOUT */}
           <div className="lg:col-span-4 space-y-5">
-            {/* Logo Wrapper Container */}
             <div className="inline-block bg-white p-3 rounded-xl shadow-md border border-white/20">
               <Image
                 src="/FinsparklogoCropped.webp"
@@ -37,7 +45,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* COLUMN 2: CORE SERVICES (Col 3) */}
+          {/* COLUMN 2: CORE SERVICES */}
           <div className="lg:col-span-3 space-y-4">
             <h3 className="text-xs sm:text-sm font-extrabold tracking-widest text-[#278393] uppercase">
               Core Services
@@ -56,62 +64,77 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* COLUMN 3: OFFICE LOCATION (Col 2) */}
+          {/* COLUMN 3: EXPLORE (site pages) */}
           <div className="lg:col-span-2 space-y-4">
+            <h3 className="text-xs sm:text-sm font-extrabold tracking-widest text-[#278393] uppercase">
+              Explore
+            </h3>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-slate-300">
+              {exploreLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* COLUMN 4: OFFICE + HOURS + PHONES */}
+          <div className="lg:col-span-3 space-y-4">
             <h3 className="text-xs sm:text-sm font-extrabold tracking-widest text-[#278393] uppercase">
               London Office
             </h3>
-            <div className="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <div className="space-y-1.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
               <p>7 Haven Lane</p>
               <p>Ealing, London</p>
               <p>W5 2HZ, United Kingdom</p>
-              <p className="pt-2 font-semibold text-white flex  gap-1">
-                <WhatsappIcon className="h-6 w-6 text-green-500 hover:text-green-600 transition" />
+            </div>
+
+            <div className="pt-1">
+              <span className="inline-block text-xs font-bold text-[#278393] bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
+                Mon – Fri: 9:00 AM – 5:00 PM
+              </span>
+            </div>
+
+            <div className="space-y-2.5 pt-2">
+              <p className="font-semibold text-white flex items-center gap-2 text-xs sm:text-sm">
+                <WhatsappIcon className="h-5 w-5 text-green-500 shrink-0" />
                 <a
                   href={contactsNo[0].href}
                   className="hover:text-[#278393] transition-colors"
                 >
                   {contactsNo[0].number}
-                  <span className="text-[11px]  text-green-200"> WhatsApp</span>
+                  <span className="text-[11px] text-green-200 font-medium">
+                    {" "}
+                    WhatsApp
+                  </span>
                 </a>
               </p>
-
-              <p className="pt-2 font-semibold text-white hover:text-[#9fc4cb] transition-colors flex items-center gap-1">
-                <Phone size={16} />
-                <a href={contactsNo[1].href} className=" ">
+              <p className="font-semibold text-white flex items-center gap-2 text-xs sm:text-sm">
+                <Phone size={16} className="shrink-0 text-slate-300" />
+                <a
+                  href={contactsNo[1].href}
+                  className="hover:text-[#278393] transition-colors"
+                >
                   {contactsNo[1].number}
                 </a>
               </p>
-            </div>
-          </div>
-
-          {/* COLUMN 4: Office timing  (Col 3) */}
-          <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-xs sm:text-sm font-extrabold tracking-widest text-[#278393] uppercase">
-              Office Hours
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Our team is available Monday through Friday to assist with your
-              accounting, tax, and business support needs.
-            </p>
-            <div className="pt-1">
-              <span className="inline-block text-xs font-bold text-[#278393] bg-white/5 px-3 py-1.5 rounded-lg border border-white/10">
-                Mon - Fri: 9:00 AM - 5:00 PM
-              </span>
             </div>
           </div>
         </div>
 
         {/* ================= BOTTOM BAR ================= */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          {/* Copyright */}
           <div>
             © {new Date().getFullYear()} Finspark Accounting and Business
             Services Limited. All rights reserved.
           </div>
 
-          {/* Agency Credit */}
-          <div className="text-slate-400 font-medium">
+          <div className="text-slate-400 font-medium text-center">
             Website designed & managed by{" "}
             <a
               href="https://portfolio-kappa-nine-204xtzt9as.vercel.app/"
@@ -123,7 +146,6 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Legal Links */}
           <div className="flex items-center gap-6">
             <Link
               href="/privacy-policy"
