@@ -69,7 +69,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-slate-50/60 py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+      <section
+        className="relative overflow-hidden bg-slate-50/60 py-16 md:py-24 px-4 sm:px-6 lg:px-8"
+        id="services"
+      >
         <AmbientBackground
           variant="light"
           theme="minimal"

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { CalendarCheck, Check, ShieldCheck } from "lucide-react";
+import { ArrowDown, CalendarCheck, Check, ShieldCheck } from "lucide-react";
 import Form from "../ui/Form";
 import AnimatedBtn from "../ui/AnimatedBtn";
 
@@ -269,7 +269,7 @@ const Hero = () => {
           variants={fadeUpVariants}
           initial="hidden"
           animate="visible"
-          className="pt-2"
+          className="pt-2 grid sm:grid-cols-1 md:grid-cols-2 gap-5"
         >
           <AnimatedBtn
             hoverText="Book an Appointment Now"
@@ -282,11 +282,22 @@ const Hero = () => {
           >
             Book an Appointment
           </AnimatedBtn>
+          <AnimatedBtn
+            hoverText="Explore Services"
+            icon={ArrowDown}
+            bgColor="bg-white"
+            hoverBgColor="hover:bg-white/90"
+            textColor="text-black"
+            hoverTextColor="hover:text-black"
+            href="#services"
+          >
+            Explore Services
+          </AnimatedBtn>
         </motion.div>
       </div>
 
       {/* Right Form Column */}
-      <div className="relative z-10 basis-full lg:basis-[40%] max-w-lg w-full">
+      <div className="relative z-10 basis-full lg:basis-[40%] max-w-lg w-full ">
         <Form />
       </div>
     </section>
