@@ -170,7 +170,7 @@ export default function Form({ headingColor }) {
   return (
     <div
       id="contact"
-      className={`z-10 p-6 sm:p-8 rounded-2xl shadow-2xl relative ${
+      className={`z-10 p-6 lg:mb-4 sm:p-8 rounded-2xl shadow-2xl relative ${
         isLight
           ? "bg-white text-slate-900 border border-slate-200 shadow-slate-200/50"
           : "text-white bg-white/10 backdrop-blur-xl border border-white/20"

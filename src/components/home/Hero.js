@@ -180,7 +180,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen lg:max-h-screen flex py-12 lg:py-10 flex-col lg:flex-row items-center md:justify-between px-4 sm:px-8 lg:px-12 overflow-hidden lg:justify-around gap-6 bg-[#083761]">
+    <section className="relative w-full min-h-[calc(100svh-var(--header-h))] flex py-8 lg:py-6 flex-col lg:flex-row items-center md:justify-between px-4 sm:px-8 lg:px-10 xl:px-16 overflow-hidden lg:justify-between gap-10 bg-[#083761]">
       {/* Background Interactive Particle Canvas */}
       <canvas
         ref={canvasRef}
@@ -188,9 +188,9 @@ const Hero = () => {
       />
 
       {/* Left Content Column */}
-      <div className="relative z-10 basis-full lg:basis-[60%]  mb-12 lg:mb-0 space-y-6 max-w-2xl">
+      <div className="relative z-10 basis-full lg:basis-[65%]  mb-12 lg:mb-0 space-y-6 lg:space-y-4 max-w-3xl">
         {/* Trust Badge */}
-        <motion.div
+        {/* <motion.div
           custom={0}
           variants={fadeUpVariants}
           initial="hidden"
@@ -201,6 +201,20 @@ const Hero = () => {
           <span className="text-xs sm:text-sm font-medium text-slate-200 tracking-wide">
             Trusted Accountancy Services in Haven Lane
           </span>
+        </motion.div> */}
+
+        <motion.div
+          custom={0}
+          variants={fadeUpVariants}
+          initial="hidden"
+          animate="visible"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#278393]/40 border border-[#278393]/60 backdrop-blur-md text-gray-200"
+        >
+          <ShieldCheck className="h-6 w-6 text-[#608b92] animate-pulse" />
+          <span className="text-xs sm:text-sm font-medium text-slate-200 tracking-wide">
+            MTD READY · Full VAT & ITSA compliance support for sole traders,
+            landlords & businesses
+          </span>
         </motion.div>
 
         {/* Main Heading */}
@@ -209,7 +223,7 @@ const Hero = () => {
           variants={fadeUpVariants}
           initial="hidden"
           animate="visible"
-          className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-300"
+          className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-black tracking-tight leading-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400"
         >
           Bookkeeping & Accountancy in Haven Lane
         </motion.h1>
@@ -220,26 +234,16 @@ const Hero = () => {
           variants={fadeUpVariants}
           initial="hidden"
           animate="visible"
-          className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed"
+          className="text-xs sm:text-base text-slate-100 font-normal leading-relaxed"
         >
           Let Finspark look after your numbers with clear, jargon-free support.{" "}
-          <b> Making Tax Digital</b> ready. Digital record-keeping and quarterly
-          filing support for sole traders, landlords and limited companies.
+          <span className="font-extrabold tracking-wide text-[14px]">
+            {" "}
+            Making Tax Digital
+          </span>{" "}
+          ready. Digital record-keeping and quarterly filing support for sole
+          traders, landlords and limited companies.
         </motion.p>
-
-        <motion.div
-          custom={0}
-          variants={fadeUpVariants}
-          initial="hidden"
-          animate="visible"
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#278393]/20 border border-[#278393]/40 backdrop-blur-md"
-        >
-          <ShieldCheck className="h-6 w-6 text-[#608b92] animate-pulse" />
-          <span className="text-xs sm:text-sm font-medium text-slate-200 tracking-wide">
-            MTD READY · Full VAT & ITSA compliance support for sole traders,
-            landlords & businesses
-          </span>
-        </motion.div>
 
         {/* Feature Pill Grid */}
         <motion.div
@@ -247,7 +251,7 @@ const Hero = () => {
           variants={fadeUpVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2"
         >
           <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
             <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
@@ -312,7 +316,7 @@ const Hero = () => {
       </div>
 
       {/* Right Form Column */}
-      <div className="relative z-10 basis-full lg:basis-[40%] max-w-lg w-full ">
+      <div className="relative z-10 basis-full lg:basis-[35%] max-w-lg w-full ">
         <Form />
       </div>
     </section>

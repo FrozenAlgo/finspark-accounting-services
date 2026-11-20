@@ -233,7 +233,7 @@ export default function Home() {
                 hard work behind each enterprise.
               </p>
               <p>
-                Our team in Tongham and Farnborough takes time to listen to your
+                Our team in London / Haven Lane takes time to listen to your
                 unique commercial objectives. Whether it's planning your first
                 dividend withdrawal, hiring your first employee, or scaling into
                 new premises, we’re right beside you.
