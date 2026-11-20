@@ -222,9 +222,24 @@ const Hero = () => {
           animate="visible"
           className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed"
         >
-          Streamline your finances with tailored accounting, VAT compliance, and
-          expert business advisory built to help small businesses thrive.
+          Let Finspark look after your numbers with clear, jargon-free support.{" "}
+          <b> Making Tax Digital</b> ready. Digital record-keeping and quarterly
+          filing support for sole traders, landlords and limited companies.
         </motion.p>
+
+        <motion.div
+          custom={0}
+          variants={fadeUpVariants}
+          initial="hidden"
+          animate="visible"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#278393]/20 border border-[#278393]/40 backdrop-blur-md"
+        >
+          <ShieldCheck className="h-6 w-6 text-[#608b92] animate-pulse" />
+          <span className="text-xs sm:text-sm font-medium text-slate-200 tracking-wide">
+            MTD READY · Full VAT & ITSA compliance support for sole traders,
+            landlords & businesses
+          </span>
+        </motion.div>
 
         {/* Feature Pill Grid */}
         <motion.div
@@ -238,6 +253,13 @@ const Hero = () => {
             <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
               <Check size={18} strokeWidth={3} />
             </div>
+            <span>Making Tax Digital (MTD)</span>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
+            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
+              <Check size={18} strokeWidth={3} />
+            </div>
             <span>Bookkeeping & VAT</span>
           </div>
 
@@ -245,21 +267,14 @@ const Hero = () => {
             <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
               <Check size={18} strokeWidth={3} />
             </div>
+            <span>Self Assessment & ITSA</span>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
+            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
+              <Check size={18} strokeWidth={3} />
+            </div>
             <span>Company Year-End Accounts</span>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
-            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
-              <Check size={18} strokeWidth={3} />
-            </div>
-            <span>Self Assessment Tax</span>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
-            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
-              <Check size={18} strokeWidth={3} />
-            </div>
-            <span>Payroll & CIS Schemes</span>
           </div>
         </motion.div>
 
