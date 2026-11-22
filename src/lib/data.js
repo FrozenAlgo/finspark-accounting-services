@@ -236,7 +236,7 @@ export const servicesData = [
           title: "Single-Director Companies",
           description:
             "Optimize salary and dividend splits to minimize tax exposure while staying compliant.",
-          tag: "Dividend Optimization",
+          tag: "Dividend Optimisation",
           icon: "User",
         },
         {
@@ -436,7 +436,7 @@ export const servicesData = [
     description:
       "Stress-free personal tax returns for sole traders, company directors, partners, and landlords. No last-minute January panic or penalty stress.",
     points: [
-      "Allowable expense optimization",
+      "Allowable expense optimisation",
       "Rental income & dividend tax calculations",
     ],
     icon: "FileCheck",
@@ -468,7 +468,7 @@ export const servicesData = [
         {
           title: "Landlord Tax Returns",
           description:
-            "Section 24 mortgage interest relief calculations and property profit optimization.",
+            "Section 24 mortgage interest relief calculations and property profit optimisation.",
           tag: "Property Specialists",
           icon: "Building",
         },
@@ -558,7 +558,7 @@ export const servicesData = [
       "Expert guidance and timely reporting for property sales, crypto, shares, and asset disposals within strict HMRC 60-day filing deadlines.",
     points: [
       "UK property disposal 60-day reporting",
-      "Maximum relief & tax allowance utilization",
+      "Maximum relief & tax allowance utilisation",
     ],
     icon: "TrendingUp",
     href: "/services/capital-gains",
@@ -1070,7 +1070,7 @@ export const teamData = [
     name: "Asif Chaudhry",
     role: "Partner & Senior Managing Director",
     badge: "Practice Lead",
-    tags: ["FCCA Qualified", "Tax Advisory", "Highly experienced"],
+    tags: ["FCCA Qualified", "Tax Advisory", "Cloud Accounting"],
     bio: "Asif’s career began while studying for ACCA, joining a practice to gain hands-on experience. That early grounding became a lasting focus on helping businesses grow. He is a Fellow Chartered Certified Accountant (FCCA) with experience across accounting, taxation and business advisory. Having worked in traditional bookkeeping, he moved into cloud accounting and automation (including Xero), and on 1 January 2021 relocated to Dubai as UAE Corporate Tax created new demand for structured advisory. He brings that mix of practice experience and digital working to Finspark clients in London and the UK.",
     email: companyEmail.email,
     phone: contactsNo[1].number,
@@ -1080,17 +1080,17 @@ export const teamData = [
     alt: "Asif Chaudhry Image",
   },
   {
-    name: "Asim Malik",
+    name: "Asim Qamar Malik",
     role: "Partner & Senior Accounting Director",
     badge: "Advisory Lead",
-    tags: ["FCCA Qualified", "Audit & Assurance", "Corporate Finance"],
-    bio: "Oversees statutory accountancy, Making Tax Digital (MTD) compliance, complex payroll structures, and high-level corporate tax review clearances for scaling businesses.",
+    tags: ["ACCA Member", "International Finance", "MTD & Compliance"],
+    bio: "Asim is an ACCA member with an MSc in International Accounting & Finance (London South Bank University) and a BSc (Hons) Applied Accounting (Oxford Brookes University). He brings commercial insight from UK accountancy, international finance, investment management and real estate. His career began in 2011, working with financial services and accountancy firms and supporting British SMEs with records, payroll, VAT and Corporation Tax. He later worked across property and investment structures in the UK, US and UAE — including VAT, tax calculations, investor reporting and financial modelling. He believes accountancy should do more than keep businesses compliant: it should support clearer decisions and planning for the future, with accurate numbers and plain insight for Finspark clients.",
     email: companyEmail.email,
     phone: contactsNo[0].number,
     phoneHref: contactsNo[0].href,
     location: "London Office",
     image: "/team/member.png",
-    alt: "Asim Malik Image",
+    alt: "Asim Qamar Malik Image",
   },
 ];
 export const FormspreeEndpoint = "https://formspree.io/f/mrpeyqod";
