@@ -32,6 +32,7 @@ import {
   FileSpreadsheet,
   FileCheck,
   Calendar,
+  CloudCheck,
 } from "lucide-react";
 
 const ICON_MAP = {
@@ -65,6 +66,7 @@ const ICON_MAP = {
   FileSpreadsheet,
   FileCheck,
   Calendar,
+  CloudCheck,
 };
 
 export default function FeatureCard({ feature }) {

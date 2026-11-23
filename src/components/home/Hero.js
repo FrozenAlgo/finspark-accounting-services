@@ -2,13 +2,21 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, CalendarCheck, Check, ShieldCheck } from "lucide-react";
+import {
+  ArrowDown,
+  CalendarCheck,
+  Check,
+  ChevronRight,
+  ShieldCheck,
+} from "lucide-react";
 import Form from "../ui/Form";
 import AnimatedBtn from "../ui/AnimatedBtn";
+import Link from "next/link";
+import { serviceLinks } from "@/lib/data";
 
 const Hero = () => {
+  const selectedPillIndex = [0, 1, 3, 2];
   const canvasRef = React.useRef(null);
-
   React.useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -253,14 +261,34 @@ const Hero = () => {
           animate="visible"
           className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2"
         >
-          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
-            <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
-              <Check size={18} strokeWidth={3} />
-            </div>
-            <span>Making Tax Digital (MTD)</span>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
+          {selectedPillIndex.map((index) => {
+            const item = serviceLinks[index];
+            if (!item) return null;
+            return (
+              <div
+                className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium"
+                key={index}
+              >
+                <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
+                  <Check size={18} strokeWidth={3} />
+                </div>
+                <span className="flex items-center justify-between w-full">
+                  {item.name}
+                  <Link
+                    className="flex items-center gap-1 text-[12px] hover:bg-[#278393]/30 text-white/80 hover:text-white cursor-pointer py-1 px-2 rounded-full hover:translate-x-1 transition-all group/learn "
+                    href={item.href}
+                  >
+                    Learn more
+                    <ChevronRight
+                      className="transition-transform duration-200 group-hover/learn:translate-x-1 group-hover/learn:animate-bounce"
+                      size={12}
+                    />
+                  </Link>
+                </span>
+              </div>
+            );
+          })}
+          {/* <div className="bg-white/10 backdrop-blur-md border border-white/15 px-4 py-2.5 rounded-xl flex items-center gap-3 text-white text-xs sm:text-sm font-medium">
             <div className="bg-[#278393]/30 text-[#278393] p-1 rounded-lg shrink-0">
               <Check size={18} strokeWidth={3} />
             </div>
@@ -279,7 +307,7 @@ const Hero = () => {
               <Check size={18} strokeWidth={3} />
             </div>
             <span>Company Year-End Accounts</span>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* CTA Button */}

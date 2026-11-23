@@ -170,15 +170,21 @@ export default function Form({ headingColor }) {
   return (
     <div
       id="contact"
-      className={`z-10 p-6 lg:mb-4 sm:p-8 rounded-2xl shadow-2xl relative ${
+      className={`z-10 p-6 lg:mb-4 sm:p-8 rounded-2xl shadow-2xl relative  ${
         isLight
-          ? "bg-white text-slate-900 border border-slate-200 shadow-slate-200/50"
-          : "text-white bg-white/10 backdrop-blur-xl border border-white/20"
+          ? " text-slate-900 border border-slate-200 shadow-slate-200/50"
+          : "bg-[url(/images/mtdformimage1.png)] bg-cover bg-no-repeat  text-white bg-white/10 backdrop-blur-xl border border-white/20"
       }`}
     >
+      <div
+        className={`absolute inset-0 z-0 pointer-events-none  rounded-2xl ${
+          isLight ? "bg-white/25" : "bg-slate-950/30"
+        }`}
+      />
+
       {/* Header */}
       {isLight ? (
-        <div className="border-b border-slate-200 pb-4 mb-6">
+        <div className="border-b border-slate-200 pb-4 mb-6 relative z-10">
           <h2 className="text-2xl sm:text-3xl text-slate-900 font-bold tracking-tight">
             Send An Enquiry
           </h2>
@@ -188,7 +194,7 @@ export default function Form({ headingColor }) {
           </p>
         </div>
       ) : (
-        <div className="border-b border-white/20 pb-4 mb-6">
+        <div className="border-b border-white/20 pb-4 mb-6 relative z-10">
           <h2 className="text-2xl sm:text-3xl bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-300 font-bold tracking-tight">
             Send An Enquiry
           </h2>
@@ -203,7 +209,7 @@ export default function Form({ headingColor }) {
         id="contact-form"
         onSubmit={onSubmit}
         noValidate
-        className="space-y-2"
+        className="space-y-2 relative z-10"
       >
         {/* Honeypot */}
         <input

@@ -12,6 +12,131 @@ import {
 
 export const servicesData = [
   {
+    id: "making-tax-digital",
+    slug: "making-tax-digital",
+    title: "Making Tax Digital (MTD)",
+    description:
+      "Get MTD-ready for VAT and Income Tax. Digital records, compatible software, and clear support for sole traders, landlords and limited companies — without the jargon.",
+    points: [
+      "MTD for VAT — quarterly digital submissions",
+      "MTD for ITSA readiness for sole traders & landlords",
+      "Xero / QuickBooks setup and digital record-keeping",
+    ],
+    icon: "ShieldCheck", // or "FileCheck" / "CloudCheck" if used elsewhere
+    href: "/services/making-tax-digital",
+    highlight: true, // optional — use on cards if ServiceCard supports it
+
+    banner: {
+      badge: "HMRC Making Tax Digital",
+      subBadge: "VAT & ITSA readiness",
+      subHeading:
+        "Digital record-keeping and quarterly filing support, explained in plain English.",
+      image: "/images/bookkeeping.webp", // reuse until you have a dedicated image
+    },
+
+    featuresSection: {
+      tag: "MTD SUPPORT",
+      heading: "Making Tax Digital without the stress",
+      intro: [
+        "Making Tax Digital is changing how businesses keep records and report to HMRC. Whether you need MTD for VAT or are preparing for Income Tax digital reporting, we help you stay organised and compliant.",
+        "We set up practical digital workflows, keep books submission-ready, and explain what HMRC expects — so quarterly updates do not become a last-minute panic.",
+      ],
+      items: [
+        {
+          title: "MTD for VAT",
+          description:
+            "Compatible software, digital links, and on-time quarterly VAT submissions.",
+          tag: "VAT",
+          icon: "Calculator",
+        },
+        {
+          title: "MTD for Income Tax (ITSA)",
+          description:
+            "Preparation for sole traders and landlords moving to quarterly digital updates.",
+          tag: "ITSA",
+          icon: "FileCheck",
+        },
+        {
+          title: "Software & records",
+          description:
+            "Xero, QuickBooks and clean digital records so you are ready when thresholds apply.",
+          tag: "Cloud",
+          icon: "CloudCheck",
+        },
+      ],
+    },
+
+    audienceSection: {
+      tag: "WHO IT IS FOR",
+      heading: "Built for the businesses HMRC is bringing into MTD",
+      subHeading:
+        "Practical support if you are already in MTD for VAT or preparing for ITSA.",
+      items: [
+        {
+          title: "Sole traders",
+          description:
+            "Digital income and expense records and clearer year-round reporting habits.",
+          tag: "Self-employed",
+          icon: "User",
+        },
+        {
+          title: "Landlords",
+          description:
+            "Property income tracking ready for digital reporting requirements.",
+          tag: "Property",
+          icon: "Building",
+        },
+        {
+          title: "Limited companies",
+          description:
+            "MTD VAT processes and bookkeeping that stay filing-ready all year.",
+          tag: "Companies",
+          icon: "Briefcase",
+        },
+      ],
+    },
+
+    workflowSection: {
+      tag: "HOW WE HELP",
+      heading: "A simple path to MTD-ready books",
+      subHeading: "We focus on software, habits and submissions — not jargon.",
+      steps: [
+        {
+          num: "1",
+          title: "Review your setup",
+          description:
+            "We check how you record income and expenses and whether your software is MTD-compatible.",
+        },
+        {
+          num: "2",
+          title: "Organise digital records",
+          description:
+            "Bank feeds, coding and a clear monthly rhythm so quarterly figures are trustworthy.",
+        },
+        {
+          num: "3",
+          title: "File with confidence",
+          description:
+            "VAT returns and ongoing support so deadlines are met without last-minute stress.",
+        },
+      ],
+      platforms: [
+        {
+          title: "Xero",
+          desc: "MTD-friendly bookkeeping and VAT workflows.",
+        },
+        {
+          title: "QuickBooks",
+          desc: "Cloud records and digital submission support.",
+        },
+        {
+          title: "Clear reporting",
+          desc: "Plain-English explanations of what HMRC expects.",
+        },
+      ],
+    },
+  },
+  {
     id: "bookkeeping-vat",
     slug: "bookkeeping-vat",
     title: "Bookkeeping & VAT Returns",
@@ -880,6 +1005,7 @@ export const servicesData = [
 ];
 
 export const serviceLinks = [
+  { name: "Making Tax Digital (MTD)", href: "/services/making-tax-digital" },
   { name: "Bookkeeping & VAT", href: "/services/bookkeeping-vat" },
   { name: "Company Accounts & Tax", href: "/services/company-accounts-tax" },
   { name: "Self Assessment", href: "/services/self-assessment" },
@@ -1023,30 +1149,36 @@ export const TESTIMONIALS = [
 export const FAQ_DATA = [
   {
     id: 1,
+    question: "What is Making Tax Digital and do I need it?",
+    answer:
+      "Making Tax Digital (MTD) is HMRC’s system for keeping digital records and submitting returns using compatible software. Many businesses already use MTD for VAT. Sole traders and landlords are being brought into MTD for Income Tax over time. We help you understand whether you are in scope, set up the right software and records, and stay on top of quarterly obligations — in plain English.",
+  },
+  {
+    id: 2,
     question: "Fast, reliable communication",
     answer:
       "When you contact us, you'll get a prompt response and clear answers. No chasing, no being passed around, just straightforward support when you need it.",
   },
   {
-    id: 2,
+    id: 3,
     question: "One dedicated team that knows your business",
     answer:
       "You'll work directly with experienced accountants who understand your specific industry, goals, and day-to-day operations inside and out.",
   },
   {
-    id: 3,
+    id: 4,
     question: "Clear advice, without the jargon",
     answer:
       "We speak plain English. No complicated accounting terminology or hidden complexities—just simple, actionable insights to grow your business.",
   },
   {
-    id: 4,
+    id: 5,
     question: "Built around small businesses",
     answer:
       "Our accounting and advisory services are tailored specifically for sole traders, SMEs, and ambitious entrepreneurs looking for flexible support.",
   },
   {
-    id: 5,
+    id: 6,
     question: "Local, personal, and accountable",
     answer:
       "Based nearby, we offer both virtual convenience and face-to-face meetings, ensuring you always have a trusted partner in your corner.",

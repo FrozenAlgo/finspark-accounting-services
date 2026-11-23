@@ -13,6 +13,7 @@ export default function sitemap() {
     "/blogs",
     "/privacy-policy",
     "/terms",
+    "/services/making-tax-digital",
     "/services/bookkeeping-vat",
     "/services/company-accounts-tax",
     "/services/self-assessment",

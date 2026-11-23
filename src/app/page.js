@@ -37,7 +37,7 @@ export default function Home() {
       <section className="grid grid-cols-1 md:grid-cols-4  gap-4 py-8">
         <div className="text-center">
           <h6 className="text-[#278393] text-xl  lg:text-2xl font-bold ">
-            VAT & MTD
+            MTD VAT & ITSA
           </h6>
           <p className="text-[10px] lg:text-xs font-semibold  text-gray-600">
             Returns Filed On Time

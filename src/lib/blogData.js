@@ -29,7 +29,7 @@ export const posts = [
     publishedDate: "2026-02-12",
     publishedLabel: "Published Feb 2026",
     image: "/images/taxreturn.webp",
-    featured: true,
+    featured: false,
     content: [
       {
         type: "p",
@@ -109,7 +109,7 @@ export const posts = [
     publishedDate: "2026-01-20",
     publishedLabel: "Published Jan 2026",
     image: "/images/bookkeeping.webp",
-    featured: false,
+    featured: true,
     content: [
       {
         type: "p",

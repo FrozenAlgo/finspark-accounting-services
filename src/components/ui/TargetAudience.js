@@ -34,6 +34,7 @@ import {
   FileCheck,
   Calendar,
   ScrollText,
+  Briefcase,
 } from "lucide-react";
 
 const ICON_MAP = {
@@ -69,6 +70,7 @@ const ICON_MAP = {
   FileCheck,
   Calendar,
   ScrollText,
+  Briefcase,
 };
 
 export default function TargetAudience({ badge, heading, subHeading, items }) {
