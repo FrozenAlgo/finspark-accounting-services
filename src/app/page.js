@@ -28,9 +28,9 @@ import { companyInfo, servicesData, stats, steps } from "@/lib/data";
 import MTDRoadmap from "@/components/services/MTDRoadmap";
 
 export const metadata = {
-  title: "Accountants in London",
+  title: "Accountants in London | Making Tax Digital & Bookkeeping",
   description:
-    "Contact Finspark Accounting in London. WhatsApp +44 7884 003546, phone +44 7587 486885, or email info@finsparkaccounting.co.uk.",
+    "Finspark Accounting — MTD, bookkeeping, VAT, payroll and tax support in London. Led by FCCA and ACCA advisers.",
 };
 export default function Home() {
   return (
