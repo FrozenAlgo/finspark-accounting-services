@@ -682,8 +682,10 @@ export const servicesData = [
     description:
       "Expert guidance and timely reporting for property sales, crypto, shares, and asset disposals within strict HMRC 60-day filing deadlines.",
     points: [
-      "UK property disposal 60-day reporting",
-      "Maximum relief & tax allowance utilisation",
+      "UK residential property: report and pay within 60 days of completion",
+      "Shares, crypto and other assets reported via Self Assessment",
+      "Non-UK residents: UK property disposals within 60 days (even if no tax due)",
+      "Reliefs and allowances reviewed before filing",
     ],
     icon: "TrendingUp",
     href: "/services/capital-gains",

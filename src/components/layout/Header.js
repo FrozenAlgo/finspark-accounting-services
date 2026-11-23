@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Calendar, MailPlus, Phone, Menu, X, ChevronDown } from "lucide-react";
+import { Calendar, Menu, X, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedBtn from "../ui/AnimatedBtn";
@@ -13,21 +13,21 @@ export default function Header() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   return (
-    <header className="site-header   z-50 transition-all duration-300">
+    <header className="site-header sticky top-0 z-50 transition-all duration-300">
       {/* Top Contact Bar */}
       <div className="top-bar bg-[#083761] text-white px-4 md:px-10 py-2.5 w-full text-xs sm:text-sm font-semibold border-b border-white/5">
         <div className="contact-info flex flex-wrap justify-center sm:justify-end items-center gap-3 sm:gap-5 max-w-7xl mx-auto">
           <a
             href={contactsNo[0].href}
-            className="flex gap-1.5 items-center px-3 sm:px-4 py-1 border border-white/30 rounded-full hover:bg-white/10 transition-colors relative group transition-all duration-600"
+            className="flex gap-1.5 items-center px-3 sm:px-4 py-1 border border-white/30 rounded-full hover:bg-white/10 transition-colors relative group"
           >
-            <WhatsappIcon className="h-4 w-4 text-green-500 hover:text-green-600 transition" />
-            <span>
+            <WhatsappIcon className="h-4 w-4 text-green-500 hover:text-green-600 transition shrink-0" />
+            <span className="whitespace-nowrap">
               {contactsNo[0].number}{" "}
               <span className="text-[11px] text-green-200"> WhatsApp </span>
             </span>
-            <span className="absolute  right-full min-w-max px-2  lg:group-hover:visible lg:group-hover:opacity-100 invisible opacity-0">
-              <span className="rounded-full p-2 text-xs text-green-200 bg-white/30  ">
+            <span className="absolute right-full mr-2 min-w-max hidden xl:group-hover:block">
+              <span className="rounded-full p-2 text-xs text-green-200 bg-white/30">
                 Chat on Whatsapp
               </span>
             </span>
@@ -36,15 +36,15 @@ export default function Header() {
             href={companyEmail.href}
             className="flex gap-1.5 items-center px-3 sm:px-4 py-1 border border-white/30 rounded-full hover:bg-white/10 transition-colors"
           >
-            <GmailIcon className="w-4 h-4 text-red-500 hover:text-red-600 transition" />
-            <span>{companyEmail.email}</span>
+            <GmailIcon className="w-4 h-4 text-red-500 hover:text-red-600 transition shrink-0" />
+            <span className="truncate">{companyEmail.email}</span>
           </a>
         </div>
       </div>
 
       {/* Main Navigation Bar */}
-      <nav className="bg-[#083761] pb-2.5 md:pb-3.5 ">
-        <div className="main-nav flex justify-between items-center px-4 sm:px-8 lg:px-10 bg-white mx-3 sm:mx-6 md:mx-12 rounded-2xl shadow-lg py-2.5 md:py-1 border border-slate-100">
+      <nav className="bg-[#083761] pb-2.5 md:pb-3.5">
+        <div className="main-nav flex justify-between items-center gap-4 px-4 sm:px-8 xl:px-10 bg-white mx-3 sm:mx-6 md:mx-10 xl:mx-12 rounded-2xl shadow-lg py-2.5 xl:py-1.5 border border-slate-100">
           {/* Clickable Logo */}
           <Link href="/" className="logo shrink-0 block">
             <Image
@@ -52,17 +52,17 @@ export default function Header() {
               width={120}
               height={60}
               alt="Finspark Accounting and Business Services Limited Logo"
-              className="w-32 sm:w-40 md:w-[120px] h-auto object-contain"
+              className="w-32 sm:w-36 xl:w-[120px] h-auto object-contain"
               priority
             />
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <ul className="navigations hidden lg:flex items-center gap-6 lg:gap-10 text-[#083761] text-sm lg:text-lg md:tracking-wide font-semibold">
+          {/* Desktop Navigation Links (1280px+ with full large-screen text size) */}
+          <ul className="navigations hidden xl:flex items-center gap-5 2xl:gap-8 text-[#083761] text-base 2xl:text-lg tracking-wide font-semibold">
             <li>
               <Link
                 href="/"
-                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
+                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block whitespace-nowrap"
               >
                 Home
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
@@ -72,7 +72,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
+                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block whitespace-nowrap"
               >
                 About Us
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
@@ -82,7 +82,7 @@ export default function Header() {
             {/* Services Dropdown Menu */}
             <li className="relative group py-2">
               <Link
-                className="flex items-center gap-1.5 hover:text-[#278393] transition-colors duration-200 focus:outline-none py-1"
+                className="flex items-center gap-1.5 hover:text-[#278393] transition-colors duration-200 focus:outline-none py-1 whitespace-nowrap"
                 href="/services"
               >
                 <span>Services</span>
@@ -94,7 +94,7 @@ export default function Header() {
               </Link>
 
               {/* Hover Floating Dropdown */}
-              <div className="absolute left-0 top-full pt-2 w-60 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 ease-in-out">
+              <div className="absolute left-0 top-full pt-2 w-64 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 ease-in-out z-50">
                 <div className="bg-white rounded-xl shadow-2xl border border-slate-100 py-2.5 px-1.5 flex flex-col gap-1 text-slate-700 text-xs sm:text-sm font-medium">
                   {serviceLinks.map((service, idx) => (
                     <Link
@@ -112,34 +112,37 @@ export default function Header() {
             <li>
               <Link
                 href="/team"
-                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
+                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block whitespace-nowrap"
               >
                 Our Team
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
               </Link>
             </li>
+
             <li>
               <Link
                 href="/testimonials"
-                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
+                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block whitespace-nowrap"
               >
                 Testimonials
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
               </Link>
             </li>
+
             <li>
               <Link
                 href="/blogs"
-                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
+                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block whitespace-nowrap"
               >
                 Blogs
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
               </Link>
             </li>
+
             <li>
               <Link
                 href="/contact"
-                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block"
+                className="group relative py-1 hover:text-[#278393] transition-colors duration-200 block whitespace-nowrap"
               >
                 Contact Us
                 <span className="absolute bottom-0 left-0 right-0 h-[2px] scale-x-0 bg-[#278393] transition-transform duration-300 ease-in-out origin-left group-hover:scale-x-100" />
@@ -148,7 +151,7 @@ export default function Header() {
           </ul>
 
           {/* Desktop CTA Appointment Button */}
-          <div className="book-btn hidden lg:block">
+          <div className="book-btn hidden xl:block shrink-0">
             <AnimatedBtn
               hoverText="Book An Appointment"
               icon={Calendar}
@@ -156,13 +159,13 @@ export default function Header() {
               hoverBgColor="hover:bg-[#083761]"
               textColor="text-white"
               hoverTextColor="hover:text-white"
+              className="whitespace-nowrap"
               onClick={(e) => {
                 const el = document.getElementById("contact");
                 if (el) {
                   e.preventDefault();
                   el.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
-                // else default: go to /contact#contact-form
               }}
               href="/contact#contact"
             >
@@ -170,8 +173,16 @@ export default function Header() {
             </AnimatedBtn>
           </div>
 
-          {/* Mobile Hamburger Toggle Button */}
-          <div className="lg:hidden flex items-center">
+          {/* Mobile & Tablet Hamburger Toggle Button (Visible below 1280px) */}
+          <div className="xl:hidden flex items-center gap-3">
+            <Link
+              href="/contact#contact"
+              className="hidden sm:inline-flex xl:hidden items-center gap-1.5 bg-[#278393] hover:bg-[#083761] text-white text-xs sm:text-sm font-bold px-4 py-2 rounded-full transition-colors whitespace-nowrap"
+            >
+              <Calendar size={15} />
+              <span>Book An Appointment</span>
+            </Link>
+
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle Mobile Navigation"
@@ -182,15 +193,15 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Mobile Slide-Down Menu Drawer */}
+        {/* Mobile & Tablet Slide-Down Menu Drawer */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mx-3 sm:mx-6 mt-2 bg-white rounded-2xl shadow-2xl p-5 border border-slate-100 transition-all duration-300 max-h-[80vh] overflow-y-auto">
-            <ul className="flex flex-col gap-2 text-[#083761] font-semibold text-sm pb-4 border-b border-slate-100">
+          <div className="xl:hidden mx-3 sm:mx-6 md:mx-10 mt-2 bg-white rounded-2xl shadow-2xl p-5 border border-slate-100 transition-all duration-300 max-h-[80vh] overflow-y-auto">
+            <ul className="flex flex-col gap-2 text-[#083761] font-semibold text-base pb-4 border-b border-slate-100">
               <li>
                 <Link
                   href="/"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
+                  className="hover:text-[#278393] transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between"
                 >
                   <span>Home</span>
                   <span className="text-slate-300 text-xs">&rarr;</span>
@@ -201,7 +212,7 @@ export default function Header() {
                 <Link
                   href="/about"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
+                  className="hover:text-[#278393] transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between"
                 >
                   <span>About Us</span>
                   <span className="text-slate-300 text-xs">&rarr;</span>
@@ -212,7 +223,7 @@ export default function Header() {
               <li className="rounded-lg">
                 <button
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
-                  className="w-full text-left py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between hover:text-[#278393] transition-colors"
+                  className="w-full text-left py-2.5 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between hover:text-[#278393] transition-colors"
                 >
                   <span>Services</span>
                   <ChevronDown
@@ -225,19 +236,21 @@ export default function Header() {
 
                 {isMobileServicesOpen && (
                   <ul className="pl-4 pr-2 py-2 my-1 bg-slate-50 rounded-xl space-y-1.5 border border-slate-100">
-                    <Link
-                      href="/services"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                      className="text-xs text-slate-600 hover:text-[#278393] py-1.5 px-2 block rounded-md hover:bg-white font-medium transition-colors"
-                    >
-                      All Services
-                    </Link>
+                    <li>
+                      <Link
+                        href="/services"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="text-sm text-[#278393] font-bold py-1.5 px-2 block rounded-md hover:bg-white transition-colors"
+                      >
+                        All Services
+                      </Link>
+                    </li>
                     {serviceLinks.map((service, idx) => (
                       <li key={idx}>
                         <Link
                           href={service.href}
                           onClick={() => setIsMobileMenuOpen(false)}
-                          className="text-xs text-slate-600 hover:text-[#278393] py-1.5 px-2 block rounded-md hover:bg-white font-medium transition-colors"
+                          className="text-sm text-slate-600 hover:text-[#278393] py-1.5 px-2 block rounded-md hover:bg-white font-medium transition-colors"
                         >
                           {service.name}
                         </Link>
@@ -251,39 +264,42 @@ export default function Header() {
                 <Link
                   href="/team"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
+                  className="hover:text-[#278393] transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between"
                 >
                   <span>Our Team</span>
                   <span className="text-slate-300 text-xs">&rarr;</span>
                 </Link>
               </li>
+
               <li>
                 <Link
                   href="/testimonials"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
+                  className="hover:text-[#278393] transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between"
                 >
                   <span>Testimonials</span>
                   <span className="text-slate-300 text-xs">&rarr;</span>
                 </Link>
               </li>
+
               <li>
                 <Link
                   href="/blogs"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
+                  className="hover:text-[#278393] transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between"
                 >
                   <span>Blogs</span>
                   <span className="text-slate-300 text-xs">&rarr;</span>
                 </Link>
               </li>
+
               <li>
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="hover:text-[#278393] transition-colors py-2 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between block"
+                  className="hover:text-[#278393] transition-colors py-2.5 px-3 rounded-lg hover:bg-slate-50 flex items-center justify-between"
                 >
-                  <span>Contact us</span>
+                  <span>Contact Us</span>
                   <span className="text-slate-300 text-xs">&rarr;</span>
                 </Link>
               </li>
@@ -305,7 +321,6 @@ export default function Header() {
                     el.scrollIntoView({ behavior: "smooth", block: "start" });
                   }
                   setIsMobileMenuOpen(false);
-                  // else default: go to /contact#contact-form
                 }}
                 href="/contact#contact"
               >

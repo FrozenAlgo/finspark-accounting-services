@@ -22,7 +22,7 @@ export const metadata = {
     template: "%s | Finspark Accounting",
   },
   description:
-    "Finspark Accounting and Business Services Limited provides bookkeeping, VAT, company accounts, self assessment and tax support in London. Led by FCCA partners Asif Chaudhry and Asim Malik.",
+    "Finspark Accounting in London — Making Tax Digital (MTD), bookkeeping, VAT, company accounts, self assessment and tax support. Led by FCCA and ACCA advisers Asif Chaudhry and Asim Qamar Malik.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
