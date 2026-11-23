@@ -197,11 +197,11 @@ export default async function ServiceDetailPage({ params }) {
         </div>
       </section>
 
+      {slug === "making-tax-digital" && <MTDRoadmap showCta={true} />}
+
       <section>
         <TestimonialsCard />
       </section>
-
-      {slug === "making-tax-digital" && <MTDRoadmap showCta={true} />}
 
       <section>
         <FAQ />

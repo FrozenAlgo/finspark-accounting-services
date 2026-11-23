@@ -98,6 +98,8 @@ export default function Home() {
         </div>
       </section>
 
+      <MTDRoadmap showCta={true} />
+
       <section className="w-full bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* ================= LEFT COLUMN: HEADING & STEPS ================= */}
@@ -271,8 +273,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <MTDRoadmap showCta={true} />
 
       <FAQ />
     </div>

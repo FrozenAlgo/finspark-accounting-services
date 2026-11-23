@@ -178,7 +178,7 @@ export default function Form({ headingColor }) {
     >
       <div
         className={`absolute inset-0 z-0 pointer-events-none  rounded-2xl ${
-          isLight ? "bg-white/25" : "bg-slate-950/75"
+          isLight ? "bg-white/25" : "bg-slate-950/70"
         }`}
       />
 
