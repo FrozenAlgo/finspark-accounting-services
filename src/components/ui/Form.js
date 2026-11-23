@@ -173,12 +173,12 @@ export default function Form({ headingColor }) {
       className={`z-10 p-6 lg:mb-4 sm:p-8 rounded-2xl shadow-2xl relative  ${
         isLight
           ? " text-slate-900 border border-slate-200 shadow-slate-200/50"
-          : "bg-[url(/images/mtdformimage1.png)] bg-cover bg-no-repeat  text-white bg-white/10 backdrop-blur-xl border border-white/20"
+          : "bg-[url(/images/mtdPotrait.webp)] bg-cover bg-no-repeat  text-white bg-white/10 backdrop-blur-xl border border-white/20"
       }`}
     >
       <div
         className={`absolute inset-0 z-0 pointer-events-none  rounded-2xl ${
-          isLight ? "bg-white/25" : "bg-slate-950/30"
+          isLight ? "bg-white/25" : "bg-slate-950/75"
         }`}
       />
 

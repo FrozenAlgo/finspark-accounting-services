@@ -25,6 +25,8 @@ import FAQ from "@/components/home/FAQ";
 import ServiceCard from "@/components/services/ServiceCard";
 import AmbientBackground from "@/components/ui/AmbientBackground";
 import { companyInfo, servicesData, stats, steps } from "@/lib/data";
+import MTDRoadmap from "@/components/services/MTDRoadmap";
+
 export const metadata = {
   title: "Accountants in London",
   description:
@@ -269,6 +271,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <MTDRoadmap showCta={true} />
 
       <FAQ />
     </div>

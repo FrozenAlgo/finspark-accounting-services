@@ -7,6 +7,7 @@ import FeatureCard from "@/components/services/FeatureCard";
 import TargetAudience from "@/components/ui/TargetAudience";
 import TestimonialsCard from "@/components/testimonials/TestimonialCard";
 import FAQ from "@/components/home/FAQ";
+import MTDRoadmap from "@/components/services/MTDRoadmap";
 
 // Tells Next.js which pages to generate from your data
 export function generateStaticParams() {
@@ -199,6 +200,8 @@ export default async function ServiceDetailPage({ params }) {
       <section>
         <TestimonialsCard />
       </section>
+
+      {slug === "making-tax-digital" && <MTDRoadmap showCta={true} />}
 
       <section>
         <FAQ />

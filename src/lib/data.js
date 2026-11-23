@@ -31,7 +31,7 @@ export const servicesData = [
       subBadge: "VAT & ITSA readiness",
       subHeading:
         "Digital record-keeping and quarterly filing support, explained in plain English.",
-      image: "/images/bookkeeping.webp", // reuse until you have a dedicated image
+      image: "/images/mtd.webp", // reuse until you have a dedicated image
     },
 
     featuresSection: {
@@ -381,46 +381,46 @@ export const servicesData = [
       ],
     },
     workflowSection: {
-      tag: "DIGITAL CLOUD ECOSYSTEM",
-      heading: "How we make daily bookkeeping effortless for you",
+      tag: "YEAR-END PROCESS",
+      heading: "How we deliver company accounts and corporation tax",
       subHeading:
-        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+        "From trial balance to Companies House and HMRC — clear steps, senior review, and no last-minute surprises.",
       steps: [
         {
           num: "1",
-          title: "Snap & Upload",
+          title: "Gather & review records",
           description:
-            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+            "We collect bank data, books, and supporting documents, then clear queries early so year-end is not a scramble.",
         },
         {
           num: "2",
-          title: "Reconcile & Validate",
+          title: "Accounts & tax computation",
           description:
-            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+            "We prepare statutory accounts and corporation tax figures, applying reliefs where they properly apply.",
         },
         {
           num: "3",
-          title: "Review & Relax",
+          title: "File & explain",
           description:
-            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+            "Companies House and HMRC filings are submitted on time, with a plain-English summary of profit and tax due.",
         },
       ],
       platforms: [
         {
-          title: "Xero Accounting",
-          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
+          title: "Companies House",
+          desc: "Accounts and confirmation filings handled on schedule.",
         },
         {
-          title: "QuickBooks",
-          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
+          title: "HMRC CT600",
+          desc: "Corporation tax returns prepared and submitted correctly.",
         },
         {
-          title: "Dext & Hubdoc",
-          desc: "Instant optical receipt capture and automatic filing.",
+          title: "Cloud books",
+          desc: "Works from Xero, QuickBooks or clean spreadsheet records.",
         },
         {
-          title: "Sage & Bespoke",
-          desc: "Custom legacy conversions and spreadsheet transfers.",
+          title: "Director review",
+          desc: "You approve figures before anything is filed.",
         },
       ],
     },
@@ -509,46 +509,43 @@ export const servicesData = [
       ],
     },
     workflowSection: {
-      tag: "DIGITAL CLOUD ECOSYSTEM",
-      heading: "How we make daily bookkeeping effortless for you",
+      tag: "PAYROLL RHYTHM",
+      heading: "How we run payroll without the admin headache",
       subHeading:
-        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+        "Starters, leavers, RTI and pensions — handled on a clear monthly cycle so payslips and HMRC stay aligned.",
       steps: [
         {
           num: "1",
-          title: "Snap & Upload",
+          title: "Collect pay data",
           description:
-            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+            "You send hours, salary changes, new starters or leavers by an agreed cut-off each pay period.",
         },
         {
           num: "2",
-          title: "Reconcile & Validate",
+          title: "Process & submit RTI",
           description:
-            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+            "We calculate PAYE and NI, produce payslips, and submit Real Time Information to HMRC on or before payday.",
         },
         {
           num: "3",
-          title: "Review & Relax",
+          title: "Pensions & year-end",
           description:
-            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+            "Auto-enrolment duties and year-end payroll forms are kept in step with your accounts.",
         },
       ],
       platforms: [
         {
-          title: "Xero Accounting",
-          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
+          title: "HMRC RTI",
+          desc: "FPS submissions aligned with your payday.",
         },
         {
-          title: "QuickBooks",
-          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
+          title: "Payslips",
+          desc: "Clear digital payslips for every employee and director.",
         },
+        { title: "Pensions", desc: "Support with workplace pension duties." },
         {
-          title: "Dext & Hubdoc",
-          desc: "Instant optical receipt capture and automatic filing.",
-        },
-        {
-          title: "Sage & Bespoke",
-          desc: "Custom legacy conversions and spreadsheet transfers.",
+          title: "CIS link",
+          desc: "Payroll can sit alongside CIS where you use subcontractors.",
         },
       ],
     },
@@ -630,46 +627,40 @@ export const servicesData = [
       ],
     },
     workflowSection: {
-      tag: "DIGITAL CLOUD ECOSYSTEM",
-      heading: "How we make daily bookkeeping effortless for you",
+      tag: "PERSONAL TAX",
+      heading: "How we complete your Self Assessment",
       subHeading:
-        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+        "Organised records in, clear return out — with enough time before the January deadline.",
       steps: [
         {
           num: "1",
-          title: "Snap & Upload",
+          title: "Collect your information",
           description:
-            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+            "Income, expenses, property, dividends and any tax already deducted — gathered in a simple checklist.",
         },
         {
           num: "2",
-          title: "Reconcile & Validate",
+          title: "Prepare the return",
           description:
-            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+            "We complete the Self Assessment, claim allowable expenses, and explain the tax position before filing.",
         },
         {
           num: "3",
-          title: "Review & Relax",
+          title: "File & plan payments",
           description:
-            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+            "Submitted to HMRC on time, with payment dates and payments on account flagged clearly.",
         },
       ],
       platforms: [
+        { title: "HMRC SA", desc: "Online Self Assessment filing." },
         {
-          title: "Xero Accounting",
-          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
+          title: "Sole traders",
+          desc: "Business income and expense schedules.",
         },
+        { title: "Landlords", desc: "Property income reported correctly." },
         {
-          title: "QuickBooks",
-          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
-        },
-        {
-          title: "Dext & Hubdoc",
-          desc: "Instant optical receipt capture and automatic filing.",
-        },
-        {
-          title: "Sage & Bespoke",
-          desc: "Custom legacy conversions and spreadsheet transfers.",
+          title: "Directors",
+          desc: "Salary, dividends and benefits aligned with payroll.",
         },
       ],
     },
@@ -746,46 +737,46 @@ export const servicesData = [
       ],
     },
     workflowSection: {
-      tag: "DIGITAL CLOUD ECOSYSTEM",
-      heading: "How we make daily bookkeeping effortless for you",
+      tag: "CGT PROCESS",
+      heading: "How we handle Capital Gains Tax reporting",
       subHeading:
-        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+        "Property, shares and other disposals — calculated clearly and filed within HMRC time limits.",
       steps: [
         {
           num: "1",
-          title: "Snap & Upload",
+          title: "Capture the disposal",
           description:
-            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+            "Sale proceeds, costs, dates and acquisition details for property, shares, crypto or other assets.",
         },
         {
           num: "2",
-          title: "Reconcile & Validate",
+          title: "Calculate gain & reliefs",
           description:
-            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+            "We work out the gain or loss and apply allowances and reliefs where they are available.",
         },
         {
           num: "3",
-          title: "Review & Relax",
+          title: "Report & pay on time",
           description:
-            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+            "UK residential property within the 60-day rules where required; other gains via Self Assessment as applicable.",
         },
       ],
       platforms: [
         {
-          title: "Xero Accounting",
-          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
+          title: "60-day property",
+          desc: "UK residential disposals reported within HMRC deadlines.",
         },
         {
-          title: "QuickBooks",
-          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
+          title: "Self Assessment",
+          desc: "Shares, crypto and other assets on the annual return.",
         },
         {
-          title: "Dext & Hubdoc",
-          desc: "Instant optical receipt capture and automatic filing.",
+          title: "Non-UK residents",
+          desc: "UK property disposals handled under the right rules.",
         },
         {
-          title: "Sage & Bespoke",
-          desc: "Custom legacy conversions and spreadsheet transfers.",
+          title: "Records",
+          desc: "Clear workings you can keep for future sales.",
         },
       ],
     },
@@ -852,46 +843,43 @@ export const servicesData = [
       ],
     },
     workflowSection: {
-      tag: "DIGITAL CLOUD ECOSYSTEM",
-      heading: "How we make daily bookkeeping effortless for you",
+      tag: "COMPANY SECRETARIAL",
+      heading: "How we keep your company filings in order",
       subHeading:
-        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+        "Confirmation statements, officer changes and registers — tracked so Companies House deadlines are not missed.",
       steps: [
         {
           num: "1",
-          title: "Snap & Upload",
+          title: "Diary your dates",
           description:
-            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+            "We note confirmation statement and accounts deadlines from day one of the engagement.",
         },
         {
           num: "2",
-          title: "Reconcile & Validate",
+          title: "Prepare filings",
           description:
-            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+            "Changes to directors, shares or registered details are prepared accurately for submission.",
         },
         {
           num: "3",
-          title: "Review & Relax",
+          title: "File & confirm",
           description:
-            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+            "Submitted to Companies House, with confirmation so you know the public record is up to date.",
         },
       ],
       platforms: [
+        { title: "Confirmation Statement", desc: "Filed on time each year." },
         {
-          title: "Xero Accounting",
-          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
+          title: "Officer changes",
+          desc: "Director and secretary updates handled correctly.",
         },
         {
-          title: "QuickBooks",
-          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
+          title: "Registers",
+          desc: "Statutory registers kept consistent with filings.",
         },
         {
-          title: "Dext & Hubdoc",
-          desc: "Instant optical receipt capture and automatic filing.",
-        },
-        {
-          title: "Sage & Bespoke",
-          desc: "Custom legacy conversions and spreadsheet transfers.",
+          title: "Reminders",
+          desc: "Deadlines flagged before they become penalties.",
         },
       ],
     },
@@ -960,46 +948,46 @@ export const servicesData = [
       ],
     },
     workflowSection: {
-      tag: "DIGITAL CLOUD ECOSYSTEM",
-      heading: "How we make daily bookkeeping effortless for you",
+      tag: "CERTIFICATES & ADHOC",
+      heading: "How we support mortgages and one-off requests",
       subHeading:
-        "Forget shoe boxes of paper receipts. Whether you snap pictures of receipts on your mobile or automatically sync bank feeds through cloud software, Finspark integrates seamlessly with the software you prefer.",
+        "Fast, accurate accountant certificates and verification letters when lenders or third parties ask for them.",
       steps: [
         {
           num: "1",
-          title: "Snap & Upload",
+          title: "Understand the request",
           description:
-            "Drop photos of receipts or email electronic invoices directly into your dedicated client hub.",
+            "Mortgage reference, income certificate, SA302 or other adhoc letter — we confirm exactly what is needed.",
         },
         {
           num: "2",
-          title: "Reconcile & Validate",
+          title: "Verify from your records",
           description:
-            "Our bookkeepers categorise every expense according to HMRC rules and reconcile against your bank feed.",
+            "Figures are taken from filed returns and accounting records so the certificate is supportable.",
         },
         {
           num: "3",
-          title: "Review & Relax",
+          title: "Issue promptly",
           description:
-            "Gain clear, real-time reports whenever you need to see your profit, VAT position, or cash balance.",
+            "Signed documentation issued so your application or admin task can move forward.",
         },
       ],
       platforms: [
         {
-          title: "Xero Accounting",
-          desc: "Xero-Ready Bookkeeping and Cloud Bookkeeping on Xero.",
+          title: "Mortgage references",
+          desc: "Accountant letters in the form lenders expect.",
         },
         {
-          title: "QuickBooks",
-          desc: "QuickBooks-Friendly Workflows and Support for QuickBooks Online.",
+          title: "SA302 / tax year overview",
+          desc: "Support where income evidence is required.",
         },
         {
-          title: "Dext & Hubdoc",
-          desc: "Instant optical receipt capture and automatic filing.",
+          title: "Adhoc schedules",
+          desc: "One-off reports without a full retained package.",
         },
         {
-          title: "Sage & Bespoke",
-          desc: "Custom legacy conversions and spreadsheet transfers.",
+          title: "Turnaround",
+          desc: "Clear timelines agreed when you instruct us.",
         },
       ],
     },
